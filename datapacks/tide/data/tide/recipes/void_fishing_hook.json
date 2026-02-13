@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:crying_obsidian"
+    },
+    "D": {
+      "item": "minecraft:dragon_breath"
+    }
+  },
+  "pattern": [
+    "  #",
+    "#D#",
+    " # "
+  ],
+  "result": {
+    "item": "tide:void_fishing_hook"
+  },
+  "show_notification": true
+}

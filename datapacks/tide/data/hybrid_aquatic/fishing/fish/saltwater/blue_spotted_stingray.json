@@ -1,0 +1,47 @@
+{
+  "conditions": [
+    {
+      "type": "tide:dimension",
+      "dimensions": [
+        "minecraft:overworld"
+      ]
+    },
+    {
+      "type": "tide:fluid",
+      "fluid": "water"
+    },
+    {
+      "type": "tide:above",
+      "y": 40
+    },
+    {
+      "type": "tide:saltwater"
+    }
+  ],
+  "display_data": {
+    "entity": "hybrid-aquatic:stingray",
+    "yaw": 90.0
+  },
+  "fish": "hybrid-aquatic:blue_spotted_stingray",
+  "journal_profile": {
+    "description": "journal.description.hybrid-aquatic.blue_spotted_stingray",
+    "group": "saltwater",
+    "location": "journal.info.location.saltwater",
+    "rarity": "rare"
+  },
+  "modifiers": [
+    {
+      "type": "tide:temperature",
+      "preferred_temperature": 0.55,
+      "temperature_tolerance": 0.4
+    }
+  ],
+  "selection_weight": 12.0,
+  "size": {
+    "record_high_cm": 130.0,
+    "typical_high_cm": 75.0,
+    "typical_low_cm": 55.0
+  },
+  "speed": 1.1,
+  "strength": 0.65
+}

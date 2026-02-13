@@ -1,0 +1,46 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_fishing_line": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "tide:fishing_line"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_iron_nuggets": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "c:nuggets/iron"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "tide:reinforced_line"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_fishing_line",
+      "has_iron_nuggets",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "tide:reinforced_line"
+    ]
+  },
+  "sends_telemetry_event": false
+}

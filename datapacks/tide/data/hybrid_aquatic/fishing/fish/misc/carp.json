@@ -1,0 +1,14 @@
+{
+  "parent": "tide:carp",
+  "display_data": {
+    "entity": "hybrid-aquatic:carp",
+    "roll": -90.0,
+    "x": 0.05,
+    "y": -0.15,
+    "z": 0.08
+  },
+  "fish": "hybrid-aquatic:carp",
+  "journal_profile": {
+    "description": "journal.description.hybrid-aquatic.carp"
+  }
+}

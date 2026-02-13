@@ -1,0 +1,14 @@
+{
+  "parent": "tide:anglerfish",
+  "display_data": {
+    "entity": "hybrid-aquatic:anglerfish",
+    "roll": -90.0,
+    "x": 0.06,
+    "y": -0.2,
+    "z": 0.08
+  },
+  "fish": "hybrid-aquatic:anglerfish",
+  "journal_profile": {
+    "description": "journal.description.hybrid-aquatic.anglerfish"
+  }
+}

@@ -1,0 +1,95 @@
+{
+   "associated_mod": "hybrid-aquatic",
+   "weight": 1.0,
+   "block": {
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+         {
+            "weight": 1,
+            "data": {
+               "Name": "hybrid-aquatic:crab_pot"
+            }
+         },
+         {
+            "weight": 1,
+            "data": {
+               "Name": "hybrid-aquatic:hybrid_crate"
+            }
+         },
+         {
+            "weight": 1,
+            "data": {
+               "Name": "hybrid-aquatic:oak_crate"
+            }
+         },
+         {
+            "weight": 1,
+            "data": {
+               "Name": "hybrid-aquatic:spruce_crate"
+            }
+         },
+         {
+            "weight": 1,
+            "data": {
+               "Name": "hybrid-aquatic:birch_crate"
+            }
+         },
+         {
+            "weight": 1,
+            "data": {
+               "Name": "hybrid-aquatic:dark_oak_crate"
+            }
+         },
+         {
+            "weight": 1,
+            "data": {
+               "Name": "hybrid-aquatic:acacia_crate"
+            }
+         },
+         {
+            "weight": 1,
+            "data": {
+               "Name": "hybrid-aquatic:jungle_crate"
+            }
+         },
+         {
+            "weight": 1,
+            "data": {
+               "Name": "hybrid-aquatic:bamboo_crate"
+            }
+         },
+         {
+            "weight": 1,
+            "data": {
+               "Name": "hybrid-aquatic:mangrove_crate"
+            }
+         },
+         {
+            "weight": 1,
+            "data": {
+               "Name": "hybrid-aquatic:cherry_crate"
+            }
+         }
+      ]
+   },
+   "conditions": [
+      {
+         "type": "tide:open_water",
+         "in_open_water": true
+      },
+      {
+         "type": "tide:fluid",
+         "fluid": "water"
+      },
+      {
+         "type": "tide:dimension",
+         "dimensions": [
+            "minecraft:overworld"
+         ]
+      },
+      {
+         "type": "tide:above",
+         "y": 40
+      }
+   ]
+}

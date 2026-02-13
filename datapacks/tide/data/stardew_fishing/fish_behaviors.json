@@ -1,0 +1,812 @@
+{
+  "behaviors": {
+    "tide:abyss_angler": {
+      "avg_distance": 78,
+      "down_acceleration": 0.34,
+      "idle_time": 12,
+      "move_variation": 16,
+      "top_speed": 2.5600002,
+      "up_acceleration": 0.34
+    },
+    "tide:alpha_fish": {
+      "avg_distance": 90,
+      "down_acceleration": 0.73,
+      "idle_time": 6,
+      "move_variation": 27,
+      "top_speed": 6.72,
+      "up_acceleration": 0.73
+    },
+    "tide:amber_rockfish": {
+      "avg_distance": 60,
+      "down_acceleration": 0.46,
+      "idle_time": 10,
+      "move_variation": 8,
+      "top_speed": 3.8400002,
+      "up_acceleration": 0.46
+    },
+    "tide:anchovy": {
+      "avg_distance": 30,
+      "down_acceleration": 0.55,
+      "idle_time": 9,
+      "move_variation": 3,
+      "top_speed": 4.8,
+      "up_acceleration": 0.55
+    },
+    "tide:angelfish": {
+      "avg_distance": 45,
+      "down_acceleration": 0.475,
+      "idle_time": 10,
+      "move_variation": 4,
+      "top_speed": 4.0,
+      "up_acceleration": 0.475
+    },
+    "tide:anglerfish": {
+      "avg_distance": 75,
+      "down_acceleration": 0.34,
+      "idle_time": 12,
+      "move_variation": 14,
+      "top_speed": 2.5600002,
+      "up_acceleration": 0.34
+    },
+    "tide:aquathorn": {
+      "avg_distance": 82,
+      "down_acceleration": 0.55,
+      "idle_time": 9,
+      "move_variation": 19,
+      "top_speed": 4.8,
+      "up_acceleration": 0.55
+    },
+    "tide:arapaima": {
+      "avg_distance": 60,
+      "down_acceleration": 0.6100001,
+      "idle_time": 8,
+      "move_variation": 8,
+      "top_speed": 5.44,
+      "up_acceleration": 0.6100001
+    },
+    "tide:ash_perch": {
+      "avg_distance": 55,
+      "down_acceleration": 0.46,
+      "idle_time": 10,
+      "move_variation": 6,
+      "top_speed": 3.8400002,
+      "up_acceleration": 0.46
+    },
+    "tide:bedrock_bug": {
+      "avg_distance": 75,
+      "down_acceleration": 0.52000004,
+      "idle_time": 9,
+      "move_variation": 14,
+      "top_speed": 4.48,
+      "up_acceleration": 0.52000004
+    },
+    "tide:bedrock_tetra": {
+      "avg_distance": 75,
+      "down_acceleration": 0.46,
+      "idle_time": 10,
+      "move_variation": 14,
+      "top_speed": 3.8400002,
+      "up_acceleration": 0.46
+    },
+    "tide:black_crappie": {
+      "avg_distance": 38,
+      "down_acceleration": 0.35500002,
+      "idle_time": 12,
+      "move_variation": 3,
+      "top_speed": 2.72,
+      "up_acceleration": 0.35500002
+    },
+    "tide:blazing_swordfish": {
+      "avg_distance": 85,
+      "down_acceleration": 0.544,
+      "idle_time": 9,
+      "move_variation": 22,
+      "top_speed": 4.736,
+      "up_acceleration": 0.544
+    },
+    "tide:blossom_bass": {
+      "avg_distance": 50,
+      "down_acceleration": 0.49,
+      "idle_time": 10,
+      "move_variation": 5,
+      "top_speed": 4.16,
+      "up_acceleration": 0.49
+    },
+    "tide:blue_neonfish": {
+      "avg_distance": 75,
+      "down_acceleration": 0.55,
+      "idle_time": 9,
+      "move_variation": 14,
+      "top_speed": 4.8,
+      "up_acceleration": 0.55
+    },
+    "tide:bluegill": {
+      "avg_distance": 35,
+      "down_acceleration": 0.31,
+      "idle_time": 13,
+      "move_variation": 3,
+      "top_speed": 2.24,
+      "up_acceleration": 0.31
+    },
+    "tide:brook_trout": {
+      "avg_distance": 35,
+      "down_acceleration": 0.34,
+      "idle_time": 12,
+      "move_variation": 3,
+      "top_speed": 2.5600002,
+      "up_acceleration": 0.34
+    },
+    "tide:bull_shark": {
+      "avg_distance": 80,
+      "down_acceleration": 0.6100001,
+      "idle_time": 8,
+      "move_variation": 17,
+      "top_speed": 5.44,
+      "up_acceleration": 0.6100001
+    },
+    "tide:carp": {
+      "avg_distance": 40,
+      "down_acceleration": 0.28,
+      "idle_time": 13,
+      "move_variation": 4,
+      "top_speed": 1.9200001,
+      "up_acceleration": 0.28
+    },
+    "tide:catfish": {
+      "avg_distance": 40,
+      "down_acceleration": 0.4,
+      "idle_time": 11,
+      "move_variation": 4,
+      "top_speed": 3.2,
+      "up_acceleration": 0.4
+    },
+    "tide:cave_crawler": {
+      "avg_distance": 75,
+      "down_acceleration": 0.34,
+      "idle_time": 12,
+      "move_variation": 14,
+      "top_speed": 2.5600002,
+      "up_acceleration": 0.34
+    },
+    "tide:cave_eel": {
+      "avg_distance": 65,
+      "down_acceleration": 0.4,
+      "idle_time": 11,
+      "move_variation": 9,
+      "top_speed": 3.2,
+      "up_acceleration": 0.4
+    },
+    "tide:chasm_eel": {
+      "avg_distance": 85,
+      "down_acceleration": 0.55,
+      "idle_time": 9,
+      "move_variation": 22,
+      "top_speed": 4.8,
+      "up_acceleration": 0.55
+    },
+    "tide:chorus_cod": {
+      "avg_distance": 72,
+      "down_acceleration": 0.445,
+      "idle_time": 10,
+      "move_variation": 12,
+      "top_speed": 3.68,
+      "up_acceleration": 0.445
+    },
+    "tide:coelacanth": {
+      "avg_distance": 92,
+      "down_acceleration": 0.58000004,
+      "idle_time": 8,
+      "move_variation": 29,
+      "top_speed": 5.1200004,
+      "up_acceleration": 0.58000004
+    },
+    "tide:crimson_fangjaw": {
+      "avg_distance": 68,
+      "down_acceleration": 0.37,
+      "idle_time": 12,
+      "move_variation": 11,
+      "top_speed": 2.8799999,
+      "up_acceleration": 0.37
+    },
+    "tide:crystal_shrimp": {
+      "avg_distance": 62,
+      "down_acceleration": 0.42400002,
+      "idle_time": 11,
+      "move_variation": 8,
+      "top_speed": 3.456,
+      "up_acceleration": 0.42400002
+    },
+    "tide:crystalline_carp": {
+      "avg_distance": 70,
+      "down_acceleration": 0.37,
+      "idle_time": 12,
+      "move_variation": 11,
+      "top_speed": 2.8799999,
+      "up_acceleration": 0.37
+    },
+    "tide:darkness_eater": {
+      "avg_distance": 86,
+      "down_acceleration": 0.6100001,
+      "idle_time": 8,
+      "move_variation": 23,
+      "top_speed": 5.44,
+      "up_acceleration": 0.6100001
+    },
+    "tide:deep_blue": {
+      "avg_distance": 76,
+      "down_acceleration": 0.565,
+      "idle_time": 8,
+      "move_variation": 15,
+      "top_speed": 4.96,
+      "up_acceleration": 0.565
+    },
+    "tide:deep_grouper": {
+      "avg_distance": 50,
+      "down_acceleration": 0.46,
+      "idle_time": 10,
+      "move_variation": 5,
+      "top_speed": 3.8400002,
+      "up_acceleration": 0.46
+    },
+    "tide:devils_hole_pupfish": {
+      "avg_distance": 80,
+      "down_acceleration": 0.73,
+      "idle_time": 6,
+      "move_variation": 17,
+      "top_speed": 6.72,
+      "up_acceleration": 0.73
+    },
+    "tide:dragon_fish": {
+      "avg_distance": 92,
+      "down_acceleration": 0.67,
+      "idle_time": 7,
+      "move_variation": 29,
+      "top_speed": 6.08,
+      "up_acceleration": 0.67
+    },
+    "tide:dripstone_darter": {
+      "avg_distance": 70,
+      "down_acceleration": 0.49,
+      "idle_time": 10,
+      "move_variation": 11,
+      "top_speed": 4.16,
+      "up_acceleration": 0.49
+    },
+    "tide:dutchman_sock": {
+      "avg_distance": 65,
+      "down_acceleration": 0.52000004,
+      "idle_time": 9,
+      "move_variation": 9,
+      "top_speed": 4.48,
+      "up_acceleration": 0.52000004
+    },
+    "tide:echo_snapper": {
+      "avg_distance": 80,
+      "down_acceleration": 0.34,
+      "idle_time": 12,
+      "move_variation": 17,
+      "top_speed": 2.5600002,
+      "up_acceleration": 0.34
+    },
+    "tide:elytrout": {
+      "avg_distance": 65,
+      "down_acceleration": 0.535,
+      "idle_time": 9,
+      "move_variation": 9,
+      "top_speed": 4.6400003,
+      "up_acceleration": 0.535
+    },
+    "tide:ember_koi": {
+      "avg_distance": 60,
+      "down_acceleration": 0.32500002,
+      "idle_time": 12,
+      "move_variation": 8,
+      "top_speed": 2.4,
+      "up_acceleration": 0.32500002
+    },
+    "tide:ender_glider": {
+      "avg_distance": 55,
+      "down_acceleration": 0.475,
+      "idle_time": 10,
+      "move_variation": 6,
+      "top_speed": 4.0,
+      "up_acceleration": 0.475
+    },
+    "tide:enderfin": {
+      "avg_distance": 60,
+      "down_acceleration": 0.475,
+      "idle_time": 10,
+      "move_variation": 8,
+      "top_speed": 4.0,
+      "up_acceleration": 0.475
+    },
+    "tide:endergazer": {
+      "avg_distance": 68,
+      "down_acceleration": 0.43,
+      "idle_time": 11,
+      "move_variation": 11,
+      "top_speed": 3.5200002,
+      "up_acceleration": 0.43
+    },
+    "tide:flounder": {
+      "avg_distance": 45,
+      "down_acceleration": 0.34,
+      "idle_time": 12,
+      "move_variation": 4,
+      "top_speed": 2.5600002,
+      "up_acceleration": 0.34
+    },
+    "tide:frostbite_flounder": {
+      "avg_distance": 55,
+      "down_acceleration": 0.37,
+      "idle_time": 12,
+      "move_variation": 6,
+      "top_speed": 2.8799999,
+      "up_acceleration": 0.37
+    },
+    "tide:gilded_minnow": {
+      "avg_distance": 70,
+      "down_acceleration": 0.43,
+      "idle_time": 11,
+      "move_variation": 11,
+      "top_speed": 3.5200002,
+      "up_acceleration": 0.43
+    },
+    "tide:glowfish": {
+      "avg_distance": 50,
+      "down_acceleration": 0.43,
+      "idle_time": 11,
+      "move_variation": 5,
+      "top_speed": 3.5200002,
+      "up_acceleration": 0.43
+    },
+    "tide:great_white_shark": {
+      "avg_distance": 85,
+      "down_acceleration": 0.6100001,
+      "idle_time": 8,
+      "move_variation": 22,
+      "top_speed": 5.44,
+      "up_acceleration": 0.6100001
+    },
+    "tide:guppy": {
+      "avg_distance": 20,
+      "down_acceleration": 0.43,
+      "idle_time": 11,
+      "move_variation": 2,
+      "top_speed": 3.5200002,
+      "up_acceleration": 0.43
+    },
+    "tide:incandescent_larva": {
+      "avg_distance": 65,
+      "down_acceleration": 0.565,
+      "idle_time": 8,
+      "move_variation": 9,
+      "top_speed": 4.96,
+      "up_acceleration": 0.565
+    },
+    "tide:inferno_guppy": {
+      "avg_distance": 40,
+      "down_acceleration": 0.475,
+      "idle_time": 10,
+      "move_variation": 4,
+      "top_speed": 4.0,
+      "up_acceleration": 0.475
+    },
+    "tide:iron_tetra": {
+      "avg_distance": 65,
+      "down_acceleration": 0.4,
+      "idle_time": 11,
+      "move_variation": 9,
+      "top_speed": 3.2,
+      "up_acceleration": 0.4
+    },
+    "tide:judgment_fish": {
+      "avg_distance": 73,
+      "down_acceleration": 0.58000004,
+      "idle_time": 8,
+      "move_variation": 13,
+      "top_speed": 5.1200004,
+      "up_acceleration": 0.58000004
+    },
+    "tide:lapis_lanternfish": {
+      "avg_distance": 60,
+      "down_acceleration": 0.4,
+      "idle_time": 11,
+      "move_variation": 8,
+      "top_speed": 3.2,
+      "up_acceleration": 0.4
+    },
+    "tide:largemouth_bass": {
+      "avg_distance": 40,
+      "down_acceleration": 0.35500002,
+      "idle_time": 12,
+      "move_variation": 4,
+      "top_speed": 2.72,
+      "up_acceleration": 0.35500002
+    },
+    "tide:luminescent_jellyfish": {
+      "avg_distance": 68,
+      "down_acceleration": 0.37,
+      "idle_time": 12,
+      "move_variation": 11,
+      "top_speed": 2.8799999,
+      "up_acceleration": 0.37
+    },
+    "tide:mackerel": {
+      "avg_distance": 50,
+      "down_acceleration": 0.4,
+      "idle_time": 11,
+      "move_variation": 5,
+      "top_speed": 3.2,
+      "up_acceleration": 0.4
+    },
+    "tide:magma_mackerel": {
+      "avg_distance": 65,
+      "down_acceleration": 0.4,
+      "idle_time": 11,
+      "move_variation": 9,
+      "top_speed": 3.2,
+      "up_acceleration": 0.4
+    },
+    "tide:mahi_mahi": {
+      "avg_distance": 70,
+      "down_acceleration": 0.52000004,
+      "idle_time": 9,
+      "move_variation": 11,
+      "top_speed": 4.48,
+      "up_acceleration": 0.52000004
+    },
+    "tide:manta_ray": {
+      "avg_distance": 76,
+      "down_acceleration": 0.49,
+      "idle_time": 10,
+      "move_variation": 15,
+      "top_speed": 4.16,
+      "up_acceleration": 0.49
+    },
+    "tide:mantyvern": {
+      "avg_distance": 78,
+      "down_acceleration": 0.565,
+      "idle_time": 8,
+      "move_variation": 16,
+      "top_speed": 4.96,
+      "up_acceleration": 0.565
+    },
+    "tide:marstilus": {
+      "avg_distance": 82,
+      "down_acceleration": 0.52000004,
+      "idle_time": 9,
+      "move_variation": 19,
+      "top_speed": 4.48,
+      "up_acceleration": 0.52000004
+    },
+    "tide:midas_fish": {
+      "avg_distance": 90,
+      "down_acceleration": 0.64000005,
+      "idle_time": 7,
+      "move_variation": 27,
+      "top_speed": 5.7599998,
+      "up_acceleration": 0.64000005
+    },
+    "tide:mirage_catfish": {
+      "avg_distance": 45,
+      "down_acceleration": 0.52000004,
+      "idle_time": 9,
+      "move_variation": 4,
+      "top_speed": 4.48,
+      "up_acceleration": 0.52000004
+    },
+    "tide:mooneye": {
+      "avg_distance": 70,
+      "down_acceleration": 0.64000005,
+      "idle_time": 7,
+      "move_variation": 11,
+      "top_speed": 5.7599998,
+      "up_acceleration": 0.64000005
+    },
+    "tide:nephrosilu": {
+      "avg_distance": 80,
+      "down_acceleration": 0.595,
+      "idle_time": 8,
+      "move_variation": 17,
+      "top_speed": 5.28,
+      "up_acceleration": 0.595
+    },
+    "tide:neptune_koi": {
+      "avg_distance": 75,
+      "down_acceleration": 0.49,
+      "idle_time": 10,
+      "move_variation": 14,
+      "top_speed": 4.16,
+      "up_acceleration": 0.49
+    },
+    "tide:obsidian_pike": {
+      "avg_distance": 65,
+      "down_acceleration": 0.475,
+      "idle_time": 10,
+      "move_variation": 9,
+      "top_speed": 4.0,
+      "up_acceleration": 0.475
+    },
+    "tide:ocean_perch": {
+      "avg_distance": 40,
+      "down_acceleration": 0.43,
+      "idle_time": 11,
+      "move_variation": 4,
+      "top_speed": 3.5200002,
+      "up_acceleration": 0.43
+    },
+    "tide:pale_clubfish": {
+      "avg_distance": 60,
+      "down_acceleration": 0.43,
+      "idle_time": 11,
+      "move_variation": 8,
+      "top_speed": 3.5200002,
+      "up_acceleration": 0.43
+    },
+    "tide:pentapus": {
+      "avg_distance": 80,
+      "down_acceleration": 0.595,
+      "idle_time": 8,
+      "move_variation": 17,
+      "top_speed": 5.28,
+      "up_acceleration": 0.595
+    },
+    "tide:pike": {
+      "avg_distance": 45,
+      "down_acceleration": 0.37,
+      "idle_time": 12,
+      "move_variation": 4,
+      "top_speed": 2.8799999,
+      "up_acceleration": 0.37
+    },
+    "tide:pluto_snail": {
+      "avg_distance": 87,
+      "down_acceleration": 0.34,
+      "idle_time": 12,
+      "move_variation": 24,
+      "top_speed": 2.5600002,
+      "up_acceleration": 0.34
+    },
+    "tide:rainbow_trout": {
+      "avg_distance": 30,
+      "down_acceleration": 0.32500002,
+      "idle_time": 12,
+      "move_variation": 3,
+      "top_speed": 2.4,
+      "up_acceleration": 0.32500002
+    },
+    "tide:red_40": {
+      "avg_distance": 75,
+      "down_acceleration": 0.475,
+      "idle_time": 10,
+      "move_variation": 14,
+      "top_speed": 4.0,
+      "up_acceleration": 0.475
+    },
+    "tide:red_snapper": {
+      "avg_distance": 40,
+      "down_acceleration": 0.4,
+      "idle_time": 11,
+      "move_variation": 4,
+      "top_speed": 3.2,
+      "up_acceleration": 0.4
+    },
+    "tide:sailfish": {
+      "avg_distance": 80,
+      "down_acceleration": 0.52000004,
+      "idle_time": 9,
+      "move_variation": 17,
+      "top_speed": 4.48,
+      "up_acceleration": 0.52000004
+    },
+    "tide:sand_tiger_shark": {
+      "avg_distance": 70,
+      "down_acceleration": 0.595,
+      "idle_time": 8,
+      "move_variation": 11,
+      "top_speed": 5.28,
+      "up_acceleration": 0.595
+    },
+    "tide:saturn_cuttlefish": {
+      "avg_distance": 82,
+      "down_acceleration": 0.46,
+      "idle_time": 10,
+      "move_variation": 19,
+      "top_speed": 3.8400002,
+      "up_acceleration": 0.46
+    },
+    "tide:shadow_shark": {
+      "avg_distance": 86,
+      "down_acceleration": 0.62500006,
+      "idle_time": 7,
+      "move_variation": 23,
+      "top_speed": 5.6,
+      "up_acceleration": 0.62500006
+    },
+    "tide:shadow_snapper": {
+      "avg_distance": 55,
+      "down_acceleration": 0.43,
+      "idle_time": 11,
+      "move_variation": 6,
+      "top_speed": 3.5200002,
+      "up_acceleration": 0.43
+    },
+    "tide:shooting_starfish": {
+      "avg_distance": 88,
+      "down_acceleration": 0.76000005,
+      "idle_time": 5,
+      "move_variation": 25,
+      "top_speed": 7.0400004,
+      "up_acceleration": 0.76000005
+    },
+    "tide:sleepy_carp": {
+      "avg_distance": 78,
+      "down_acceleration": 0.29500002,
+      "idle_time": 13,
+      "move_variation": 16,
+      "top_speed": 2.08,
+      "up_acceleration": 0.29500002
+    },
+    "tide:slimy_salmon": {
+      "avg_distance": 50,
+      "down_acceleration": 0.52000004,
+      "idle_time": 9,
+      "move_variation": 5,
+      "top_speed": 4.48,
+      "up_acceleration": 0.52000004
+    },
+    "tide:smallmouth_bass": {
+      "avg_distance": 40,
+      "down_acceleration": 0.37,
+      "idle_time": 12,
+      "move_variation": 4,
+      "top_speed": 2.8799999,
+      "up_acceleration": 0.37
+    },
+    "tide:snatcher_squid": {
+      "avg_distance": 80,
+      "down_acceleration": 0.55,
+      "idle_time": 9,
+      "move_variation": 17,
+      "top_speed": 4.8,
+      "up_acceleration": 0.55
+    },
+    "tide:snook": {
+      "avg_distance": 45,
+      "down_acceleration": 0.43,
+      "idle_time": 11,
+      "move_variation": 4,
+      "top_speed": 3.5200002,
+      "up_acceleration": 0.43
+    },
+    "tide:soulscale": {
+      "avg_distance": 60,
+      "down_acceleration": 0.445,
+      "idle_time": 10,
+      "move_variation": 8,
+      "top_speed": 3.68,
+      "up_acceleration": 0.445
+    },
+    "tide:spore_stalker": {
+      "avg_distance": 50,
+      "down_acceleration": 0.49,
+      "idle_time": 10,
+      "move_variation": 5,
+      "top_speed": 4.16,
+      "up_acceleration": 0.49
+    },
+    "tide:sturgeon": {
+      "avg_distance": 60,
+      "down_acceleration": 0.58000004,
+      "idle_time": 8,
+      "move_variation": 8,
+      "top_speed": 5.1200004,
+      "up_acceleration": 0.58000004
+    },
+    "tide:sun_emblem": {
+      "avg_distance": 83,
+      "down_acceleration": 0.49,
+      "idle_time": 10,
+      "move_variation": 20,
+      "top_speed": 4.16,
+      "up_acceleration": 0.49
+    },
+    "tide:swordfish": {
+      "avg_distance": 80,
+      "down_acceleration": 0.52000004,
+      "idle_time": 9,
+      "move_variation": 17,
+      "top_speed": 4.48,
+      "up_acceleration": 0.52000004
+    },
+    "tide:tuna": {
+      "avg_distance": 55,
+      "down_acceleration": 0.46,
+      "idle_time": 10,
+      "move_variation": 6,
+      "top_speed": 3.8400002,
+      "up_acceleration": 0.46
+    },
+    "tide:uranias_pisces": {
+      "avg_distance": 80,
+      "down_acceleration": 0.6100001,
+      "idle_time": 8,
+      "move_variation": 17,
+      "top_speed": 5.44,
+      "up_acceleration": 0.6100001
+    },
+    "tide:vengeance": {
+      "avg_distance": 80,
+      "down_acceleration": 0.60400003,
+      "idle_time": 8,
+      "move_variation": 17,
+      "top_speed": 5.376,
+      "up_acceleration": 0.60400003
+    },
+    "tide:violet_carp": {
+      "avg_distance": 70,
+      "down_acceleration": 0.445,
+      "idle_time": 10,
+      "move_variation": 11,
+      "top_speed": 3.68,
+      "up_acceleration": 0.445
+    },
+    "tide:voidseeker": {
+      "avg_distance": 90,
+      "down_acceleration": 0.65500003,
+      "idle_time": 7,
+      "move_variation": 27,
+      "top_speed": 5.92,
+      "up_acceleration": 0.65500003
+    },
+    "tide:volcano_tuna": {
+      "avg_distance": 70,
+      "down_acceleration": 0.49,
+      "idle_time": 10,
+      "move_variation": 11,
+      "top_speed": 4.16,
+      "up_acceleration": 0.49
+    },
+    "tide:walleye": {
+      "avg_distance": 45,
+      "down_acceleration": 0.43,
+      "idle_time": 11,
+      "move_variation": 4,
+      "top_speed": 3.5200002,
+      "up_acceleration": 0.43
+    },
+    "tide:warped_guppy": {
+      "avg_distance": 50,
+      "down_acceleration": 0.445,
+      "idle_time": 10,
+      "move_variation": 5,
+      "top_speed": 3.68,
+      "up_acceleration": 0.445
+    },
+    "tide:white_crappie": {
+      "avg_distance": 35,
+      "down_acceleration": 0.35500002,
+      "idle_time": 12,
+      "move_variation": 3,
+      "top_speed": 2.72,
+      "up_acceleration": 0.35500002
+    },
+    "tide:witherfin": {
+      "avg_distance": 70,
+      "down_acceleration": 0.445,
+      "idle_time": 10,
+      "move_variation": 11,
+      "top_speed": 3.68,
+      "up_acceleration": 0.445
+    },
+    "tide:yellow_perch": {
+      "avg_distance": 35,
+      "down_acceleration": 0.385,
+      "idle_time": 11,
+      "move_variation": 3,
+      "top_speed": 3.04,
+      "up_acceleration": 0.385
+    }
+  }
+}

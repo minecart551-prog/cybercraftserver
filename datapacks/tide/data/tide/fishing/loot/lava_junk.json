@@ -1,0 +1,11 @@
+{
+  "conditions": [
+    {
+      "type": "tide:fluid",
+      "fluid": "lava"
+    }
+  ],
+  "loot_table": "tide:gameplay/fishing/junk_lava",
+  "quality": -1.0,
+  "weight": 30.0
+}

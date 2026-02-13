@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:cherry_grove",
+    {
+      "id": "biomesoplenty:snowblossom_grove",
+      "required": false
+    }
+  ]
+}

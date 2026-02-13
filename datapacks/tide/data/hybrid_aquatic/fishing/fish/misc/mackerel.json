@@ -1,0 +1,14 @@
+{
+  "parent": "tide:mackerel",
+  "display_data": {
+    "entity": "hybrid-aquatic:mackerel",
+    "roll": -90.0,
+    "x": 0.02,
+    "y": -0.1,
+    "z": 0.08
+  },
+  "fish": "hybrid-aquatic:mackerel",
+  "journal_profile": {
+    "description": "journal.description.hybrid-aquatic.mackerel"
+  }
+}

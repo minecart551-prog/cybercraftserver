@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "#c:is_ocean",
+    "#c:is_beach",
+    "minecraft:stony_shore",
+    "minecraft:mushroom_fields"
+  ]
+}

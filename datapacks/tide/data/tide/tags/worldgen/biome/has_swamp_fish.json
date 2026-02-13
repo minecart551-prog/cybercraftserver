@@ -1,0 +1,30 @@
+{
+  "replace": false,
+  "values": [
+    "#c:is_swamp",
+    {
+      "id": "hybrid-aquatic:swamp",
+      "required": false
+    },
+    {
+      "id": "hybrid-aquatic:mangroves",
+      "required": false
+    },
+    {
+      "id": "hybrid-aquatic:marshes",
+      "required": false
+    },
+    {
+      "id": "biomesoplenty:bayou",
+      "required": false
+    },
+    {
+      "id": "biomesoplenty:bog",
+      "required": false
+    },
+    {
+      "id": "biomesoplenty:marsh",
+      "required": false
+    }
+  ]
+}
