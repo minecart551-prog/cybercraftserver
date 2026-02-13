@@ -1,0 +1,18 @@
+{
+    "Scripts": [
+        {
+            "Script": "",
+            "Console": [
+            ],
+            "ScriptList": [
+                {
+                    "Line": "playerscript/caravsugarcheck.js"
+                }
+            ]
+        }
+    ],
+    "ScriptLanguage": "ECMAScript",
+    "ScriptConsole": [
+    ],
+    "ScriptEnabled": 1b
+}
