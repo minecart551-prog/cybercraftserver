@@ -1,4 +1,4 @@
-// Menu Editor NPC Script - Create and modify menu with prices
+// HARDENED Menu Editor NPC Script - Create and modify menu with prices
 // Place this in the NPC's Interact, customGuiButton, customGuiSlotClicked, and customGuiClosed events
 
 var guiRef;                 
@@ -32,6 +32,142 @@ var ID_SET_ROWS_BUTTON = 116;
 var ID_ADD_TAB = 117;
 var ID_REMOVE_TAB = 118;
 
+// ========== CORRUPTION RESISTANCE LAYER ==========
+
+// Safe JSON parse with fallback
+function safeJSONParse(jsonString, defaultValue) {
+    if (!jsonString || jsonString.length === 0) {
+        return defaultValue;
+    }
+    try {
+        return JSON.parse(jsonString);
+    } catch(e) {
+        return defaultValue;
+    }
+}
+
+// Safe data retrieval with validation
+function safeGetData(storageData, key, defaultValue) {
+    if (!storageData.has(key)) {
+        return defaultValue;
+    }
+    var rawData = storageData.get(key);
+    if (!rawData || rawData.length() === 0) {
+        return defaultValue;
+    }
+    return rawData;
+}
+
+// Atomic save with validation - ensures data is valid before saving
+function atomicSave(storageData, key, value) {
+    try {
+        // Validate the value can be stringified
+        var jsonString = JSON.stringify(value);
+        
+        // Extra validation: ensure it's not empty
+        if (!jsonString || jsonString.length === 0) {
+            return false;
+        }
+        
+        // Verify it can be parsed back (round-trip test)
+        JSON.parse(jsonString);
+        
+        // Only save if all validations pass
+        storageData.put(key, jsonString);
+        return true;
+    } catch(e) {
+        return false;
+    }
+}
+
+// Load data with automatic repair
+function loadMenuItems(npcData) {
+    var rawData = safeGetData(npcData, "MenuItems", null);
+    if (rawData === null) {
+        // No data - initialize fresh
+        var emptyData = {};
+        atomicSave(npcData, "MenuItems", emptyData);
+        return emptyData;
+    }
+    
+    var parsed = safeJSONParse(rawData, null);
+    if (parsed === null) {
+        // Corrupted data - reinitialize
+        var emptyData = {};
+        atomicSave(npcData, "MenuItems", emptyData);
+        return emptyData;
+    }
+    
+    return parsed;
+}
+
+function loadTabItems(npcData, expectedLength) {
+    var rawData = safeGetData(npcData, "TabItems", null);
+    if (rawData === null) {
+        var defaultArray = makeNullArray(expectedLength);
+        atomicSave(npcData, "TabItems", defaultArray);
+        return defaultArray;
+    }
+    
+    var parsed = safeJSONParse(rawData, null);
+    if (parsed === null || !Array.isArray(parsed)) {
+        var defaultArray = makeNullArray(expectedLength);
+        atomicSave(npcData, "TabItems", defaultArray);
+        return defaultArray;
+    }
+    
+    // Ensure correct length
+    while (parsed.length < expectedLength) {
+        parsed.push(null);
+    }
+    if (parsed.length > expectedLength) {
+        parsed = parsed.slice(0, expectedLength);
+    }
+    
+    return parsed;
+}
+
+function loadTabRows(npcData, currentPage) {
+    var rawData = safeGetData(npcData, "TabRows", null);
+    if (rawData === null) {
+        return 20; // Default
+    }
+    
+    var parsed = safeJSONParse(rawData, {});
+    if (parsed[currentPage] !== undefined) {
+        return parsed[currentPage];
+    }
+    return 20; // Default
+}
+
+function saveTabRowConfig(npcData, rows) {
+    var rawData = safeGetData(npcData, "TabRows", null);
+    var tabRowsConfig = safeJSONParse(rawData, {});
+    
+    tabRowsConfig[currentPage] = rows;
+    atomicSave(npcData, "TabRows", tabRowsConfig);
+}
+
+function loadGlobalMenuData(worldData) {
+    var rawData = safeGetData(worldData, "GlobalMenuData", null);
+    if (rawData === null) {
+        var emptyData = {};
+        atomicSave(worldData, "GlobalMenuData", emptyData);
+        return emptyData;
+    }
+    
+    var parsed = safeJSONParse(rawData, null);
+    if (parsed === null) {
+        var emptyData = {};
+        atomicSave(worldData, "GlobalMenuData", emptyData);
+        return emptyData;
+    }
+    
+    return parsed;
+}
+
+// ========== END CORRUPTION RESISTANCE LAYER ==========
+
 function makeNullArray(n){
     var a = new Array(n);
     for (var i = 0; i < n; i++){ a[i] = null; }
@@ -40,40 +176,15 @@ function makeNullArray(n){
 
 // Load total rows for current tab
 function loadTabRowConfig(npcData) {
-    if(npcData.has("TabRows")) {
-        try {
-            var tabRowsConfig = JSON.parse(npcData.get("TabRows"));
-            if(tabRowsConfig[currentPage] !== undefined) {
-                totalRows = tabRowsConfig[currentPage];
-            } else {
-                totalRows = 20;
-            }
-        } catch(e) {
-            totalRows = 20;
-        }
-    } else {
-        totalRows = 20;
-    }
-}
-
-// Save total rows for current tab
-function saveTabRowConfig(npcData, rows) {
-    var tabRowsConfig = {};
-    if(npcData.has("TabRows")) {
-        try {
-            tabRowsConfig = JSON.parse(npcData.get("TabRows"));
-        } catch(e) {}
-    }
-    tabRowsConfig[currentPage] = rows;
-    npcData.put("TabRows", JSON.stringify(tabRowsConfig));
+    totalRows = loadTabRows(npcData, currentPage);
 }
 
 // Load max pages
 function loadMaxPages(npcData) {
     if(npcData.has("MaxPages")) {
         try {
-            maxPages = npcData.get("MaxPages");
-            if(maxPages < 1) maxPages = 1;
+            maxPages = parseInt(npcData.get("MaxPages"));
+            if(isNaN(maxPages) || maxPages < 1) maxPages = 1;
             if(maxPages > 10) maxPages = 10;
         } catch(e) {
             maxPages = 5;
@@ -85,7 +196,7 @@ function loadMaxPages(npcData) {
 
 // Save max pages
 function saveMaxPages(npcData, pages) {
-    npcData.put("MaxPages", pages);
+    npcData.put("MaxPages", "" + pages);
 }
 
 // ========== Layout ==========
@@ -128,10 +239,8 @@ function interact(event) {
     // Load row configuration for this tab
     loadTabRowConfig(npcData);
     
-    // Load menu items from NPC storage
-    storedSlotItems = npcData.has("MenuItems") 
-        ? JSON.parse(npcData.get("MenuItems")) 
-        : {};
+    // Load menu items with corruption protection
+    storedSlotItems = loadMenuItems(npcData);
     
     var adminMode = (player.getMainhandItem() && player.getMainhandItem().getName() === "minecraft:bedrock");
     
@@ -150,18 +259,8 @@ function interact(event) {
         }
     }
     
-    var storedTabItems = npcData.has("TabItems")
-        ? JSON.parse(npcData.get("TabItems"))
-        : makeNullArray(maxPages);
-    
-    // Ensure storedTabItems matches current maxPages
-    if(storedTabItems.length < maxPages){
-        while(storedTabItems.length < maxPages){
-            storedTabItems.push(null);
-        }
-    } else if(storedTabItems.length > maxPages){
-        storedTabItems = storedTabItems.slice(0, maxPages);
-    }
+    // Load tab items with corruption protection
+    var storedTabItems = loadTabItems(npcData, maxPages);
     
     var totalSlots = totalRows * numCols;
     if(!storedSlotItems[currentPage]){
@@ -368,14 +467,45 @@ function customGuiButton(event){
             return;
         }
         
+        // Save current viewport items FIRST
         savePageItems();
-        totalRows = newRows;
         
+        // Load ALL existing items from storage to preserve them
         if(lastNpc) {
             var npcData = lastNpc.getStoreddata();
+            var allItems = loadMenuItems(npcData);
+            
+            // Get old array for current page
+            var oldArray = allItems[currentPage] || [];
+            var newTotalSlots = newRows * numCols;
+            
+            // Create new array with new size
+            var newArray = makeNullArray(newTotalSlots);
+            
+            // Copy over existing items
+            var copyLimit = Math.min(oldArray.length, newTotalSlots);
+            for(var i = 0; i < copyLimit; i++){
+                newArray[i] = oldArray[i];
+            }
+            
+            // Update storage with resized array
+            allItems[currentPage] = newArray;
+            storedSlotItems = allItems;
+            
+            // Save back to NPC using atomic save
+            if(!atomicSave(npcData, "MenuItems", allItems)){
+                player.message("§cFailed to save menu data!");
+                return;
+            }
+            
+            // Update total rows
+            totalRows = newRows;
+            
+            // Save row config
             saveTabRowConfig(npcData, totalRows);
         }
         
+        // Reset viewport if out of bounds
         var maxViewportRow = Math.max(0, totalRows - viewportRows);
         if(viewportRow > maxViewportRow) {
             viewportRow = maxViewportRow;
@@ -393,8 +523,39 @@ function customGuiButton(event){
             return;
         }
         
-        savePageItems();
-        saveTabItems();
+        // Save current state with atomic protection
+        if(lastNpc && mySlots && mySlots.length > 0){
+            var npcData = lastNpc.getStoreddata();
+            var allItems = loadMenuItems(npcData);
+            
+            // Ensure current page array exists
+            var totalSlots = totalRows * numCols;
+            if(!allItems[currentPage]){
+                allItems[currentPage] = makeNullArray(totalSlots);
+            }
+            
+            // Save visible viewport items
+            for(var i = 0; i < mySlots.length; i++){
+                var globalIndex = viewportToGlobal(i);
+                var stack = mySlots[i].getStack();
+                allItems[currentPage][globalIndex] = stack && !stack.isEmpty() ? stack.getItemNbt().toJsonString() : null;
+            }
+            
+            // Atomic save
+            if(!atomicSave(npcData, "MenuItems", allItems)){
+                player.message("§cFailed to save menu data!");
+                return;
+            }
+            
+            // Save tab items
+            if(tabSlots && tabSlots.length > 0){
+                var tabItems = tabSlots.map(function(slot){
+                    var stack = slot.getStack();
+                    return (stack && !stack.isEmpty()) ? stack.getItemNbt().toJsonString() : null;
+                });
+                atomicSave(npcData, "TabItems", tabItems);
+            }
+        }
         
         maxPages++;
         if(lastNpc){
@@ -426,13 +587,7 @@ function customGuiButton(event){
         
         if(lastNpc){
             var npcData = lastNpc.getStoreddata();
-            
-            var allItems = {};
-            if(npcData.has("MenuItems")){
-                try {
-                    allItems = JSON.parse(npcData.get("MenuItems"));
-                } catch(e) {}
-            }
+            var allItems = loadMenuItems(npcData);
             
             // Clean up ghost tabs
             for(var key in allItems){
@@ -470,46 +625,37 @@ function customGuiButton(event){
                 }
             }
             
+            // Atomic save
             var freshNpcData = lastNpc.getStoreddata();
-            freshNpcData.put("MenuItems", JSON.stringify(newAllItems));
-            
-            // Handle tab items
-            var allTabItems = [];
-            if(npcData.has("TabItems")){
-                try {
-                    allTabItems = JSON.parse(npcData.get("TabItems"));
-                } catch(e) {
-                    allTabItems = makeNullArray(maxPages);
-                }
-            } else {
-                allTabItems = makeNullArray(maxPages);
+            if(!atomicSave(freshNpcData, "MenuItems", newAllItems)){
+                player.message("§cFailed to save menu data!");
+                return;
             }
             
+            // Handle tab items
+            var allTabItems = loadTabItems(npcData, maxPages);
             var newTabItems = [];
             for(var oldIndex = 0; oldIndex < maxPages; oldIndex++){
                 if(oldIndex !== tabToDelete){
                     newTabItems.push(allTabItems[oldIndex] || null);
                 }
             }
-            freshNpcData.put("TabItems", JSON.stringify(newTabItems));
+            atomicSave(freshNpcData, "TabItems", newTabItems);
             
             // Handle row configs
-            if(freshNpcData.has("TabRows")){
-                try {
-                    var tabRowsConfig = JSON.parse(npcData.get("TabRows"));
-                    var newRowsConfig = {};
-                    newIndex = 0;
-                    for(var oldIndex = 0; oldIndex < maxPages; oldIndex++){
-                        if(oldIndex !== tabToDelete){
-                            if(tabRowsConfig[oldIndex] !== undefined){
-                                newRowsConfig[newIndex] = tabRowsConfig[oldIndex];
-                            }
-                            newIndex++;
-                        }
+            var rawTabRows = safeGetData(freshNpcData, "TabRows", null);
+            var tabRowsConfig = safeJSONParse(rawTabRows, {});
+            var newRowsConfig = {};
+            newIndex = 0;
+            for(var oldIndex = 0; oldIndex < maxPages; oldIndex++){
+                if(oldIndex !== tabToDelete){
+                    if(tabRowsConfig[oldIndex] !== undefined){
+                        newRowsConfig[newIndex] = tabRowsConfig[oldIndex];
                     }
-                    freshNpcData.put("TabRows", JSON.stringify(newRowsConfig));
-                } catch(e) {}
+                    newIndex++;
+                }
             }
+            atomicSave(freshNpcData, "TabRows", newRowsConfig);
         }
         
         maxPages--;
@@ -612,57 +758,6 @@ function customGuiButton(event){
     
     savePageItems();
     saveToGlobalData();
-    
-    // Debug: Show what we're trying to save
-    var itemsWithPrices = 0;
-    var totalItems = 0;
-    for(var pageKey in storedSlotItems){
-        if(storedSlotItems.hasOwnProperty(pageKey)){
-            var pageItems = storedSlotItems[pageKey];
-            if(Array.isArray(pageItems)){
-                for(var i = 0; i < pageItems.length; i++){
-                    if(pageItems[i]){
-                        totalItems++;
-                        try {
-                            var cleanNbt = pageItems[i].replace(/(\d+)(d|b|s|f|L)\b/g, '$1');
-                            var nbtObj = JSON.parse(cleanNbt);
-                            if(nbtObj.tag && nbtObj.tag.display && nbtObj.tag.display.Lore){
-                                var lore = nbtObj.tag.display.Lore;
-                                if(Array.isArray(lore)){
-                                    for(var j = 0; j < lore.length; j++){
-                                        var line = String(lore[j]).replace(/§./g, "").replace(/["']/g, "");
-                                        if(line.indexOf("Price:") !== -1){
-                                            itemsWithPrices++;
-                                            break;
-                                        }
-                                    }
-                                }
-                            }
-                        } catch(e) {
-                            player.message("§c[Debug] Parse error: " + e);
-                        }
-                    }
-                }
-            }
-        }
-    }
-    
-    player.message("§7[Debug] Found " + totalItems + " total items, " + itemsWithPrices + " with prices");
-    
-    // Debug: confirm save
-    var world = lastNpc.getWorld();
-    var worldData = world.getStoreddata();
-    if(worldData.has("GlobalMenuData")){
-        try {
-            var testData = JSON.parse(worldData.get("GlobalMenuData"));
-            var count = Object.keys(testData).length;
-            player.message("§7[Debug] Global menu now has " + count + " items");
-        } catch(e) {
-            player.message("§c[Debug] Error reading global menu: " + e);
-        }
-    } else {
-        player.message("§c[Debug] GlobalMenuData not found in world storage!");
-    }
 }
 
 function customGuiSlotClicked(event) {
@@ -807,7 +902,8 @@ function savePageItems(){
         storedSlotItems[currentPage][globalIndex] = stack && !stack.isEmpty() ? stack.getItemNbt().toJsonString() : null;
     }
     
-    npcData.put("MenuItems", JSON.stringify(storedSlotItems));
+    // Use atomic save
+    atomicSave(npcData, "MenuItems", storedSlotItems);
 }
 
 function saveTabItems(){
@@ -816,13 +912,11 @@ function saveTabItems(){
     var npcData = lastNpc.getStoreddata();
     var tabItems = tabSlots.map(function(slot){
         var stack = slot.getStack();
-        if(stack && !stack.isEmpty()){
-            return stack.getItemNbt().toJsonString();
-        }
-        return null;
+        return (stack && !stack.isEmpty()) ? stack.getItemNbt().toJsonString() : null;
     });
     
-    npcData.put("TabItems", JSON.stringify(tabItems));
+    // Use atomic save
+    atomicSave(npcData, "TabItems", tabItems);
 }
 
 function saveToGlobalData(){
@@ -830,7 +924,6 @@ function saveToGlobalData(){
     
     var world = lastNpc.getWorld();
     var worldData = world.getStoreddata();
-    var npcData = lastNpc.getStoreddata();
     
     // Build menu with prices from all items
     var globalMenu = {};
@@ -851,7 +944,8 @@ function saveToGlobalData(){
                 var cleanNbt = itemNbt.replace(/(\d+)(d|b|s|f|L)\b/g, '$1');
                 
                 // Parse NBT string to get the item's lore
-                var nbtObj = JSON.parse(cleanNbt);
+                var nbtObj = safeJSONParse(cleanNbt, null);
+                if(!nbtObj) continue;
                 
                 var price = null;
                 
@@ -866,13 +960,9 @@ function saveToGlobalData(){
                             
                             // CustomNPCs uses JSON format like: {"translate":"§aPrice: §e100¢"}
                             // Try to parse as JSON first
-                            try {
-                                var loreJson = JSON.parse(line);
-                                if(loreJson.translate){
-                                    line = loreJson.translate;
-                                }
-                            } catch(e) {
-                                // Not JSON, use as-is
+                            var loreJson = safeJSONParse(line, null);
+                            if(loreJson && loreJson.translate){
+                                line = loreJson.translate;
                             }
                             
                             // Remove color codes and quotes
@@ -891,13 +981,9 @@ function saveToGlobalData(){
                             var line = String(loreArray[key]);
                             
                             // Try to parse as JSON first
-                            try {
-                                var loreJson = JSON.parse(line);
-                                if(loreJson.translate){
-                                    line = loreJson.translate;
-                                }
-                            } catch(e) {
-                                // Not JSON, use as-is
+                            var loreJson = safeJSONParse(line, null);
+                            if(loreJson && loreJson.translate){
+                                line = loreJson.translate;
                             }
                             
                             var cleanLine = line.replace(/§./g, "").replace(/["']/g, "");
@@ -921,20 +1007,13 @@ function saveToGlobalData(){
                     };
                 }
             } catch(e) {
-                // Log parsing errors for debugging
-                if(lastNpc && lastNpc.getWorld){
-                    try {
-                        var nearbyPlayers = world.getNearbyEntities(lastNpc.getX(), lastNpc.getY(), lastNpc.getZ(), 10, 1);
-                        if(nearbyPlayers && nearbyPlayers.length > 0){
-                            nearbyPlayers[0].message("§c[Debug] Error parsing item " + i + ": " + e);
-                        }
-                    } catch(e2) {}
-                }
+                // Skip items that can't be parsed
             }
         }
     }
     
-    worldData.put("GlobalMenuData", JSON.stringify(globalMenu));
+    // Use atomic save for global menu data
+    atomicSave(worldData, "GlobalMenuData", globalMenu);
 }
 
 function countPlayerCoins(player) {
