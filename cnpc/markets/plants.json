@@ -1,0 +1,165 @@
+{
+    "TraderCurrency": {
+        "NpcMiscInv": [
+            {
+                "Slot": 0b,
+                "id": "coins:stone_coin",
+                "Count": 3b
+            },
+            {
+                "Slot": 1b,
+                "id": "minecraft:torchflower",
+                "Count": 1b
+            },
+            {
+                "Slot": 3b,
+                "id": "coins:stone_coin",
+                "Count": 3b
+            },
+            {
+                "Slot": 4b,
+                "id": "minecraft:beetroot",
+                "Count": 1b
+            },
+            {
+                "Slot": 5b,
+                "id": "coins:stone_coin",
+                "Count": 10b
+            },
+            {
+                "Slot": 6b,
+                "id": "coins:stone_coin",
+                "Count": 3b
+            },
+            {
+                "Slot": 7b,
+                "id": "minecraft:carrot",
+                "Count": 1b
+            },
+            {
+                "Slot": 8b,
+                "id": "coins:stone_coin",
+                "Count": 5b
+            },
+            {
+                "Slot": 9b,
+                "id": "coins:stone_coin",
+                "Count": 3b
+            },
+            {
+                "Slot": 10b,
+                "id": "minecraft:potato",
+                "Count": 1b
+            },
+            {
+                "Slot": 11b,
+                "id": "coins:coal_coin",
+                "Count": 1b
+            },
+            {
+                "Slot": 12b,
+                "id": "coins:stone_coin",
+                "Count": 3b
+            },
+            {
+                "Slot": 13b,
+                "id": "minecraft:sweet_berries",
+                "Count": 2b
+            },
+            {
+                "Slot": 15b,
+                "id": "coins:stone_coin",
+                "Count": 3b
+            },
+            {
+                "Slot": 16b,
+                "id": "minecraft:melon_slice",
+                "Count": 1b
+            }
+        ]
+    },
+    "TraderIgnoreNBT": 0b,
+    "TraderSold": {
+        "NpcMiscInv": [
+            {
+                "Slot": 0b,
+                "id": "minecraft:torchflower_seeds",
+                "Count": 1b
+            },
+            {
+                "Slot": 1b,
+                "id": "coins:stone_coin",
+                "Count": 6b
+            },
+            {
+                "Slot": 3b,
+                "id": "minecraft:beetroot_seeds",
+                "Count": 1b
+            },
+            {
+                "Slot": 4b,
+                "id": "coins:stone_coin",
+                "Count": 5b
+            },
+            {
+                "Slot": 5b,
+                "id": "minecraft:water_bucket",
+                "Count": 1b
+            },
+            {
+                "Slot": 6b,
+                "id": "minecraft:carrot",
+                "Count": 1b
+            },
+            {
+                "Slot": 7b,
+                "id": "coins:stone_coin",
+                "Count": 1b
+            },
+            {
+                "Slot": 8b,
+                "id": "minecraft:wooden_hoe",
+                "tag": {
+                    "Damage": 0
+                },
+                "Count": 1b
+            },
+            {
+                "Slot": 9b,
+                "id": "minecraft:potato",
+                "Count": 1b
+            },
+            {
+                "Slot": 10b,
+                "id": "coins:stone_coin",
+                "Count": 1b
+            },
+            {
+                "Slot": 11b,
+                "id": "minecraft:dirt",
+                "Count": 1b
+            },
+            {
+                "Slot": 12b,
+                "id": "minecraft:sweet_berries",
+                "Count": 1b
+            },
+            {
+                "Slot": 13b,
+                "id": "coins:stone_coin",
+                "Count": 3b
+            },
+            {
+                "Slot": 15b,
+                "id": "minecraft:melon_seeds",
+                "Count": 1b
+            },
+            {
+                "Slot": 16b,
+                "id": "coins:stone_coin",
+                "Count": 1b
+            }
+        ]
+    },
+    "TraderIgnoreDamage": 1b
+}

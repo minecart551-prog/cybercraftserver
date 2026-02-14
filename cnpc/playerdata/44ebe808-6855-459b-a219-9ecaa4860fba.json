@@ -1,0 +1,74 @@
+{
+    "QuestData": {
+        "ActiveQuests": [
+        ],
+        "CompletedQuests": [
+        ]
+    },
+    "jacket": 0,
+    "FactionData": [
+        {
+            "Faction": 17,
+            "Points": 1000
+        },
+        {
+            "Faction": 4,
+            "Points": 1600
+        },
+        {
+            "Faction": 9,
+            "Points": 1000
+        },
+        {
+            "Faction": 13,
+            "Points": 1000
+        },
+        {
+            "Faction": 15,
+            "Points": 1000
+        }
+    ],
+    "face": 0,
+    "ItemGiverChained": [
+    ],
+    "ScriptStoreddata": {
+        "tourGuideTriggered": 1.0d
+    },
+    "hair": 0,
+    "ItemGiversList": [
+        {
+            "Long": 1768947659991L,
+            "Slot": 54
+        },
+        {
+            "Long": 1768948140697L,
+            "Slot": 55
+        },
+        {
+            "Long": 1768948155599L,
+            "Slot": 56
+        }
+    ],
+    "TransportData": [
+    ],
+    "DialogData": [
+    ],
+    "PlayerCompanionId": 0,
+    "body": 0,
+    "isActive": 0b,
+    "bodyColor": 0,
+    "NpcsTimers": [
+    ],
+    "shoes": 0,
+    "leg": 0,
+    "PlayerName": "University__",
+    "isMale": 0b,
+    "UUID": "44ebe808-6855-459b-a219-9ecaa4860fba",
+    "eyesColor": 0,
+    "MailData": [
+    ],
+    "BankData": [
+    ],
+    "peculiarities": [I;],
+    "hairColor": 0
+}

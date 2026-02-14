@@ -1,0 +1,121 @@
+{
+    "QuestData": {
+        "ActiveQuests": [
+            {
+                "ExtraData": {
+                },
+                "QuestCompleted": 0b,
+                "Quest": 1
+            }
+        ],
+        "CompletedQuests": [
+        ]
+    },
+    "jacket": 0,
+    "FactionData": [
+        {
+            "Faction": 17,
+            "Points": 1000
+        },
+        {
+            "Faction": 18,
+            "Points": 300
+        },
+        {
+            "Faction": 3,
+            "Points": 1000
+        },
+        {
+            "Faction": 4,
+            "Points": 1600
+        },
+        {
+            "Faction": 5,
+            "Points": 1000
+        },
+        {
+            "Faction": 6,
+            "Points": 1000
+        },
+        {
+            "Faction": 9,
+            "Points": 1000
+        },
+        {
+            "Faction": 10,
+            "Points": 1000
+        },
+        {
+            "Faction": 13,
+            "Points": 1000
+        },
+        {
+            "Faction": 15,
+            "Points": 1000
+        }
+    ],
+    "face": 0,
+    "ItemGiverChained": [
+    ],
+    "ScriptStoreddata": {
+        "canDoContract": 0.0d,
+        "contractKillsLeft": 1.0d,
+        "tourGuideTriggered": 1.0d,
+        "canGetPackage": 0.0d
+    },
+    "hair": 0,
+    "ItemGiversList": [
+        {
+            "Long": 1757390738849L,
+            "Slot": 32
+        },
+        {
+            "Long": 1758245896258L,
+            "Slot": 48
+        },
+        {
+            "Long": 1757302167185L,
+            "Slot": 27
+        },
+        {
+            "Long": 1757337239331L,
+            "Slot": 29
+        },
+        {
+            "Long": 1757341617531L,
+            "Slot": 30
+        },
+        {
+            "Long": 1757343167030L,
+            "Slot": 31
+        }
+    ],
+    "TransportData": [
+    ],
+    "DialogData": [
+        {
+            "Dialog": 4
+        },
+        {
+            "Dialog": 14
+        }
+    ],
+    "PlayerCompanionId": 0,
+    "body": 0,
+    "isActive": 0b,
+    "bodyColor": 0,
+    "NpcsTimers": [
+    ],
+    "shoes": 0,
+    "leg": 0,
+    "PlayerName": "ToniestTen648",
+    "isMale": 0b,
+    "UUID": "c1481222-d45b-4011-a47c-0ab832f8c9d4",
+    "eyesColor": 0,
+    "MailData": [
+    ],
+    "BankData": [
+    ],
+    "peculiarities": [I;],
+    "hairColor": 0
+}

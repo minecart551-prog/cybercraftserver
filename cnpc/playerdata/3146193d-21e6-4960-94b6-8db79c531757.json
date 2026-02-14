@@ -1,0 +1,87 @@
+{
+    "QuestData": {
+        "ActiveQuests": [
+            {
+                "ExtraData": {
+                },
+                "QuestCompleted": 0b,
+                "Quest": 3
+            },
+            {
+                "ExtraData": {
+                },
+                "QuestCompleted": 0b,
+                "Quest": 7
+            }
+        ],
+        "CompletedQuests": [
+            {
+                "Quest": 3,
+                "Date": 36333674L
+            }
+        ]
+    },
+    "jacket": 0,
+    "FactionData": [
+        {
+            "Faction": 3,
+            "Points": 1000
+        },
+        {
+            "Faction": 4,
+            "Points": 1600
+        },
+        {
+            "Faction": 5,
+            "Points": 1000
+        },
+        {
+            "Faction": 9,
+            "Points": 1000
+        }
+    ],
+    "face": 0,
+    "ItemGiverChained": [
+    ],
+    "ScriptStoreddata": {
+    },
+    "hair": 0,
+    "ItemGiversList": [
+        {
+            "Long": 1755413545442L,
+            "Slot": 2
+        },
+        {
+            "Long": 1755419157591L,
+            "Slot": 6
+        }
+    ],
+    "TransportData": [
+    ],
+    "DialogData": [
+        {
+            "Dialog": 6
+        },
+        {
+            "Dialog": 10
+        }
+    ],
+    "PlayerCompanionId": 0,
+    "body": 0,
+    "isActive": 0b,
+    "bodyColor": 0,
+    "NpcsTimers": [
+    ],
+    "shoes": 0,
+    "leg": 0,
+    "PlayerName": "gilrochae",
+    "isMale": 0b,
+    "UUID": "3146193d-21e6-4960-94b6-8db79c531757",
+    "eyesColor": 0,
+    "MailData": [
+    ],
+    "BankData": [
+    ],
+    "peculiarities": [I;],
+    "hairColor": 0
+}

@@ -1,0 +1,94 @@
+{
+    "QuestData": {
+        "ActiveQuests": [
+        ],
+        "CompletedQuests": [
+        ]
+    },
+    "jacket": 0,
+    "FactionData": [
+        {
+            "Faction": 17,
+            "Points": 1000
+        },
+        {
+            "Faction": 3,
+            "Points": 1000
+        },
+        {
+            "Faction": 4,
+            "Points": 1600
+        },
+        {
+            "Faction": 5,
+            "Points": 1000
+        },
+        {
+            "Faction": 9,
+            "Points": 1000
+        },
+        {
+            "Faction": 10,
+            "Points": 1000
+        },
+        {
+            "Faction": 13,
+            "Points": 1000
+        },
+        {
+            "Faction": 15,
+            "Points": 1000
+        }
+    ],
+    "face": 0,
+    "ItemGiverChained": [
+    ],
+    "ScriptStoreddata": {
+        "contractZ": 463.0d,
+        "canDoContract": 0.0d,
+        "contractX": 2186.0d,
+        "contractY": -52.0d,
+        "contractKillsLeft": 1.0d,
+        "tourGuideTriggered": 1.0d
+    },
+    "hair": 0,
+    "ItemGiversList": [
+        {
+            "Long": 1768796472215L,
+            "Slot": 53
+        },
+        {
+            "Long": 1768862187878L,
+            "Slot": 54
+        },
+        {
+            "Long": 1768968375256L,
+            "Slot": 56
+        }
+    ],
+    "TransportData": [
+    ],
+    "DialogData": [
+        {
+            "Dialog": 14
+        }
+    ],
+    "PlayerCompanionId": 0,
+    "body": 0,
+    "isActive": 0b,
+    "bodyColor": 0,
+    "NpcsTimers": [
+    ],
+    "shoes": 0,
+    "leg": 0,
+    "PlayerName": "MyrteeBirdee",
+    "isMale": 0b,
+    "UUID": "8318d08f-cf96-426b-a6af-26f96b93153d",
+    "eyesColor": 0,
+    "MailData": [
+    ],
+    "BankData": [
+    ],
+    "peculiarities": [I;],
+    "hairColor": 0
+}

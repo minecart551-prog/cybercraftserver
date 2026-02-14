@@ -1,0 +1,118 @@
+{
+    "TraderCurrency": {
+        "NpcMiscInv": [
+            {
+                "Slot": 0b,
+                "id": "minecraft:emerald",
+                "Count": 1b
+            },
+            {
+                "Slot": 1b,
+                "id": "minecraft:emerald",
+                "Count": 2b
+            },
+            {
+                "Slot": 2b,
+                "id": "minecraft:emerald",
+                "Count": 3b
+            },
+            {
+                "Slot": 3b,
+                "id": "minecraft:emerald",
+                "Count": 1b
+            },
+            {
+                "Slot": 4b,
+                "id": "minecraft:emerald",
+                "Count": 2b
+            },
+            {
+                "Slot": 5b,
+                "id": "minecraft:emerald",
+                "Count": 3b
+            },
+            {
+                "Slot": 7b,
+                "id": "minecraft:emerald",
+                "Count": 2b
+            },
+            {
+                "Slot": 8b,
+                "id": "minecraft:emerald",
+                "Count": 3b
+            },
+            {
+                "Slot": 15b,
+                "id": "minecraft:emerald",
+                "Count": 3b
+            },
+            {
+                "Slot": 16b,
+                "id": "minecraft:emerald",
+                "Count": 12b
+            }
+        ]
+    },
+    "TraderIgnoreNBT": 0b,
+    "TraderSold": {
+        "NpcMiscInv": [
+            {
+                "Slot": 0b,
+                "id": "minecraft:cookie",
+                "Count": 1b
+            },
+            {
+                "Slot": 1b,
+                "id": "minecraft:potato",
+                "Count": 1b
+            },
+            {
+                "Slot": 2b,
+                "id": "minecraft:rabbit_stew",
+                "Count": 1b
+            },
+            {
+                "Slot": 3b,
+                "id": "minecraft:glow_berries",
+                "Count": 1b
+            },
+            {
+                "Slot": 4b,
+                "id": "minecraft:melon_slice",
+                "Count": 1b
+            },
+            {
+                "Slot": 5b,
+                "id": "minecraft:carrot",
+                "Count": 1b
+            },
+            {
+                "Slot": 7b,
+                "id": "minecraft:apple",
+                "Count": 1b
+            },
+            {
+                "Slot": 8b,
+                "id": "minecraft:bread",
+                "Count": 1b
+            },
+            {
+                "Slot": 15b,
+                "id": "minecraft:splash_potion",
+                "tag": {
+                    "Potion": "minecraft:strong_swiftness"
+                },
+                "Count": 1b
+            },
+            {
+                "Slot": 16b,
+                "id": "minecraft:potion",
+                "tag": {
+                    "Potion": "minecraft:strong_healing"
+                },
+                "Count": 1b
+            }
+        ]
+    },
+    "TraderIgnoreDamage": 0b
+}

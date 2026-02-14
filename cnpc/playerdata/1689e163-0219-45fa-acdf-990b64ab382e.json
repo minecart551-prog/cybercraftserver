@@ -1,0 +1,70 @@
+{
+    "QuestData": {
+        "ActiveQuests": [
+        ],
+        "CompletedQuests": [
+        ]
+    },
+    "jacket": 0,
+    "FactionData": [
+        {
+            "Faction": 17,
+            "Points": 1000
+        },
+        {
+            "Faction": 3,
+            "Points": 1000
+        },
+        {
+            "Faction": 4,
+            "Points": 1600
+        },
+        {
+            "Faction": 13,
+            "Points": 1000
+        },
+        {
+            "Faction": 15,
+            "Points": 1000
+        }
+    ],
+    "face": 0,
+    "ItemGiverChained": [
+    ],
+    "ScriptStoreddata": {
+        "tourGuideTriggered": 1.0d
+    },
+    "hair": 0,
+    "ItemGiversList": [
+        {
+            "Long": 1759266696071L,
+            "Slot": 48
+        },
+        {
+            "Long": 1759266306223L,
+            "Slot": 50
+        }
+    ],
+    "TransportData": [
+    ],
+    "DialogData": [
+    ],
+    "PlayerCompanionId": 0,
+    "body": 0,
+    "isActive": 0b,
+    "bodyColor": 0,
+    "NpcsTimers": [
+    ],
+    "shoes": 0,
+    "leg": 0,
+    "PlayerName": "mythoflink",
+    "isMale": 0b,
+    "UUID": "1689e163-0219-45fa-acdf-990b64ab382e",
+    "eyesColor": 0,
+    "MailData": [
+    ],
+    "BankData": [
+    ],
+    "peculiarities": [I;],
+    "hairColor": 0
+}

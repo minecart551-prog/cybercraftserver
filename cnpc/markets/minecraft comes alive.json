@@ -1,0 +1,211 @@
+{
+    "TraderCurrency": {
+        "NpcMiscInv": [
+            {
+                "Slot": 0b,
+                "id": "coins:coal_coin",
+                "Count": 21b
+            },
+            {
+                "Slot": 1b,
+                "id": "coins:coal_coin",
+                "Count": 16b
+            },
+            {
+                "Slot": 3b,
+                "id": "coins:coal_coin",
+                "Count": 16b
+            },
+            {
+                "Slot": 4b,
+                "id": "coins:coal_coin",
+                "Count": 15b
+            },
+            {
+                "Slot": 6b,
+                "id": "coins:coal_coin",
+                "Count": 14b
+            },
+            {
+                "Slot": 7b,
+                "id": "coins:coal_coin",
+                "Count": 13b
+            },
+            {
+                "Slot": 8b,
+                "id": "coins:stone_coin",
+                "Count": 10b
+            },
+            {
+                "Slot": 9b,
+                "id": "coins:coal_coin",
+                "Count": 13b
+            },
+            {
+                "Slot": 10b,
+                "id": "coins:coal_coin",
+                "Count": 12b
+            },
+            {
+                "Slot": 12b,
+                "id": "coins:coal_coin",
+                "Count": 12b
+            }
+        ]
+    },
+    "TraderIgnoreNBT": 0b,
+    "TraderSold": {
+        "NpcMiscInv": [
+            {
+                "Slot": 0b,
+                "id": "automobility:automobile",
+                "tag": {
+                    "display": {
+                        "Name": "{\"translate\":\"prefab.automobility.bejeweled_motorcar\",\"italic\":\"false\"}"
+                    },
+                    "Automobile": {
+                        "frame": "automobility:bejeweled_motorcar",
+                        "isPrefab": 1b,
+                        "wheels": "automobility:bejeweled",
+                        "engine": "automobility:diamond"
+                    }
+                },
+                "Count": 1b
+            },
+            {
+                "Slot": 1b,
+                "id": "automobility:automobile",
+                "tag": {
+                    "display": {
+                        "Name": "{\"translate\":\"prefab.automobility.echo_rickshaw\",\"italic\":\"false\"}"
+                    },
+                    "Automobile": {
+                        "frame": "automobility:echo_rickshaw",
+                        "isPrefab": 1b,
+                        "wheels": "automobility:street",
+                        "engine": "automobility:diamond"
+                    }
+                },
+                "Count": 1b
+            },
+            {
+                "Slot": 3b,
+                "id": "automobility:automobile",
+                "tag": {
+                    "display": {
+                        "Name": "{\"translate\":\"prefab.automobility.golden_motorcar\",\"italic\":\"false\"}"
+                    },
+                    "Automobile": {
+                        "frame": "automobility:golden_motorcar",
+                        "isPrefab": 1b,
+                        "wheels": "automobility:gilded",
+                        "engine": "automobility:gold"
+                    }
+                },
+                "Count": 1b
+            },
+            {
+                "Slot": 4b,
+                "id": "automobility:automobile",
+                "tag": {
+                    "display": {
+                        "Name": "{\"translate\":\"prefab.automobility.quartz_rickshaw\",\"italic\":\"false\"}"
+                    },
+                    "Automobile": {
+                        "frame": "automobility:quartz_rickshaw",
+                        "isPrefab": 1b,
+                        "wheels": "automobility:gilded",
+                        "engine": "automobility:gold"
+                    }
+                },
+                "Count": 1b
+            },
+            {
+                "Slot": 6b,
+                "id": "automobility:automobile",
+                "tag": {
+                    "display": {
+                        "Name": "{\"translate\":\"prefab.automobility.steel_motorcar\",\"italic\":\"false\"}"
+                    },
+                    "Automobile": {
+                        "frame": "automobility:steel_motorcar",
+                        "isPrefab": 1b,
+                        "wheels": "automobility:street",
+                        "engine": "automobility:iron"
+                    }
+                },
+                "Count": 1b
+            },
+            {
+                "Slot": 7b,
+                "id": "automobility:automobile",
+                "tag": {
+                    "display": {
+                        "Name": "{\"translate\":\"prefab.automobility.prismarine_rickshaw\",\"italic\":\"false\"}"
+                    },
+                    "Automobile": {
+                        "frame": "automobility:prismarine_rickshaw",
+                        "isPrefab": 1b,
+                        "wheels": "automobility:plated",
+                        "engine": "automobility:copper"
+                    }
+                },
+                "Count": 1b
+            },
+            {
+                "Slot": 8b,
+                "id": "automobility:crowbar",
+                "Count": 1b
+            },
+            {
+                "Slot": 9b,
+                "id": "automobility:automobile",
+                "tag": {
+                    "display": {
+                        "Name": "{\"translate\":\"prefab.automobility.copper_motorcar\",\"italic\":\"false\"}"
+                    },
+                    "Automobile": {
+                        "frame": "automobility:copper_motorcar",
+                        "isPrefab": 1b,
+                        "wheels": "automobility:plated",
+                        "engine": "automobility:copper"
+                    }
+                },
+                "Count": 1b
+            },
+            {
+                "Slot": 10b,
+                "id": "automobility:automobile",
+                "tag": {
+                    "display": {
+                        "Name": "{\"translate\":\"prefab.automobility.amethyst_rickshaw\",\"italic\":\"false\"}"
+                    },
+                    "Automobile": {
+                        "frame": "automobility:amethyst_rickshaw",
+                        "isPrefab": 1b,
+                        "wheels": "automobility:bejeweled",
+                        "engine": "automobility:stone"
+                    }
+                },
+                "Count": 1b
+            },
+            {
+                "Slot": 12b,
+                "id": "automobility:automobile",
+                "tag": {
+                    "display": {
+                        "Name": "{\"translate\":\"prefab.automobility.wooden_motorcar\",\"italic\":\"false\"}"
+                    },
+                    "Automobile": {
+                        "isPrefab": 1b,
+                        "frame": "automobility:wooden_motorcar",
+                        "engine": "automobility:stone",
+                        "wheels": "automobility:carriage"
+                    }
+                },
+                "Count": 1b
+            }
+        ]
+    },
+    "TraderIgnoreDamage": 1b
+}

@@ -1,0 +1,126 @@
+{
+    "Type": 0,
+    "QuestCompletion": 0,
+    "QuestCommand": "",
+    "QuestFactionPoints": {
+        "DecreaseFaction2Points": 0b,
+        "OptionFaction2Points": 100,
+        "OptionFaction1Points": 100,
+        "OptionFactions2": -1,
+        "OptionFactions1": -1,
+        "DecreaseFaction1Points": 0b
+    },
+    "LeaveItems": 0b,
+    "IgnoreNBT": 0b,
+    "Rewards": {
+        "NpcMiscInv": [
+            {
+                "Slot": 0b,
+                "id": "yuushya:package_0",
+                "tag": {
+                    "display": {
+                        "Name": "{\"text\":\"Molly (2719 -38 1131)\"}"
+                    }
+                },
+                "Count": 1b
+            },
+            {
+                "Slot": 1b,
+                "id": "yuushya:package_0",
+                "tag": {
+                    "display": {
+                        "Name": "{\"text\":\"Joshua (2224 38 1003)\"}"
+                    }
+                },
+                "Count": 1b
+            },
+            {
+                "Slot": 2b,
+                "id": "yuushya:package_0",
+                "tag": {
+                    "display": {
+                        "Name": "{\"text\":\"Jesse (1610 -51 -128)\"}"
+                    }
+                },
+                "Count": 1b
+            },
+            {
+                "Slot": 3b,
+                "id": "yuushya:package_0",
+                "tag": {
+                    "display": {
+                        "Name": "{\"text\":\"Chloe(2307 42 567)\"}"
+                    }
+                },
+                "Count": 1b
+            },
+            {
+                "Slot": 4b,
+                "id": "yuushya:package_0",
+                "tag": {
+                    "display": {
+                        "Name": "{\"text\":\"Mira (2705 -52 428)\"}"
+                    }
+                },
+                "Count": 1b
+            },
+            {
+                "Slot": 5b,
+                "id": "yuushya:package_0",
+                "tag": {
+                    "RepairCost": 0,
+                    "display": {
+                        "Name": "{\"text\":\"Pablo (2515 58 635)\"}"
+                    }
+                },
+                "Count": 1b
+            },
+            {
+                "Slot": 6b,
+                "id": "yuushya:package_0",
+                "tag": {
+                    "display": {
+                        "Name": "{\"text\":\"Arthen (2350 -46 2168)\"}"
+                    }
+                },
+                "Count": 1b
+            }
+        ]
+    },
+    "CompleterNpc": "Deliv1",
+    "NextQuestId": -1,
+    "CompleteText": "",
+    "Text": "",
+    "QuestMail": {
+        "Subject": "",
+        "MailQuest": -1,
+        "BeenRead": 0b,
+        "MailItems": [
+        ],
+        "Sender": "",
+        "Message": {
+        },
+        "Time": 0L,
+        "TimePast": 1756275294218L
+    },
+    "RandomReward": 1b,
+    "Title": "Delman1",
+    "IgnoreDamage": 0b,
+    "Items": {
+        "NpcMiscInv": [
+            {
+                "Slot": 0b,
+                "id": "yuushya:small_title_blue",
+                "tag": {
+                    "display": {
+                        "Name": "{\"text\":\"Delivery Token\"}"
+                    }
+                },
+                "Count": 1b
+            }
+        ]
+    },
+    "QuestRepeat": 1,
+    "RewardExp": 0,
+    "ModRev": 18
+}

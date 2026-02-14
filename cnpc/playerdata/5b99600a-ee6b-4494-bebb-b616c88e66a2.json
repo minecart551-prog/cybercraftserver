@@ -1,0 +1,105 @@
+{
+    "QuestData": {
+        "ActiveQuests": [
+        ],
+        "CompletedQuests": [
+            {
+                "Quest": 1,
+                "Date": 21285627L
+            },
+            {
+                "Quest": 2,
+                "Date": 33270830L
+            },
+            {
+                "Quest": 3,
+                "Date": 33262977L
+            },
+            {
+                "Quest": 7,
+                "Date": 33253938L
+            }
+        ]
+    },
+    "jacket": 0,
+    "FactionData": [
+        {
+            "Faction": 3,
+            "Points": 1000
+        },
+        {
+            "Faction": 4,
+            "Points": 1600
+        },
+        {
+            "Faction": 5,
+            "Points": 1000
+        },
+        {
+            "Faction": 9,
+            "Points": 1000
+        },
+        {
+            "Faction": 10,
+            "Points": 1000
+        },
+        {
+            "Faction": 13,
+            "Points": 1000
+        },
+        {
+            "Faction": 15,
+            "Points": 1000
+        }
+    ],
+    "face": 0,
+    "ItemGiverChained": [
+    ],
+    "ScriptStoreddata": {
+    },
+    "hair": 0,
+    "ItemGiversList": [
+        {
+            "Long": 1755265080014L,
+            "Slot": 2
+        },
+        {
+            "Long": 1755264457865L,
+            "Slot": 6
+        }
+    ],
+    "TransportData": [
+    ],
+    "DialogData": [
+        {
+            "Dialog": 4
+        },
+        {
+            "Dialog": 5
+        },
+        {
+            "Dialog": 6
+        },
+        {
+            "Dialog": 10
+        }
+    ],
+    "PlayerCompanionId": 0,
+    "body": 0,
+    "isActive": 0b,
+    "bodyColor": 0,
+    "NpcsTimers": [
+    ],
+    "shoes": 0,
+    "leg": 0,
+    "PlayerName": "Storm_Spirit_",
+    "isMale": 0b,
+    "UUID": "5b99600a-ee6b-4494-bebb-b616c88e66a2",
+    "eyesColor": 0,
+    "MailData": [
+    ],
+    "BankData": [
+    ],
+    "peculiarities": [I;],
+    "hairColor": 0
+}

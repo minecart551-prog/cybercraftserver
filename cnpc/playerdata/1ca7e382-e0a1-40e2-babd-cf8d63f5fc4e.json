@@ -1,0 +1,54 @@
+{
+    "QuestData": {
+        "ActiveQuests": [
+        ],
+        "CompletedQuests": [
+        ]
+    },
+    "jacket": 0,
+    "FactionData": [
+        {
+            "Faction": 17,
+            "Points": 1000
+        },
+        {
+            "Faction": 4,
+            "Points": 1600
+        }
+    ],
+    "face": 0,
+    "ItemGiverChained": [
+    ],
+    "ScriptStoreddata": {
+        "tourGuideTriggered": 1.0d
+    },
+    "hair": 0,
+    "ItemGiversList": [
+        {
+            "Long": 1768696859486L,
+            "Slot": 51
+        }
+    ],
+    "TransportData": [
+    ],
+    "DialogData": [
+    ],
+    "PlayerCompanionId": 0,
+    "body": 0,
+    "isActive": 0b,
+    "bodyColor": 0,
+    "NpcsTimers": [
+    ],
+    "shoes": 0,
+    "leg": 0,
+    "PlayerName": "BboyDoggoDino",
+    "isMale": 0b,
+    "UUID": "1ca7e382-e0a1-40e2-babd-cf8d63f5fc4e",
+    "eyesColor": 0,
+    "MailData": [
+    ],
+    "BankData": [
+    ],
+    "peculiarities": [I;],
+    "hairColor": 0
+}

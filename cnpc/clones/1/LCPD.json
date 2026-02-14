@@ -1,0 +1,191 @@
+{
+    "infectionProgress": 0.0f,
+    "DespawnDelay": 0,
+    "traits": {
+    },
+    "gender": 1,
+    "LeftHanded": 0b,
+    "AbsorptionAmount": 0.0f,
+    "FoodLevel": 0b,
+    "LastRestock": 0L,
+    "wearArmor": 0b,
+    "Invulnerable": 0b,
+    "gene_face": 0.0733245f,
+    "InteractedWith": 1b,
+    "moveState": 0,
+    "ArmorDropChances": [
+        0.085f,
+        0.085f,
+        0.085f,
+        0.085f
+    ],
+    "hair_color_blue": 0.0f,
+    "gene_skin": 0.97541213f,
+    "HandDropChances": [
+        0.085f,
+        0.085f
+    ],
+    "gene_eumelanin": 0.6933818f,
+    "ForcedAge": 0,
+    "CustomName": "{\"text\":\"LCPD\"}",
+    "ArmorItems": [
+        {
+        },
+        {
+        },
+        {
+        },
+        {
+        }
+    ],
+    "gene_melanin": 0.0f,
+    "Inventory": [
+    ],
+    "custom_skin": "",
+    "ModRev": 1,
+    "Gossips": [
+        {
+            "Type": "minor_negative",
+            "Target": [I;-289600723,2065646661,-1588051495,-1012038548],
+            "Value": 5
+        }
+    ],
+    "lastProcreation": 0,
+    "Motion": [
+        0.0d,
+        -0.0784000015258789d,
+        0.0d
+    ],
+    "isProcreating": 0b,
+    "buildings": 0,
+    "CanPickUpLoot": 1b,
+    "activeChore": 0,
+    "PersistenceRequired": 0b,
+    "AABB": [
+        2385.5022593481067d,
+        -52.0d,
+        1845.1586368634512d,
+        2386.0458665830615d,
+        -50.13225448131561d,
+        1845.702244098406d
+    ],
+    "Fire": -1s,
+    "growthAmount": 0,
+    "villagerName": "LCPD",
+    "giftSaturationQueue": [
+    ],
+    "DeathTime": 0s,
+    "gene_voice_tone": 0.87828493f,
+    "OnGround": 1b,
+    "RestocksToday": 0,
+    "Xp": 0,
+    "personality": 6,
+    "Attributes": [
+        {
+            "Name": "porting_lib:entity_gravity",
+            "Base": 0.08d
+        },
+        {
+            "Name": "minecraft:generic.armor",
+            "Base": 0.0d
+        },
+        {
+            "Name": "minecraft:generic.follow_range",
+            "Modifiers": [
+                {
+                    "Amount": 0.01307296429293726d,
+                    "UUID": [I;353037369,417350138,-1605541836,1881828415],
+                    "Name": "Random spawn bonus",
+                    "Operation": 1
+                }
+            ],
+            "Base": 48.0d
+        },
+        {
+            "Name": "minecraft:generic.armor_toughness",
+            "Base": 0.0d
+        },
+        {
+            "Name": "minecraft:generic.movement_speed",
+            "Base": 0.5d
+        },
+        {
+            "Name": "porting_lib:step_height_addition",
+            "Base": 0.0d
+        },
+        {
+            "Name": "minecraft:generic.max_health",
+            "Base": 20.0d
+        }
+    ],
+    "Brain": {
+        "memories": {
+            "minecraft:meeting_point": {
+                "value": {
+                    "pos": [I;110,-59,-220],
+                    "dimension": "minecraft:overworld"
+                }
+            }
+        }
+    },
+    "isPanicking": 0b,
+    "gene_width": 0.31202418f,
+    "Age": 0,
+    "gene_hemoglobin": 0.0f,
+    "Rotation": [
+        76.811554f,
+        0.0f
+    ],
+    "hair": "mca:skins/hair/male/19.png",
+    "HurtByTimestamp": 285,
+    "hair_color_red": 0.0f,
+    "cardinal_components": {
+        "tacz:synced_entity_data": {
+            "DataHolderList": [
+            ]
+        }
+    },
+    "babyAge": 0,
+    "gene_voice": 0.81565785f,
+    "gene_breast": 0.09418005f,
+    "gene_size": 0.57527274f,
+    "ageState": 5,
+    "Air": 300s,
+    "HandItems": [
+        {
+        },
+        {
+        }
+    ],
+    "hasBaby": 0b,
+    "longTermMemory": {
+    },
+    "isBabyMale": 0b,
+    "memories": {
+        "ab21eac0-8c24-375c-bae9-fec9892c156f": {
+            "hearts": 0,
+            "dialogueType": 0,
+            "playerUUID": [I;-1423840576,-1943783588,-1159070007,-1993599633],
+            "interactionFatigue": 0,
+            "lastSeen": 0L
+        }
+    },
+    "FrameworkDataHolder": {
+    },
+    "FallDistance": 0.0f,
+    "mood": 15,
+    "id": "mca:male_villager",
+    "VillagerData": {
+        "type": "minecraft:plains",
+        "profession": "mca:archer",
+        "level": 1
+    },
+    "gene_pheomelanin": 0.4148935f,
+    "FallFlying": 0b,
+    "clothes": "mca:skins/clothing/normal/male/guard/2.png",
+    "HurtTime": 0s,
+    "Health": 20.0f,
+    "PortalCooldown": 0,
+    "LastGossipDecay": 504161L,
+    "hair_color_green": 0.0f
+}

@@ -1,0 +1,754 @@
+{
+    "TransformHasDisplay": 0b,
+    "AttackInvisible": 0b,
+    "IsStatue": 2b,
+    "AbsorptionAmount": 0.0f,
+    "SpawnCycle": 0,
+    "Accuracy": 95,
+    "MovingPatern": 0,
+    "HideBodyWhenKilled": 1b,
+    "ReturnToStart": 1b,
+    "TransformHasAdvanced": 0b,
+    "Weapons": [
+        {
+            "Slot": 0b,
+            "id": "bbs:model",
+            "tag": {
+                "display": {
+                    "Lore": [
+                        "\"(+NBT)\""
+                    ]
+                },
+                "BlockEntityTag": {
+                    "id": "bbs:model_block_entity",
+                    "unloaded_activity": {
+                        "last_tick": 446564L
+                    },
+                    "Properties": {
+                        "transformInventory": {
+                            "t": [
+                                0.0f,
+                                0.0f,
+                                0.0f
+                            ],
+                            "r": [
+                                0.0f,
+                                0.0f,
+                                0.0f
+                            ],
+                            "r2": [
+                                0.0f,
+                                0.0f,
+                                0.0f
+                            ],
+                            "s": [
+                                1.0f,
+                                1.0f,
+                                1.0f
+                            ]
+                        },
+                        "transformThirdPerson": {
+                            "t": [
+                                0.0f,
+                                0.0f,
+                                0.0f
+                            ],
+                            "r": [
+                                0.0f,
+                                0.0f,
+                                0.0f
+                            ],
+                            "r2": [
+                                0.0f,
+                                0.0f,
+                                0.0f
+                            ],
+                            "s": [
+                                1.0f,
+                                1.0f,
+                                1.0f
+                            ]
+                        },
+                        "enabled": 1b,
+                        "global": 0b,
+                        "shadow": 0b,
+                        "transform": {
+                            "t": [
+                                -0.5f,
+                                -0.063f,
+                                -0.875f
+                            ],
+                            "r": [
+                                0.0f,
+                                3.1415927f,
+                                0.0f
+                            ],
+                            "r2": [
+                                0.0f,
+                                0.0f,
+                                0.0f
+                            ],
+                            "s": [
+                                1.0f,
+                                1.0f,
+                                1.0f
+                            ]
+                        },
+                        "form": {
+                            "hitboxWidth": 0.5f,
+                            "hitboxSneakMultiplier": 0.9f,
+                            "stateTriggers": {
+                                "list": [
+                                ]
+                            },
+                            "lighting": 1.0f,
+                            "visible": 1b,
+                            "color": -1,
+                            "texture": "assets:models/drone/stiched_texture.png",
+                            "model": "drone",
+                            "shape_keys": {
+                                "keys": {
+                                }
+                            },
+                            "hitboxHeight": 1.8f,
+                            "transform_overlay": {
+                                "t": [
+                                    0.0f,
+                                    0.0f,
+                                    0.0f
+                                ],
+                                "r": [
+                                    0.0f,
+                                    0.0f,
+                                    0.0f
+                                ],
+                                "r2": [
+                                    0.0f,
+                                    0.0f,
+                                    0.0f
+                                ],
+                                "s": [
+                                    1.0f,
+                                    1.0f,
+                                    1.0f
+                                ]
+                            },
+                            "step_height": 0.5f,
+                            "pose_overlay": {
+                                "static": 0b
+                            },
+                            "hitbox": 0b,
+                            "bodyParts": {
+                            },
+                            "uiScale": 1.0f,
+                            "animatable": 1b,
+                            "anchor": {
+                                "actor": -1,
+                                "attachment": "",
+                                "translate": 0b
+                            },
+                            "hp": 20.0f,
+                            "shaderShadow": 1b,
+                            "movement_speed": 0.1f,
+                            "keybind": 0,
+                            "hitboxEyeHeight": 0.9f,
+                            "actions": {
+                            },
+                            "transform": {
+                                "t": [
+                                    0.0f,
+                                    0.0f,
+                                    0.0f
+                                ],
+                                "r": [
+                                    0.0f,
+                                    0.0f,
+                                    0.0f
+                                ],
+                                "r2": [
+                                    0.0f,
+                                    0.0f,
+                                    0.0f
+                                ],
+                                "s": [
+                                    1.0f,
+                                    1.0f,
+                                    1.0f
+                                ]
+                            },
+                            "name": "",
+                            "pose": {
+                                "pose": {
+                                    "fan1": {
+                                        "r2": [
+                                            0.0f,
+                                            0.0f,
+                                            0.0f
+                                        ],
+                                        "fix": 0.0f,
+                                        "lighting": 1.0f,
+                                        "t": [
+                                            0.0f,
+                                            0.0f,
+                                            0.0f
+                                        ],
+                                        "color": -1776412,
+                                        "r": [
+                                            0.0f,
+                                            0.0f,
+                                            0.0f
+                                        ],
+                                        "s": [
+                                            1.0f,
+                                            1.0f,
+                                            1.0f
+                                        ]
+                                    },
+                                    "group": {
+                                        "r2": [
+                                            0.0f,
+                                            0.0f,
+                                            0.0f
+                                        ],
+                                        "fix": 0.0f,
+                                        "lighting": 0.0f,
+                                        "t": [
+                                            0.0f,
+                                            0.0f,
+                                            0.0f
+                                        ],
+                                        "color": -394759,
+                                        "r": [
+                                            0.0f,
+                                            0.0f,
+                                            0.0f
+                                        ],
+                                        "s": [
+                                            1.0f,
+                                            1.0f,
+                                            1.0f
+                                        ]
+                                    },
+                                    "fan": {
+                                        "r2": [
+                                            0.0f,
+                                            0.0f,
+                                            0.0f
+                                        ],
+                                        "fix": 0.0f,
+                                        "lighting": 0.0f,
+                                        "t": [
+                                            0.0f,
+                                            0.0f,
+                                            0.0f
+                                        ],
+                                        "color": -12632257,
+                                        "r": [
+                                            0.0f,
+                                            0.0f,
+                                            0.0f
+                                        ],
+                                        "s": [
+                                            1.0f,
+                                            1.0f,
+                                            1.0f
+                                        ]
+                                    }
+                                },
+                                "static": 0b
+                            },
+                            "id": "bbs:model"
+                        },
+                        "transformFirstPerson": {
+                            "t": [
+                                0.0f,
+                                0.0f,
+                                -0.25f
+                            ],
+                            "r": [
+                                0.0f,
+                                0.0f,
+                                0.0f
+                            ],
+                            "r2": [
+                                0.0f,
+                                0.0f,
+                                0.0f
+                            ],
+                            "s": [
+                                1.0f,
+                                1.0f,
+                                1.0f
+                            ]
+                        }
+                    }
+                }
+            },
+            "Count": 1b
+        },
+        {
+            "Slot": 1b,
+            "id": "minecraft:gold_nugget",
+            "Count": 1b
+        }
+    ],
+    "ActiveRange": 32,
+    "Resistances": {
+        "Knockback": 1.0f,
+        "Explosion": 1.0f,
+        "Melee": 1.0f,
+        "Arrow": 1.0f
+    },
+    "NPCDialogOptions": [
+    ],
+    "FactionPoints": {
+        "DecreaseFaction2Points": 0b,
+        "OptionFaction2Points": 100,
+        "OptionFaction1Points": 100,
+        "OptionFactions2": -1,
+        "OptionFactions1": -1,
+        "DecreaseFaction1Points": 0b
+    },
+    "BossColor": 0,
+    "OverlayGlowing": 1b,
+    "CloakTexture": "",
+    "pSize": 5,
+    "HandDropChances": [
+        0.085f,
+        0.085f
+    ],
+    "BossBar": 0b,
+    "MovingState": 0,
+    "MovingPause": 0b,
+    "FireRate": 1,
+    "OnAttack": 0,
+    "pArea": 0,
+    "GroundSound": "tacz:target_block_hit",
+    "pRender3D": 1b,
+    "ArmorItems": [
+        {
+        },
+        {
+        },
+        {
+        },
+        {
+        }
+    ],
+    "Scripts": [
+        {
+            "Script": "",
+            "Console": [
+            ],
+            "ScriptList": [
+                {
+                    "Line": "companiondrone/companiondrone1.js"
+                }
+            ]
+        }
+    ],
+    "FiringSound": "customnpcs:gun.pistol.shot",
+    "ShowName": 1,
+    "unloaded_activity": {
+        "last_tick": 705444L
+    },
+    "LinkedNpcName": "companiondrone1",
+    "ModRev": 18,
+    "Armor": [
+    ],
+    "CanSprint": 0b,
+    "LootMode": 0,
+    "ReactsToFire": 0b,
+    "NpcInteractNPCLines": {
+        "Lines": [
+        ]
+    },
+    "SkinUrl": "",
+    "PotionEffect": 0,
+    "MercenaryDialogFarewell": "My days with you are over. Farewell %s {player}",
+    "IgnoreCobweb": 0b,
+    "KilledTime": 0L,
+    "TransformHasJob": 0b,
+    "TransformHasRole": 0b,
+    "MercenaryDaysHired": 0,
+    "MoveSpeed": 20,
+    "DropChance": [
+        {
+            "Integer": 100.0f,
+            "Slot": 0
+        },
+        {
+            "Integer": 100.0f,
+            "Slot": 1
+        },
+        {
+            "Integer": 100.0f,
+            "Slot": 2
+        },
+        {
+            "Integer": 100.0f,
+            "Slot": 3
+        },
+        {
+            "Integer": 100.0f,
+            "Slot": 4
+        },
+        {
+            "Integer": 100.0f,
+            "Slot": 5
+        },
+        {
+            "Integer": 100.0f,
+            "Slot": 6
+        },
+        {
+            "Integer": 100.0f,
+            "Slot": 7
+        },
+        {
+            "Integer": 100.0f,
+            "Slot": 8
+        }
+    ],
+    "Fire": -1s,
+    "CombatRegen": 0,
+    "NpcAttackLines": {
+        "Lines": [
+        ]
+    },
+    "WalkingRange": 32,
+    "DeathTime": 0s,
+    "CanDrown": 0b,
+    "pStick": 0b,
+    "pDamage": 5,
+    "PositionOffsetZ": 5.0f,
+    "Orientation": 0,
+    "StandingState": 2,
+    "AggroRange": 200,
+    "OnGround": 0b,
+    "MaxFiringRange": 100,
+    "pEffect": 0,
+    "HitSound": "",
+    "pPhysics": 1b,
+    "MercenaryRefuseSoulstone": 0b,
+    "CanLeap": 0b,
+    "Attributes": [
+        {
+            "Name": "minecraft:generic.attack_damage",
+            "Base": 5.0d
+        },
+        {
+            "Name": "minecraft:generic.max_health",
+            "Base": 40.0d
+        },
+        {
+            "Name": "minecraft:generic.flying_speed",
+            "Base": 2.0d
+        },
+        {
+            "Name": "minecraft:generic.movement_speed",
+            "Base": 1.0d
+        },
+        {
+            "Name": "minecraft:generic.follow_range",
+            "Base": 69.0d
+        }
+    ],
+    "FactionID": 10,
+    "NpcScenes": {
+        "Scenes": [
+        ]
+    },
+    "Name": "CompanionDrone1",
+    "NpcAngrySound": "",
+    "VisibleAvailability": {
+        "AvailabilityScoreboardObjective": "",
+        "AvailabilityDialog3Id": -1,
+        "AvailabilityFaction2Stance": 0,
+        "AvailabilityDialog4": 0,
+        "AvailabilityQuest2": 0,
+        "AvailabilityFaction": 0,
+        "AvailabilityDialog2Id": -1,
+        "AvailabilityQuest3Id": -1,
+        "AvailabilityQuest": 0,
+        "AvailabilityMinPlayerLevel": 0,
+        "AvailabilityQuest4Id": -1,
+        "AvailabilityQuest2Id": -1,
+        "AvailabilityDialog3": 0,
+        "AvailabilityDayTime": 0,
+        "AvailabilityScoreboard2Type": 1,
+        "AvailabilityScoreboard2Objective": "",
+        "AvailabilityDialog": 0,
+        "AvailabilityDialog4Id": -1,
+        "AvailabilityQuestId": -1,
+        "AvailabilityDialogId": -1,
+        "AvailabilityScoreboardType": 1,
+        "AvailabilityDialog2": 0,
+        "AvailabilityQuest3": 0,
+        "AvailabilityQuest4": 0,
+        "AvailabilityFactionId": -1,
+        "AvailabilityFactionStance": 0,
+        "AvailabilityFaction2": 0,
+        "AvailabilityScoreboardValue": 1,
+        "AvailabilityFaction2Id": -1,
+        "AvailabilityScoreboard2Value": 1,
+        "ModRev": 18
+    },
+    "npcInteracting": 1b,
+    "FindShelter": 2,
+    "cardinal_components": {
+        "tacz:synced_entity_data": {
+            "DataHolderList": [
+            ]
+        }
+    },
+    "MercenaryIsFollowing": 1b,
+    "HurtByTimestamp": 1580,
+    "AttackStrenght": 5,
+    "ScriptEnabled": 1b,
+    "HealthRegen": 0,
+    "pXlr8": 0b,
+    "NpcStepSound": "",
+    "MovementType": 1,
+    "Size": 5,
+    "FireIndirect": 0,
+    "Role": 2,
+    "DoorInteract": 2,
+    "DirectLOS": 1b,
+    "TransformIsActive": 0b,
+    "SkinColor": 16777215,
+    "PositionOffsetX": 5.0f,
+    "MercenaryInv": {
+        "NpcMiscInv": [
+            {
+                "Slot": 1b,
+                "id": "coins:stone_coin",
+                "Count": 30b
+            }
+        ]
+    },
+    "NoFallDamage": 0b,
+    "BurstCount": 1,
+    "TransformHasAI": 0b,
+    "FrameworkDataHolder": {
+    },
+    "AttackRange": 2,
+    "pSpeed": 20,
+    "pTrail": 0,
+    "id": "customnpcs:customnpc",
+    "MercenaryDayRates": [
+        {
+            "Integer": 1,
+            "Slot": 1
+        }
+    ],
+    "Title": "",
+    "pGlows": 1b,
+    "HurtTime": 0s,
+    "AttackSpeed": 20,
+    "FallFlying": 0b,
+    "NpcLines": {
+        "Lines": [
+        ]
+    },
+    "GlowTexture": "",
+    "MountControl": 0b,
+    "MaxExp": 0,
+    "AimWhileShooting": 0b,
+    "pImpact": 0,
+    "ImmuneToFire": 0b,
+    "DisablePitch": 0b,
+    "LeftHanded": 0b,
+    "minDelay": 1,
+    "MoveState": 0,
+    "NpcInteractLines": {
+        "Lines": [
+            {
+                "Song": "",
+                "Slot": 0,
+                "Line": "Hello @p"
+            }
+        ]
+    },
+    "DefendFaction": 0b,
+    "Invulnerable": 0b,
+    "NpcJob": 0,
+    "ArmorDropChances": [
+        0.085f,
+        0.085f,
+        0.085f,
+        0.085f
+    ],
+    "TransformEditingModus": 0b,
+    "NpcIdleSound": "automobility:entity.automobile.creative_engine",
+    "NpcInv": [
+    ],
+    "AttackOtherFactions": 0b,
+    "pSpin": 0b,
+    "MercenaryInfiniteDays": 0b,
+    "pDur": 5,
+    "NpcVisible": 0,
+    "NpcsTimers": [
+    ],
+    "stopAndInteract": 1b,
+    "MovingPos": 0,
+    "KnockBack": 0,
+    "RespawnTime": 20,
+    "OrderedLines": 0b,
+    "ShotCount": 1,
+    "PotionAmp": 0,
+    "maxDelay": 1,
+    "ScriptLanguage": "ECMAScript",
+    "MarkovGeneratorId": 8,
+    "Motion": [
+        0.0d,
+        0.0d,
+        0.0d
+    ],
+    "MercenaryHiredTime": 0L,
+    "CanPickUpLoot": 0b,
+    "NpcDeathSound": "mca:silent",
+    "PotionImmune": 0b,
+    "AABB": [
+        2429.441898111733d,
+        43.98447989208944d,
+        839.3999999761581d,
+        2430.0418981355747d,
+        45.934479939773155d,
+        840.0d
+    ],
+    "PersistenceRequired": 0b,
+    "NpcModelData": {
+        "ExtraData": {
+        },
+        "HeadConfig": {
+            "TransY": 0.75f,
+            "ScaleY": 1.0f,
+            "ScaleZ": 1.0f,
+            "TransX": 0.0f,
+            "ScaleX": 1.0f,
+            "NotShared": 0b,
+            "TransZ": 0.0f
+        },
+        "LastEdited": 1753794358494L,
+        "Legs2Config": {
+            "TransY": 0.375f,
+            "ScaleY": 0.5f,
+            "ScaleZ": 0.92663044f,
+            "TransX": 0.059f,
+            "ScaleX": 0.5f,
+            "NotShared": 0b,
+            "TransZ": -4.5855978E-4f
+        },
+        "ArmsConfig": {
+            "TransY": 0.75f,
+            "ScaleY": 1.0f,
+            "ScaleZ": 0.5f,
+            "TransX": -0.15625f,
+            "ScaleX": 0.5f,
+            "NotShared": 0b,
+            "TransZ": 0.0f
+        },
+        "MoveAnimation": 16,
+        "ModelType": 0,
+        "BodyConfig": {
+            "TransY": 0.75f,
+            "ScaleY": 0.5f,
+            "ScaleZ": 0.5f,
+            "TransX": 0.0f,
+            "ScaleX": 0.5f,
+            "NotShared": 0b,
+            "TransZ": 0.0f
+        },
+        "NewParts": [
+        ],
+        "EntityName": "minecraft:wandering_trader",
+        "Animation": 0,
+        "WingMode": 0,
+        "LegsConfig": {
+            "TransY": 0.375f,
+            "ScaleY": 0.5f,
+            "ScaleZ": 0.92663044f,
+            "TransX": -0.059f,
+            "ScaleX": 0.5f,
+            "NotShared": 0b,
+            "TransZ": -4.5855978E-4f
+        },
+        "SimpleRender": 0b,
+        "Parts": [
+        ],
+        "DisplayName": "",
+        "CustomSkinUrl": "",
+        "Arms2Config": {
+            "TransY": 0.75f,
+            "ScaleY": 1.0f,
+            "ScaleZ": 0.5f,
+            "TransX": 0.15625f,
+            "ScaleX": 0.5f,
+            "NotShared": 0b,
+            "TransZ": 0.0f
+        }
+    },
+    "NoLivingAnimation": 0b,
+    "BurnInSun": 0b,
+    "TransformHasStats": 0b,
+    "MercenaryDialogHired": "Thank you for hiring me for %s days {days} Days",
+    "CreatureType": 0,
+    "PotionDuration": 5,
+    "pEffAmp": 0,
+    "CNPC_persistantData": {
+        "cnpcmarkdata": {
+            "marks": [
+            ]
+        },
+        "CNPCStoredData": {
+            "OwnerUUID": 0.0d,
+            "SpawnWorld": "world",
+            "SpawnY": 42.0d,
+            "SpawnZ": 839.0d,
+            "SpawnX": 2430.0d,
+            "HasBeenHiredOnce": 0.0d,
+            "OwnerName": 0.0d
+        }
+    },
+    "TotalTicksAlive": 3614567L,
+    "Brain": {
+        "memories": {
+        }
+    },
+    "TransformHasInv": 0b,
+    "MinExp": 0,
+    "Rotation": [
+        -14.574035f,
+        0.0f
+    ],
+    "Texture": "geckolib:textures/blank.png",
+    "NpcKilledLines": {
+        "Lines": [
+        ]
+    },
+    "NpcKillLines": {
+        "Lines": [
+        ]
+    },
+    "DistanceToMelee": 0,
+    "MercenaryDisableGui": 0b,
+    "PositionOffsetY": 5.0f,
+    "Air": 300s,
+    "HandItems": [
+        {
+        },
+        {
+        }
+    ],
+    "AvoidsSun": 0b,
+    "AvoidsWater": 0b,
+    "MarkovGender": 0,
+    "NpcHurtSound": "automobility:entity.automobile.collision",
+    "FallDistance": 0.09028897f,
+    "CanSwim": 1b,
+    "MaxHealth": 40,
+    "Health": 40.0f,
+    "UsingSkinUrl": 0b,
+    "PortalCooldown": 0
+}

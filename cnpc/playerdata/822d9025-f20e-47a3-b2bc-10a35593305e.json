@@ -1,0 +1,119 @@
+{
+    "QuestData": {
+        "ActiveQuests": [
+            {
+                "ExtraData": {
+                },
+                "QuestCompleted": 0b,
+                "Quest": 1
+            }
+        ],
+        "CompletedQuests": [
+            {
+                "Quest": 2,
+                "Date": 36626165L
+            },
+            {
+                "Quest": 3,
+                "Date": 36623428L
+            },
+            {
+                "Quest": 4,
+                "Date": 35342688L
+            },
+            {
+                "Quest": 5,
+                "Date": 33132350L
+            },
+            {
+                "Quest": 6,
+                "Date": 35360664L
+            },
+            {
+                "Quest": 7,
+                "Date": 35350664L
+            },
+            {
+                "Quest": 8,
+                "Date": 35281750L
+            }
+        ]
+    },
+    "jacket": 0,
+    "FactionData": [
+        {
+            "Faction": 3,
+            "Points": 1000
+        },
+        {
+            "Faction": 4,
+            "Points": 1600
+        },
+        {
+            "Faction": 5,
+            "Points": 1000
+        },
+        {
+            "Faction": 9,
+            "Points": 1000
+        }
+    ],
+    "face": 0,
+    "ItemGiverChained": [
+    ],
+    "ScriptStoreddata": {
+    },
+    "hair": 0,
+    "ItemGiversList": [
+        {
+            "Long": 1755256840017L,
+            "Slot": 6
+        }
+    ],
+    "TransportData": [
+    ],
+    "DialogData": [
+        {
+            "Dialog": 4
+        },
+        {
+            "Dialog": 5
+        },
+        {
+            "Dialog": 6
+        },
+        {
+            "Dialog": 7
+        },
+        {
+            "Dialog": 8
+        },
+        {
+            "Dialog": 9
+        },
+        {
+            "Dialog": 10
+        },
+        {
+            "Dialog": 11
+        }
+    ],
+    "PlayerCompanionId": 0,
+    "body": 0,
+    "isActive": 0b,
+    "bodyColor": 0,
+    "NpcsTimers": [
+    ],
+    "shoes": 0,
+    "leg": 0,
+    "PlayerName": "_V_2077",
+    "isMale": 0b,
+    "UUID": "822d9025-f20e-47a3-b2bc-10a35593305e",
+    "eyesColor": 0,
+    "MailData": [
+    ],
+    "BankData": [
+    ],
+    "peculiarities": [I;],
+    "hairColor": 0
+}

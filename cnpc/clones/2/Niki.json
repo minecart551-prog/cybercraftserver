@@ -1,0 +1,453 @@
+{
+    "TransformHasDisplay": 0b,
+    "AttackInvisible": 0b,
+    "IsStatue": 0b,
+    "AbsorptionAmount": 0.0f,
+    "SpawnCycle": 0,
+    "Accuracy": 60,
+    "MovingPatern": 0,
+    "HideBodyWhenKilled": 0b,
+    "ReturnToStart": 1b,
+    "TransformHasAdvanced": 0b,
+    "Weapons": [
+    ],
+    "ActiveRange": 32,
+    "Resistances": {
+        "Knockback": 1.0f,
+        "Explosion": 1.0f,
+        "Melee": 1.0f,
+        "Arrow": 1.0f
+    },
+    "NPCDialogOptions": [
+    ],
+    "FactionPoints": {
+        "DecreaseFaction2Points": 0b,
+        "OptionFaction2Points": 100,
+        "OptionFaction1Points": 100,
+        "OptionFactions2": -1,
+        "OptionFactions1": -1,
+        "DecreaseFaction1Points": 0b
+    },
+    "BossColor": 0,
+    "OverlayGlowing": 1b,
+    "CloakTexture": "",
+    "pSize": 5,
+    "HandDropChances": [
+        0.085f,
+        0.085f
+    ],
+    "BossBar": 0b,
+    "MovingState": 0,
+    "MovingPause": 1b,
+    "FireRate": 5,
+    "OnAttack": 0,
+    "pArea": 0,
+    "GroundSound": "minecraft:block.stone.break",
+    "pRender3D": 1b,
+    "ArmorItems": [
+        {
+        },
+        {
+        },
+        {
+        },
+        {
+        }
+    ],
+    "Scripts": [
+        {
+            "Script": "",
+            "Console": [
+            ],
+            "ScriptList": [
+                {
+                    "Line": "trader/chesttrader.js"
+                }
+            ]
+        }
+    ],
+    "FiringSound": "minecraft:entity.arrow.shoot",
+    "ShowName": 0,
+    "LinkedNpcName": "",
+    "Armor": [
+    ],
+    "CanSprint": 0b,
+    "LootMode": 0,
+    "ReactsToFire": 0b,
+    "NpcInteractNPCLines": {
+        "Lines": [
+        ]
+    },
+    "SkinUrl": "",
+    "PotionEffect": 0,
+    "IgnoreCobweb": 0b,
+    "unloaded_activity": {
+        "last_tick": 992498L
+    },
+    "ModRev": 18,
+    "KilledTime": 0L,
+    "TransformHasRole": 0b,
+    "MoveSpeed": 5,
+    "DropChance": [
+        {
+            "Integer": 100.0f,
+            "Slot": 0
+        },
+        {
+            "Integer": 100.0f,
+            "Slot": 1
+        },
+        {
+            "Integer": 100.0f,
+            "Slot": 2
+        },
+        {
+            "Integer": 100.0f,
+            "Slot": 3
+        },
+        {
+            "Integer": 100.0f,
+            "Slot": 4
+        },
+        {
+            "Integer": 100.0f,
+            "Slot": 5
+        },
+        {
+            "Integer": 100.0f,
+            "Slot": 6
+        },
+        {
+            "Integer": 100.0f,
+            "Slot": 7
+        },
+        {
+            "Integer": 100.0f,
+            "Slot": 8
+        }
+    ],
+    "Fire": -1s,
+    "CombatRegen": 0,
+    "NpcAttackLines": {
+        "Lines": [
+        ]
+    },
+    "WalkingRange": 10,
+    "DeathTime": 0s,
+    "CanDrown": 1b,
+    "pStick": 0b,
+    "pDamage": 4,
+    "PositionOffsetZ": 5.0f,
+    "Orientation": 0,
+    "StandingState": 2,
+    "AggroRange": 16,
+    "OnGround": 1b,
+    "MaxFiringRange": 15,
+    "pEffect": 0,
+    "HitSound": "minecraft:entity.arrow.hit",
+    "pPhysics": 1b,
+    "TransformHasJob": 0b,
+    "CanLeap": 0b,
+    "Attributes": [
+        {
+            "Name": "porting_lib:step_height_addition",
+            "Base": 0.0d
+        },
+        {
+            "Name": "minecraft:generic.max_health",
+            "Base": 20.0d
+        },
+        {
+            "Name": "porting_lib:entity_gravity",
+            "Base": 0.08d
+        },
+        {
+            "Name": "minecraft:generic.movement_speed",
+            "Base": 0.25d
+        },
+        {
+            "Name": "minecraft:generic.follow_range",
+            "Base": 69.0d
+        },
+        {
+            "Name": "minecraft:generic.attack_damage",
+            "Base": 5.0d
+        },
+        {
+            "Name": "minecraft:generic.flying_speed",
+            "Base": 0.5d
+        }
+    ],
+    "FactionID": 4,
+    "NpcScenes": {
+        "Scenes": [
+        ]
+    },
+    "Name": "Niki",
+    "NpcAngrySound": "",
+    "VisibleAvailability": {
+        "AvailabilityScoreboardObjective": "",
+        "AvailabilityDialog3Id": -1,
+        "AvailabilityFaction2Stance": 0,
+        "AvailabilityDialog4": 0,
+        "AvailabilityQuest2": 0,
+        "AvailabilityFaction": 0,
+        "AvailabilityDialog2Id": -1,
+        "AvailabilityQuest3Id": -1,
+        "AvailabilityQuest": 0,
+        "AvailabilityMinPlayerLevel": 0,
+        "AvailabilityQuest4Id": -1,
+        "AvailabilityQuest2Id": -1,
+        "AvailabilityDialog3": 0,
+        "AvailabilityDayTime": 0,
+        "AvailabilityScoreboard2Type": 1,
+        "AvailabilityScoreboard2Objective": "",
+        "AvailabilityDialog": 0,
+        "AvailabilityDialog4Id": -1,
+        "AvailabilityQuestId": -1,
+        "AvailabilityDialogId": -1,
+        "AvailabilityScoreboardType": 1,
+        "AvailabilityDialog2": 0,
+        "AvailabilityQuest3": 0,
+        "AvailabilityQuest4": 0,
+        "AvailabilityFactionId": -1,
+        "AvailabilityFactionStance": 0,
+        "AvailabilityFaction2": 0,
+        "AvailabilityScoreboardValue": 1,
+        "AvailabilityFaction2Id": -1,
+        "AvailabilityScoreboard2Value": 1,
+        "ModRev": 18
+    },
+    "npcInteracting": 1b,
+    "FindShelter": 2,
+    "cardinal_components": {
+        "tacz:synced_entity_data": {
+            "DataHolder": [
+            ]
+        }
+    },
+    "HurtByTimestamp": 1050,
+    "AttackStrenght": 5,
+    "ScriptEnabled": 1b,
+    "HealthRegen": 1,
+    "pXlr8": 0b,
+    "NpcStepSound": "",
+    "MovementType": 0,
+    "Size": 5,
+    "FireIndirect": 0,
+    "Role": 0,
+    "DoorInteract": 2,
+    "DirectLOS": 1b,
+    "TransformIsActive": 0b,
+    "SkinColor": 16777215,
+    "PositionOffsetX": 5.0f,
+    "NoFallDamage": 0b,
+    "BurstCount": 1,
+    "TransformHasAI": 0b,
+    "FrameworkDataHolder": {
+    },
+    "AttackRange": 2,
+    "pSpeed": 10,
+    "pTrail": 0,
+    "id": "customnpcs:customnpc",
+    "Title": "",
+    "pGlows": 0b,
+    "HurtTime": 0s,
+    "AttackSpeed": 20,
+    "FallFlying": 0b,
+    "NpcLines": {
+        "Lines": [
+        ]
+    },
+    "GlowTexture": "",
+    "MountControl": 0b,
+    "MaxExp": 0,
+    "AimWhileShooting": 0b,
+    "pImpact": 0,
+    "ImmuneToFire": 0b,
+    "DisablePitch": 0b,
+    "LeftHanded": 0b,
+    "minDelay": 20,
+    "MoveState": 0,
+    "NpcInteractLines": {
+        "Lines": [
+            {
+                "Song": "",
+                "Slot": 0,
+                "Line": "Hello @p"
+            }
+        ]
+    },
+    "DefendFaction": 0b,
+    "Invulnerable": 0b,
+    "NpcJob": 0,
+    "ArmorDropChances": [
+        0.085f,
+        0.085f,
+        0.085f,
+        0.085f
+    ],
+    "NpcIdleSound": "",
+    "NpcInv": [
+    ],
+    "AttackOtherFactions": 0b,
+    "pSpin": 0b,
+    "TransformEditingModus": 0b,
+    "pDur": 5,
+    "NpcVisible": 0,
+    "NpcsTimers": [
+    ],
+    "stopAndInteract": 1b,
+    "MovingPos": 0,
+    "KnockBack": 0,
+    "RespawnTime": 20,
+    "OrderedLines": 0b,
+    "ShotCount": 1,
+    "PotionAmp": 0,
+    "maxDelay": 40,
+    "ScriptLanguage": "ECMAScript",
+    "MarkovGeneratorId": 5,
+    "Motion": [
+        0.0d,
+        -0.0784000015258789d,
+        0.0d
+    ],
+    "CanPickUpLoot": 0b,
+    "NpcDeathSound": "minecraft:entity.player.hurt",
+    "PotionImmune": 0b,
+    "AABB": [
+        2433.199999988079d,
+        42.0d,
+        882.1999999880791d,
+        2433.800000011921d,
+        43.89999997615814d,
+        882.8000000119209d
+    ],
+    "PersistenceRequired": 0b,
+    "NpcModelData": {
+        "ExtraData": {
+        },
+        "HeadConfig": {
+            "TransY": 0.0f,
+            "ScaleY": 1.0f,
+            "ScaleZ": 1.0f,
+            "TransX": 0.0f,
+            "ScaleX": 1.0f,
+            "NotShared": 0b,
+            "TransZ": 0.0f
+        },
+        "LastEdited": 1753188080914L,
+        "Legs2Config": {
+            "TransY": 0.0f,
+            "ScaleY": 1.0f,
+            "ScaleZ": 1.0f,
+            "TransX": 0.0f,
+            "ScaleX": 1.0f,
+            "NotShared": 0b,
+            "TransZ": 0.0f
+        },
+        "ArmsConfig": {
+            "TransY": 0.0f,
+            "ScaleY": 1.0f,
+            "ScaleZ": 1.0f,
+            "TransX": 0.0f,
+            "ScaleX": 1.0f,
+            "NotShared": 0b,
+            "TransZ": 0.0f
+        },
+        "MoveAnimation": 16,
+        "ModelType": 0,
+        "BodyConfig": {
+            "TransY": 0.0f,
+            "ScaleY": 1.0f,
+            "ScaleZ": 1.0f,
+            "TransX": 0.0f,
+            "ScaleX": 1.0f,
+            "NotShared": 0b,
+            "TransZ": 0.0f
+        },
+        "NewParts": [
+        ],
+        "Animation": 0,
+        "WingMode": 0,
+        "LegsConfig": {
+            "TransY": 0.0f,
+            "ScaleY": 1.0f,
+            "ScaleZ": 1.0f,
+            "TransX": 0.0f,
+            "ScaleX": 1.0f,
+            "NotShared": 0b,
+            "TransZ": 0.0f
+        },
+        "SimpleRender": 0b,
+        "Parts": [
+        ],
+        "DisplayName": "",
+        "CustomSkinUrl": "",
+        "Arms2Config": {
+            "TransY": 0.0f,
+            "ScaleY": 1.0f,
+            "ScaleZ": 1.0f,
+            "TransX": 0.0f,
+            "ScaleX": 1.0f,
+            "NotShared": 0b,
+            "TransZ": 0.0f
+        }
+    },
+    "NoLivingAnimation": 0b,
+    "BurnInSun": 0b,
+    "TransformHasStats": 0b,
+    "CreatureType": 0,
+    "PotionDuration": 5,
+    "pEffAmp": 0,
+    "CNPC_persistantData": {
+        "cnpcmarkdata": {
+            "marks": [
+            ]
+        },
+        "CNPCStoredData": {
+            "SlotItems": "{\"0\":[null,\"{\\n    \\\"id\\\": \\\"coins:stone_coin\\\",\\n    \\\"Count\\\": 15b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"tacz:modern_kinetic_gun\\\",\\n    \\\"tag\\\": {\\n        \\\"HasBulletInBarrel\\\": 1b,\\n        \\\"GunCurrentAmmoCount\\\": 17,\\n        \\\"GunFireMode\\\": \\\"SEMI\\\",\\n        \\\"GunId\\\": \\\"tacz:glock_17\\\"\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",null,\"{\\n    \\\"id\\\": \\\"coins:coal_coin\\\",\\n    \\\"Count\\\": 1b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"tacz:modern_kinetic_gun\\\",\\n    \\\"tag\\\": {\\n        \\\"HasBulletInBarrel\\\": 1b,\\n        \\\"GunCurrentAmmoCount\\\": 16,\\n        \\\"GunFireMode\\\": \\\"AUTO\\\",\\n        \\\"GunId\\\": \\\"tacz:cz75\\\"\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",null,\"{\\n    \\\"id\\\": \\\"coins:coal_coin\\\",\\n    \\\"Count\\\": 5b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"tacz:modern_kinetic_gun\\\",\\n    \\\"tag\\\": {\\n        \\\"HasBulletInBarrel\\\": 1b,\\n        \\\"GunCurrentAmmoCount\\\": 20,\\n        \\\"GunFireMode\\\": \\\"SEMI\\\",\\n        \\\"GunId\\\": \\\"tacz:scar_h\\\"\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",null,\"{\\n    \\\"id\\\": \\\"coins:coal_coin\\\",\\n    \\\"Count\\\": 10b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"tacz:modern_kinetic_gun\\\",\\n    \\\"tag\\\": {\\n        \\\"HasBulletInBarrel\\\": 1b,\\n        \\\"GunCurrentAmmoCount\\\": 4,\\n        \\\"GunFireMode\\\": \\\"SEMI\\\",\\n        \\\"GunId\\\": \\\"cyber_armorer:m2038_the_headsman\\\"\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",null,\"{\\n    \\\"id\\\": \\\"coins:coal_coin\\\",\\n    \\\"Count\\\": 20b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"tacz:modern_kinetic_gun\\\",\\n    \\\"tag\\\": {\\n        \\\"AttachmentSCOPE\\\": {\\n            \\\"id\\\": \\\"tacz:attachment\\\",\\n            \\\"tag\\\": {\\n                \\\"AttachmentId\\\": \\\"tacz:scope_elcan_4x\\\",\\n                \\\"ZoomNumber\\\": 5\\n            },\\n            \\\"Count\\\": 1b\\n        },\\n        \\\"HasBulletInBarrel\\\": 1b,\\n        \\\"GunCurrentAmmoCount\\\": 6,\\n        \\\"GunFireMode\\\": \\\"SEMI\\\",\\n        \\\"GunId\\\": \\\"tacz:m700\\\"\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",null,null,null,null,\"{\\n    \\\"id\\\": \\\"coins:emerald_coin\\\",\\n    \\\"Count\\\": 1b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"tacz:modern_kinetic_gun\\\",\\n    \\\"tag\\\": {\\n        \\\"HasBulletInBarrel\\\": 1b,\\n        \\\"GunCurrentAmmoCount\\\": 3,\\n        \\\"GunFireMode\\\": \\\"SEMI\\\",\\n        \\\"GunId\\\": \\\"cyber_armorer:unity_cheetah\\\"\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",null,null,null,null,null,null,null,null,null,null,\"{\\n    \\\"id\\\": \\\"coins:stone_coin\\\",\\n    \\\"Count\\\": 20b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"minecraft:leather_helmet\\\",\\n    \\\"tag\\\": {\\n        \\\"Damage\\\": 0,\\n        \\\"AttributeModifiers\\\": [\\n            {\\n                \\\"Amount\\\": 2.0d,\\n                \\\"Operation\\\": 0,\\n                \\\"Name\\\": \\\"generic.armor\\\",\\n                \\\"UUID\\\": [I;1276935719,2101628065,-2062805011,-1388635],\\n                \\\"AttributeName\\\": \\\"generic.armor\\\",\\n                \\\"Slot\\\": \\\"head\\\"\\n            }\\n        ]\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",null,\"{\\n    \\\"id\\\": \\\"coins:stone_coin\\\",\\n    \\\"Count\\\": 60b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"minecraft:leather_chestplate\\\",\\n    \\\"tag\\\": {\\n        \\\"Damage\\\": 0,\\n        \\\"AttributeModifiers\\\": [\\n            {\\n                \\\"Amount\\\": 6.0d,\\n                \\\"Operation\\\": 0,\\n                \\\"Slot\\\": \\\"chest\\\",\\n                \\\"UUID\\\": [I;66453,79497593,-201178,-16957605],\\n                \\\"AttributeName\\\": \\\"generic.armor\\\",\\n                \\\"Name\\\": \\\"generic.armor\\\"\\n            }\\n        ]\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",null,\"{\\n    \\\"id\\\": \\\"coins:stone_coin\\\",\\n    \\\"Count\\\": 50b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"minecraft:leather_leggings\\\",\\n    \\\"tag\\\": {\\n        \\\"Damage\\\": 0,\\n        \\\"AttributeModifiers\\\": [\\n            {\\n                \\\"Amount\\\": 5.0d,\\n                \\\"Operation\\\": 0,\\n                \\\"Slot\\\": \\\"legs\\\",\\n                \\\"UUID\\\": [I;1393173916,1759135223,-1879342790,-508144820],\\n                \\\"AttributeName\\\": \\\"generic.armor\\\",\\n                \\\"Name\\\": \\\"generic.armor\\\"\\n            }\\n        ]\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",null,\"{\\n    \\\"id\\\": \\\"coins:stone_coin\\\",\\n    \\\"Count\\\": 20b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"minecraft:leather_boots\\\",\\n    \\\"tag\\\": {\\n        \\\"Damage\\\": 0,\\n        \\\"AttributeModifiers\\\": [\\n            {\\n                \\\"Amount\\\": 2.0d,\\n                \\\"Operation\\\": 0,\\n                \\\"Slot\\\": \\\"feet\\\",\\n                \\\"UUID\\\": [I;-1305545332,996295294,-1733047031,531723401],\\n                \\\"AttributeName\\\": \\\"generic.armor\\\",\\n                \\\"Name\\\": \\\"generic.armor\\\"\\n            }\\n        ]\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,\"{\\n    \\\"id\\\": \\\"coins:stone_coin\\\",\\n    \\\"Count\\\": 75b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"minecraft:chainmail_helmet\\\",\\n    \\\"tag\\\": {\\n        \\\"Damage\\\": 0,\\n        \\\"AttributeModifiers\\\": [\\n            {\\n                \\\"Amount\\\": 3.0d,\\n                \\\"Operation\\\": 0,\\n                \\\"Name\\\": \\\"generic.armor\\\",\\n                \\\"UUID\\\": [I;1962758238,-402895587,-1157109447,1225991700],\\n                \\\"AttributeName\\\": \\\"generic.armor\\\",\\n                \\\"Slot\\\": \\\"head\\\"\\n            },\\n            {\\n                \\\"Amount\\\": 3.0d,\\n                \\\"Operation\\\": 0,\\n                \\\"Name\\\": \\\"generic.armor_toughness\\\",\\n                \\\"UUID\\\": [I;-1942079108,914771463,-1608237363,1151659171],\\n                \\\"AttributeName\\\": \\\"generic.armor_toughness\\\",\\n                \\\"Slot\\\": \\\"head\\\"\\n            }\\n        ]\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"coins:coal_coin\\\",\\n    \\\"Count\\\": 1b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"coins:stone_coin\\\",\\n    \\\"Count\\\": 38b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"minecraft:chainmail_chestplate\\\",\\n    \\\"tag\\\": {\\n        \\\"Damage\\\": 0,\\n        \\\"AttributeModifiers\\\": [\\n            {\\n                \\\"Amount\\\": 8.0d,\\n                \\\"Operation\\\": 0,\\n                \\\"Name\\\": \\\"generic.armor\\\",\\n                \\\"UUID\\\": [I;2082959146,1448298836,-2088010816,-866068823],\\n                \\\"AttributeName\\\": \\\"generic.armor\\\",\\n                \\\"Slot\\\": \\\"chest\\\"\\n            },\\n            {\\n                \\\"Amount\\\": 3.0d,\\n                \\\"Operation\\\": 0,\\n                \\\"Name\\\": \\\"generic.armor_toughness\\\",\\n                \\\"UUID\\\": [I;-734355839,1568492182,-1279907194,-1996913419],\\n                \\\"AttributeName\\\": \\\"generic.armor_toughness\\\",\\n                \\\"Slot\\\": \\\"chest\\\"\\n            }\\n        ]\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"coins:coal_coin\\\",\\n    \\\"Count\\\": 1b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"coins:stone_coin\\\",\\n    \\\"Count\\\": 12b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"minecraft:chainmail_leggings\\\",\\n    \\\"tag\\\": {\\n        \\\"Damage\\\": 0,\\n        \\\"AttributeModifiers\\\": [\\n            {\\n                \\\"Amount\\\": 6.0d,\\n                \\\"Operation\\\": 0,\\n                \\\"Slot\\\": \\\"legs\\\",\\n                \\\"UUID\\\": [I;650941737,-1901506567,-1582766196,1857334701],\\n                \\\"AttributeName\\\": \\\"generic.armor\\\",\\n                \\\"Name\\\": \\\"generic.armor\\\"\\n            },\\n            {\\n                \\\"Amount\\\": 3.0d,\\n                \\\"Operation\\\": 0,\\n                \\\"Slot\\\": \\\"legs\\\",\\n                \\\"UUID\\\": [I;-865580501,1016744579,-1206154126,-1400343339],\\n                \\\"AttributeName\\\": \\\"generic.armor_toughness\\\",\\n                \\\"Name\\\": \\\"generic.armor_toughness\\\"\\n            }\\n        ]\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",null,\"{\\n    \\\"id\\\": \\\"coins:stone_coin\\\",\\n    \\\"Count\\\": 75b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"minecraft:chainmail_boots\\\",\\n    \\\"tag\\\": {\\n        \\\"Damage\\\": 0,\\n        \\\"AttributeModifiers\\\": [\\n            {\\n                \\\"Amount\\\": 3.0d,\\n                \\\"Operation\\\": 0,\\n                \\\"Slot\\\": \\\"feet\\\",\\n                \\\"UUID\\\": [I;1624854239,-1370865197,-1979221776,1862783941],\\n                \\\"AttributeName\\\": \\\"generic.armor\\\",\\n                \\\"Name\\\": \\\"generic.armor\\\"\\n            },\\n            {\\n                \\\"Amount\\\": 3.0d,\\n                \\\"Operation\\\": 0,\\n                \\\"Slot\\\": \\\"feet\\\",\\n                \\\"UUID\\\": [I;996174618,-1532542096,-1324170079,1457612765],\\n                \\\"AttributeName\\\": \\\"generic.armor_toughness\\\",\\n                \\\"Name\\\": \\\"generic.armor_toughness\\\"\\n            }\\n        ]\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,\"{\\n    \\\"id\\\": \\\"coins:coal_coin\\\",\\n    \\\"Count\\\": 10b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"minecraft:iron_helmet\\\",\\n    \\\"tag\\\": {\\n        \\\"Damage\\\": 0,\\n        \\\"AttributeModifiers\\\": [\\n            {\\n                \\\"Amount\\\": 11.0d,\\n                \\\"Operation\\\": 0,\\n                \\\"Name\\\": \\\"generic.armor\\\",\\n                \\\"UUID\\\": [I;819273645,-564738291,271828182,-314159265],\\n                \\\"AttributeName\\\": \\\"generic.armor\\\",\\n                \\\"Slot\\\": \\\"head\\\"\\n            }\\n        ]\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",null,\"{\\n    \\\"id\\\": \\\"coins:coal_coin\\\",\\n    \\\"Count\\\": 25b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"minecraft:iron_chestplate\\\",\\n    \\\"tag\\\": {\\n        \\\"Damage\\\": 0,\\n        \\\"AttributeModifiers\\\": [\\n            {\\n                \\\"Amount\\\": 24.0d,\\n                \\\"Operation\\\": 0,\\n                \\\"Name\\\": \\\"generic.armor\\\",\\n                \\\"UUID\\\": [I;-192837465,918273645,-135792468,246813579],\\n                \\\"AttributeName\\\": \\\"generic.armor\\\",\\n                \\\"Slot\\\": \\\"chest\\\"\\n            }\\n        ]\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",null,\"{\\n    \\\"id\\\": \\\"coins:coal_coin\\\",\\n    \\\"Count\\\": 15b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"minecraft:iron_leggings\\\",\\n    \\\"tag\\\": {\\n        \\\"Damage\\\": 0,\\n        \\\"AttributeModifiers\\\": [\\n            {\\n                \\\"Amount\\\": 15.0d,\\n                \\\"Operation\\\": 0,\\n                \\\"Name\\\": \\\"generic.armor\\\",\\n                \\\"UUID\\\": [I;135791113,-975318642,864209753,-509182736],\\n                \\\"AttributeName\\\": \\\"generic.armor\\\",\\n                \\\"Slot\\\": \\\"legs\\\"\\n            }\\n        ]\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",null,\"{\\n    \\\"id\\\": \\\"coins:coal_coin\\\",\\n    \\\"Count\\\": 10b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"minecraft:iron_boots\\\",\\n    \\\"tag\\\": {\\n        \\\"Damage\\\": 0,\\n        \\\"AttributeModifiers\\\": [\\n            {\\n                \\\"Amount\\\": 11.0d,\\n                \\\"Operation\\\": 0,\\n                \\\"Name\\\": \\\"generic.armor\\\",\\n                \\\"UUID\\\": [I;-741852963,159357258,-258147963,753951456],\\n                \\\"AttributeName\\\": \\\"generic.armor\\\",\\n                \\\"Slot\\\": \\\"feet\\\"\\n            }\\n        ]\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,\"{\\n    \\\"id\\\": \\\"coins:coal_coin\\\",\\n    \\\"Count\\\": 50b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"minecraft:golden_helmet\\\",\\n    \\\"tag\\\": {\\n        \\\"Damage\\\": 0,\\n        \\\"AttributeModifiers\\\": [\\n            {\\n                \\\"Amount\\\": 18.0d,\\n                \\\"Operation\\\": 0,\\n                \\\"Name\\\": \\\"generic.armor\\\",\\n                \\\"UUID\\\": [I;472918365,-183746592,938475610,-561029384],\\n                \\\"AttributeName\\\": \\\"generic.armor\\\",\\n                \\\"Slot\\\": \\\"head\\\"\\n            }\\n        ]\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",null,\"{\\n    \\\"id\\\": \\\"coins:emerald_coin\\\",\\n    \\\"Count\\\": 1b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"minecraft:golden_chestplate\\\",\\n    \\\"tag\\\": {\\n        \\\"Damage\\\": 0,\\n        \\\"AttributeModifiers\\\": [\\n            {\\n                \\\"Amount\\\": 39.0d,\\n                \\\"Operation\\\": 0,\\n                \\\"Name\\\": \\\"generic.armor\\\",\\n                \\\"UUID\\\": [I;-609283745,817364920,-274918365,193746582],\\n                \\\"AttributeName\\\": \\\"generic.armor\\\",\\n                \\\"Slot\\\": \\\"chest\\\"\\n            }\\n        ]\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",null,\"{\\n    \\\"id\\\": \\\"coins:coal_coin\\\",\\n    \\\"Count\\\": 50b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"minecraft:golden_leggings\\\",\\n    \\\"tag\\\": {\\n        \\\"Damage\\\": 0,\\n        \\\"AttributeModifiers\\\": [\\n            {\\n                \\\"Amount\\\": 25.0d,\\n                \\\"Operation\\\": 0,\\n                \\\"Name\\\": \\\"generic.armor\\\",\\n                \\\"UUID\\\": [I;358274619,-920183746,647382915,-183746590],\\n                \\\"AttributeName\\\": \\\"generic.armor\\\",\\n                \\\"Slot\\\": \\\"legs\\\"\\n            }\\n        ]\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",null,\"{\\n    \\\"id\\\": \\\"coins:coal_coin\\\",\\n    \\\"Count\\\": 50b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"minecraft:golden_boots\\\",\\n    \\\"tag\\\": {\\n        \\\"Damage\\\": 0,\\n        \\\"AttributeModifiers\\\": [\\n            {\\n                \\\"Amount\\\": 18.0d,\\n                \\\"Operation\\\": 0,\\n                \\\"Name\\\": \\\"generic.armor\\\",\\n                \\\"UUID\\\": [I;-847362915,264918375,-519283746,736491820],\\n                \\\"AttributeName\\\": \\\"generic.armor\\\",\\n                \\\"Slot\\\": \\\"feet\\\"\\n            }\\n        ]\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],\"1\":[null,\"{\\n    \\\"id\\\": \\\"coins:stone_coin\\\",\\n    \\\"Count\\\": 1b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"tacz:ammo\\\",\\n    \\\"tag\\\": {\\n        \\\"AmmoId\\\": \\\"tacz:9mm\\\"\\n    },\\n    \\\"Count\\\": 10b\\n}\\n\",null,null,null,null,\"{\\n    \\\"id\\\": \\\"coins:stone_coin\\\",\\n    \\\"Count\\\": 10b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"tacz:ammo\\\",\\n    \\\"tag\\\": {\\n        \\\"AmmoId\\\": \\\"tacz:308\\\"\\n    },\\n    \\\"Count\\\": 10b\\n}\\n\",null,\"{\\n    \\\"id\\\": \\\"coins:stone_coin\\\",\\n    \\\"Count\\\": 10b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"tacz:ammo\\\",\\n    \\\"tag\\\": {\\n        \\\"AmmoId\\\": \\\"cyber_armorer:bullet_buckshot\\\"\\n    },\\n    \\\"Count\\\": 10b\\n}\\n\",null,\"{\\n    \\\"id\\\": \\\"coins:coal_coin\\\",\\n    \\\"Count\\\": 1b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"tacz:ammo\\\",\\n    \\\"tag\\\": {\\n        \\\"AmmoId\\\": \\\"tacz:30_06\\\"\\n    },\\n    \\\"Count\\\": 10b\\n}\\n\",null,null,null,null,\"{\\n    \\\"id\\\": \\\"coins:coal_coin\\\",\\n    \\\"Count\\\": 1b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"tacz:ammo\\\",\\n    \\\"tag\\\": {\\n        \\\"AmmoId\\\": \\\"cyber_armorer:bullet_pistol\\\"\\n    },\\n    \\\"Count\\\": 10b\\n}\\n\",null,null,null,null,null,null,null,null,null,null,\"{\\n    \\\"id\\\": \\\"minecraft:emerald\\\",\\n    \\\"Count\\\": 20b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"tacz:attachment\\\",\\n    \\\"tag\\\": {\\n        \\\"AttachmentId\\\": \\\"tacz:sight_sro_dot\\\"\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",null,\"{\\n    \\\"id\\\": \\\"minecraft:emerald\\\",\\n    \\\"Count\\\": 40b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"tacz:attachment\\\",\\n    \\\"tag\\\": {\\n        \\\"AttachmentId\\\": \\\"tacz:sight_coyote\\\",\\n        \\\"ZoomNumber\\\": 1\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",null,\"{\\n    \\\"id\\\": \\\"minecraft:emerald\\\",\\n    \\\"Count\\\": 40b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"tacz:attachment\\\",\\n    \\\"tag\\\": {\\n        \\\"AttachmentId\\\": \\\"tacz:sight_t2\\\"\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",null,\"{\\n    \\\"id\\\": \\\"minecraft:emerald\\\",\\n    \\\"Count\\\": 60b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"tacz:attachment\\\",\\n    \\\"tag\\\": {\\n        \\\"AttachmentId\\\": \\\"tacz:scope_acog_ta31\\\"\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,\"{\\n    \\\"id\\\": \\\"minecraft:emerald\\\",\\n    \\\"Count\\\": 30b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"tacz:attachment\\\",\\n    \\\"tag\\\": {\\n        \\\"AttachmentId\\\": \\\"tacz:light_extended_mag_1\\\"\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null]}",
+            "TabItems": "[\"{\\n    \\\"id\\\": \\\"tacz:modern_kinetic_gun\\\",\\n    \\\"tag\\\": {\\n        \\\"display\\\": {\\n            \\\"Name\\\": \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"Guns\\\\\\\"}\\\"\\n        },\\n        \\\"HasBulletInBarrel\\\": 1b,\\n        \\\"GunCurrentAmmoCount\\\": 17,\\n        \\\"GunFireMode\\\": \\\"SEMI\\\",\\n        \\\"GunId\\\": \\\"tacz:glock_17\\\"\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"tacz:ammo\\\",\\n    \\\"tag\\\": {\\n        \\\"display\\\": {\\n            \\\"Name\\\": \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"Ammo\\\\\\\"}\\\"\\n        },\\n        \\\"AmmoId\\\": \\\"tacz:9mm\\\"\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"minecraft:iron_helmet\\\",\\n    \\\"tag\\\": {\\n        \\\"Damage\\\": 0,\\n        \\\"display\\\": {\\n            \\\"Name\\\": \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"Armour\\\\\\\"}\\\"\\n        }\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"tacz:attachment\\\",\\n    \\\"tag\\\": {\\n        \\\"AttachmentId\\\": \\\"tacz:scope_elcan_4x\\\",\\n        \\\"display\\\": {\\n            \\\"Name\\\": \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"Scope\\\\\\\"}\\\"\\n        }\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"tacz:attachment\\\",\\n    \\\"tag\\\": {\\n        \\\"AttachmentId\\\": \\\"tacz:light_extended_mag_1\\\"\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\"]",
+            "ShopItems": "{\"0\":[\"{\\n    \\\"id\\\": \\\"tacz:modern_kinetic_gun\\\",\\n    \\\"tag\\\": {\\n        \\\"display\\\": {\\n            \\\"Lore\\\": [\\n                \\\"\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§aPrice: §e15¢\\\\\\\"}\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§7Click to purchase\\\\\\\"}\\\"\\n            ]\\n        },\\n        \\\"HasBulletInBarrel\\\": 1b,\\n        \\\"GunCurrentAmmoCount\\\": 17,\\n        \\\"GunFireMode\\\": \\\"SEMI\\\",\\n        \\\"GunId\\\": \\\"tacz:glock_17\\\"\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"tacz:modern_kinetic_gun\\\",\\n    \\\"tag\\\": {\\n        \\\"display\\\": {\\n            \\\"Lore\\\": [\\n                \\\"\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§aPrice: §e100¢\\\\\\\"}\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§7Click to purchase\\\\\\\"}\\\"\\n            ]\\n        },\\n        \\\"HasBulletInBarrel\\\": 1b,\\n        \\\"GunCurrentAmmoCount\\\": 16,\\n        \\\"GunFireMode\\\": \\\"AUTO\\\",\\n        \\\"GunId\\\": \\\"tacz:cz75\\\"\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"tacz:modern_kinetic_gun\\\",\\n    \\\"tag\\\": {\\n        \\\"display\\\": {\\n            \\\"Lore\\\": [\\n                \\\"\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§aPrice: §e500¢\\\\\\\"}\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§7Click to purchase\\\\\\\"}\\\"\\n            ]\\n        },\\n        \\\"HasBulletInBarrel\\\": 1b,\\n        \\\"GunCurrentAmmoCount\\\": 20,\\n        \\\"GunFireMode\\\": \\\"SEMI\\\",\\n        \\\"GunId\\\": \\\"tacz:scar_h\\\"\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"tacz:modern_kinetic_gun\\\",\\n    \\\"tag\\\": {\\n        \\\"display\\\": {\\n            \\\"Lore\\\": [\\n                \\\"\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§aPrice: §e1000¢\\\\\\\"}\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§7Click to purchase\\\\\\\"}\\\"\\n            ]\\n        },\\n        \\\"HasBulletInBarrel\\\": 1b,\\n        \\\"GunCurrentAmmoCount\\\": 5,\\n        \\\"GunFireMode\\\": \\\"SEMI\\\",\\n        \\\"GunId\\\": \\\"cyber_armorer:m2038_the_headsman\\\"\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"tacz:modern_kinetic_gun\\\",\\n    \\\"tag\\\": {\\n        \\\"display\\\": {\\n            \\\"Lore\\\": [\\n                \\\"\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§aPrice: §e2000¢\\\\\\\"}\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§7Click to purchase\\\\\\\"}\\\"\\n            ]\\n        },\\n        \\\"HasBulletInBarrel\\\": 1b,\\n        \\\"GunCurrentAmmoCount\\\": 6,\\n        \\\"GunFireMode\\\": \\\"SEMI\\\",\\n        \\\"GunId\\\": \\\"tacz:m700\\\"\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",null,null,null,null,\"{\\n    \\\"id\\\": \\\"tacz:modern_kinetic_gun\\\",\\n    \\\"tag\\\": {\\n        \\\"display\\\": {\\n            \\\"Lore\\\": [\\n                \\\"\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§aPrice: §e10000¢\\\\\\\"}\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§7Click to purchase\\\\\\\"}\\\"\\n            ]\\n        },\\n        \\\"HasBulletInBarrel\\\": 1b,\\n        \\\"GunCurrentAmmoCount\\\": 11,\\n        \\\"GunFireMode\\\": \\\"SEMI\\\",\\n        \\\"GunId\\\": \\\"cyber_armorer:unity_cheetah\\\"\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],\"1\":[\"{\\n    \\\"id\\\": \\\"tacz:ammo\\\",\\n    \\\"tag\\\": {\\n        \\\"display\\\": {\\n            \\\"Lore\\\": [\\n                \\\"\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§aPrice: §e1¢\\\\\\\"}\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§7Click to purchase\\\\\\\"}\\\"\\n            ]\\n        },\\n        \\\"AmmoId\\\": \\\"tacz:9mm\\\"\\n    },\\n    \\\"Count\\\": 10b\\n}\\n\",null,\"{\\n    \\\"id\\\": \\\"tacz:ammo\\\",\\n    \\\"tag\\\": {\\n        \\\"display\\\": {\\n            \\\"Lore\\\": [\\n                \\\"\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§aPrice: §e10¢\\\\\\\"}\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§7Click to purchase\\\\\\\"}\\\"\\n            ]\\n        },\\n        \\\"AmmoId\\\": \\\"tacz:308\\\"\\n    },\\n    \\\"Count\\\": 10b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"tacz:ammo\\\",\\n    \\\"tag\\\": {\\n        \\\"display\\\": {\\n            \\\"Lore\\\": [\\n                \\\"\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§aPrice: §e10¢\\\\\\\"}\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§7Click to purchase\\\\\\\"}\\\"\\n            ]\\n        },\\n        \\\"AmmoId\\\": \\\"cyber_armorer:bullet_buckshot\\\"\\n    },\\n    \\\"Count\\\": 10b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"tacz:ammo\\\",\\n    \\\"tag\\\": {\\n        \\\"display\\\": {\\n            \\\"Lore\\\": [\\n                \\\"\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§aPrice: §e100¢\\\\\\\"}\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§7Click to purchase\\\\\\\"}\\\"\\n            ]\\n        },\\n        \\\"AmmoId\\\": \\\"tacz:30_06\\\"\\n    },\\n    \\\"Count\\\": 10b\\n}\\n\",null,null,null,null,\"{\\n    \\\"id\\\": \\\"tacz:ammo\\\",\\n    \\\"tag\\\": {\\n        \\\"display\\\": {\\n            \\\"Lore\\\": [\\n                \\\"\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§aPrice: §e100¢\\\\\\\"}\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§7Click to purchase\\\\\\\"}\\\"\\n            ]\\n        },\\n        \\\"AmmoId\\\": \\\"cyber_armorer:bullet_pistol\\\"\\n    },\\n    \\\"Count\\\": 10b\\n}\\n\",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],\"2\":[\"{\\n    \\\"id\\\": \\\"minecraft:leather_helmet\\\",\\n    \\\"tag\\\": {\\n        \\\"Damage\\\": 0,\\n        \\\"AttributeModifiers\\\": [\\n            {\\n                \\\"Amount\\\": 2.0d,\\n                \\\"Operation\\\": 0,\\n                \\\"Slot\\\": \\\"head\\\",\\n                \\\"UUID\\\": [I;1276935719,2101628065,-2062805011,-1388635],\\n                \\\"AttributeName\\\": \\\"generic.armor\\\",\\n                \\\"Name\\\": \\\"generic.armor\\\"\\n            }\\n        ],\\n        \\\"display\\\": {\\n            \\\"Lore\\\": [\\n                \\\"\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§aPrice: §e20¢\\\\\\\"}\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§7Click to purchase\\\\\\\"}\\\"\\n            ]\\n        }\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"minecraft:chainmail_helmet\\\",\\n    \\\"tag\\\": {\\n        \\\"Damage\\\": 0,\\n        \\\"AttributeModifiers\\\": [\\n            {\\n                \\\"Amount\\\": 3.0d,\\n                \\\"Operation\\\": 0,\\n                \\\"Name\\\": \\\"generic.armor\\\",\\n                \\\"UUID\\\": [I;1962758238,-402895587,-1157109447,1225991700],\\n                \\\"AttributeName\\\": \\\"generic.armor\\\",\\n                \\\"Slot\\\": \\\"head\\\"\\n            },\\n            {\\n                \\\"Amount\\\": 3.0d,\\n                \\\"Operation\\\": 0,\\n                \\\"Name\\\": \\\"generic.armor_toughness\\\",\\n                \\\"UUID\\\": [I;-1942079108,914771463,-1608237363,1151659171],\\n                \\\"AttributeName\\\": \\\"generic.armor_toughness\\\",\\n                \\\"Slot\\\": \\\"head\\\"\\n            }\\n        ],\\n        \\\"display\\\": {\\n            \\\"Lore\\\": [\\n                \\\"\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§aPrice: §e75¢\\\\\\\"}\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§7Click to purchase\\\\\\\"}\\\"\\n            ]\\n        }\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"minecraft:iron_helmet\\\",\\n    \\\"tag\\\": {\\n        \\\"Damage\\\": 0,\\n        \\\"AttributeModifiers\\\": [\\n            {\\n                \\\"Amount\\\": 11.0d,\\n                \\\"Operation\\\": 0,\\n                \\\"Name\\\": \\\"generic.armor\\\",\\n                \\\"UUID\\\": [I;819273645,-564738291,271828182,-314159265],\\n                \\\"AttributeName\\\": \\\"generic.armor\\\",\\n                \\\"Slot\\\": \\\"head\\\"\\n            }\\n        ],\\n        \\\"display\\\": {\\n            \\\"Lore\\\": [\\n                \\\"\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§aPrice: §e1000¢\\\\\\\"}\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§7Click to purchase\\\\\\\"}\\\"\\n            ]\\n        }\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"minecraft:golden_helmet\\\",\\n    \\\"tag\\\": {\\n        \\\"Damage\\\": 0,\\n        \\\"AttributeModifiers\\\": [\\n            {\\n                \\\"Amount\\\": 18.0d,\\n                \\\"Operation\\\": 0,\\n                \\\"Name\\\": \\\"generic.armor\\\",\\n                \\\"UUID\\\": [I;472918365,-183746592,938475610,-561029384],\\n                \\\"AttributeName\\\": \\\"generic.armor\\\",\\n                \\\"Slot\\\": \\\"head\\\"\\n            }\\n        ],\\n        \\\"display\\\": {\\n            \\\"Lore\\\": [\\n                \\\"\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§aPrice: §e5000¢\\\\\\\"}\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§7Click to purchase\\\\\\\"}\\\"\\n            ]\\n        }\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",null,null,null,null,null,\"{\\n    \\\"id\\\": \\\"minecraft:leather_chestplate\\\",\\n    \\\"tag\\\": {\\n        \\\"Damage\\\": 0,\\n        \\\"AttributeModifiers\\\": [\\n            {\\n                \\\"Amount\\\": 6.0d,\\n                \\\"Operation\\\": 0,\\n                \\\"Slot\\\": \\\"chest\\\",\\n                \\\"UUID\\\": [I;66453,79497593,-201178,-16957605],\\n                \\\"AttributeName\\\": \\\"generic.armor\\\",\\n                \\\"Name\\\": \\\"generic.armor\\\"\\n            }\\n        ],\\n        \\\"display\\\": {\\n            \\\"Lore\\\": [\\n                \\\"\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§aPrice: §e60¢\\\\\\\"}\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§7Click to purchase\\\\\\\"}\\\"\\n            ]\\n        }\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"minecraft:chainmail_chestplate\\\",\\n    \\\"tag\\\": {\\n        \\\"Damage\\\": 0,\\n        \\\"AttributeModifiers\\\": [\\n            {\\n                \\\"Amount\\\": 8.0d,\\n                \\\"Operation\\\": 0,\\n                \\\"Name\\\": \\\"generic.armor\\\",\\n                \\\"UUID\\\": [I;2082959146,1448298836,-2088010816,-866068823],\\n                \\\"AttributeName\\\": \\\"generic.armor\\\",\\n                \\\"Slot\\\": \\\"chest\\\"\\n            },\\n            {\\n                \\\"Amount\\\": 3.0d,\\n                \\\"Operation\\\": 0,\\n                \\\"Name\\\": \\\"generic.armor_toughness\\\",\\n                \\\"UUID\\\": [I;-734355839,1568492182,-1279907194,-1996913419],\\n                \\\"AttributeName\\\": \\\"generic.armor_toughness\\\",\\n                \\\"Slot\\\": \\\"chest\\\"\\n            }\\n        ],\\n        \\\"display\\\": {\\n            \\\"Lore\\\": [\\n                \\\"\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§aPrice: §e138¢\\\\\\\"}\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§7Click to purchase\\\\\\\"}\\\"\\n            ]\\n        }\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"minecraft:iron_chestplate\\\",\\n    \\\"tag\\\": {\\n        \\\"Damage\\\": 0,\\n        \\\"AttributeModifiers\\\": [\\n            {\\n                \\\"Amount\\\": 24.0d,\\n                \\\"Operation\\\": 0,\\n                \\\"Name\\\": \\\"generic.armor\\\",\\n                \\\"UUID\\\": [I;-192837465,918273645,-135792468,246813579],\\n                \\\"AttributeName\\\": \\\"generic.armor\\\",\\n                \\\"Slot\\\": \\\"chest\\\"\\n            }\\n        ],\\n        \\\"display\\\": {\\n            \\\"Lore\\\": [\\n                \\\"\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§aPrice: §e2500¢\\\\\\\"}\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§7Click to purchase\\\\\\\"}\\\"\\n            ]\\n        }\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"minecraft:golden_chestplate\\\",\\n    \\\"tag\\\": {\\n        \\\"Damage\\\": 0,\\n        \\\"AttributeModifiers\\\": [\\n            {\\n                \\\"Amount\\\": 39.0d,\\n                \\\"Operation\\\": 0,\\n                \\\"Name\\\": \\\"generic.armor\\\",\\n                \\\"UUID\\\": [I;-609283745,817364920,-274918365,193746582],\\n                \\\"AttributeName\\\": \\\"generic.armor\\\",\\n                \\\"Slot\\\": \\\"chest\\\"\\n            }\\n        ],\\n        \\\"display\\\": {\\n            \\\"Lore\\\": [\\n                \\\"\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§aPrice: §e10000¢\\\\\\\"}\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§7Click to purchase\\\\\\\"}\\\"\\n            ]\\n        }\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",null,null,null,null,null,\"{\\n    \\\"id\\\": \\\"minecraft:leather_leggings\\\",\\n    \\\"tag\\\": {\\n        \\\"Damage\\\": 0,\\n        \\\"AttributeModifiers\\\": [\\n            {\\n                \\\"Amount\\\": 5.0d,\\n                \\\"Operation\\\": 0,\\n                \\\"Slot\\\": \\\"legs\\\",\\n                \\\"UUID\\\": [I;1393173916,1759135223,-1879342790,-508144820],\\n                \\\"AttributeName\\\": \\\"generic.armor\\\",\\n                \\\"Name\\\": \\\"generic.armor\\\"\\n            }\\n        ],\\n        \\\"display\\\": {\\n            \\\"Lore\\\": [\\n                \\\"\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§aPrice: §e50¢\\\\\\\"}\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§7Click to purchase\\\\\\\"}\\\"\\n            ]\\n        }\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"minecraft:chainmail_leggings\\\",\\n    \\\"tag\\\": {\\n        \\\"Damage\\\": 0,\\n        \\\"AttributeModifiers\\\": [\\n            {\\n                \\\"Amount\\\": 6.0d,\\n                \\\"Operation\\\": 0,\\n                \\\"Slot\\\": \\\"legs\\\",\\n                \\\"UUID\\\": [I;650941737,-1901506567,-1582766196,1857334701],\\n                \\\"AttributeName\\\": \\\"generic.armor\\\",\\n                \\\"Name\\\": \\\"generic.armor\\\"\\n            },\\n            {\\n                \\\"Amount\\\": 3.0d,\\n                \\\"Operation\\\": 0,\\n                \\\"Slot\\\": \\\"legs\\\",\\n                \\\"UUID\\\": [I;-865580501,1016744579,-1206154126,-1400343339],\\n                \\\"AttributeName\\\": \\\"generic.armor_toughness\\\",\\n                \\\"Name\\\": \\\"generic.armor_toughness\\\"\\n            }\\n        ],\\n        \\\"display\\\": {\\n            \\\"Lore\\\": [\\n                \\\"\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§aPrice: §e112¢\\\\\\\"}\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§7Click to purchase\\\\\\\"}\\\"\\n            ]\\n        }\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"minecraft:iron_leggings\\\",\\n    \\\"tag\\\": {\\n        \\\"Damage\\\": 0,\\n        \\\"AttributeModifiers\\\": [\\n            {\\n                \\\"Amount\\\": 15.0d,\\n                \\\"Operation\\\": 0,\\n                \\\"Name\\\": \\\"generic.armor\\\",\\n                \\\"UUID\\\": [I;135791113,-975318642,864209753,-509182736],\\n                \\\"AttributeName\\\": \\\"generic.armor\\\",\\n                \\\"Slot\\\": \\\"legs\\\"\\n            }\\n        ],\\n        \\\"display\\\": {\\n            \\\"Lore\\\": [\\n                \\\"\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§aPrice: §e1500¢\\\\\\\"}\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§7Click to purchase\\\\\\\"}\\\"\\n            ]\\n        }\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"minecraft:golden_leggings\\\",\\n    \\\"tag\\\": {\\n        \\\"Damage\\\": 0,\\n        \\\"AttributeModifiers\\\": [\\n            {\\n                \\\"Amount\\\": 25.0d,\\n                \\\"Operation\\\": 0,\\n                \\\"Name\\\": \\\"generic.armor\\\",\\n                \\\"UUID\\\": [I;358274619,-920183746,647382915,-183746590],\\n                \\\"AttributeName\\\": \\\"generic.armor\\\",\\n                \\\"Slot\\\": \\\"legs\\\"\\n            }\\n        ],\\n        \\\"display\\\": {\\n            \\\"Lore\\\": [\\n                \\\"\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§aPrice: §e5000¢\\\\\\\"}\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§7Click to purchase\\\\\\\"}\\\"\\n            ]\\n        }\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",null,null,null,null,null,\"{\\n    \\\"id\\\": \\\"minecraft:leather_boots\\\",\\n    \\\"tag\\\": {\\n        \\\"Damage\\\": 0,\\n        \\\"AttributeModifiers\\\": [\\n            {\\n                \\\"Amount\\\": 2.0d,\\n                \\\"Operation\\\": 0,\\n                \\\"Slot\\\": \\\"feet\\\",\\n                \\\"UUID\\\": [I;-1305545332,996295294,-1733047031,531723401],\\n                \\\"AttributeName\\\": \\\"generic.armor\\\",\\n                \\\"Name\\\": \\\"generic.armor\\\"\\n            }\\n        ],\\n        \\\"display\\\": {\\n            \\\"Lore\\\": [\\n                \\\"\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§aPrice: §e20¢\\\\\\\"}\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§7Click to purchase\\\\\\\"}\\\"\\n            ]\\n        }\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"minecraft:chainmail_boots\\\",\\n    \\\"tag\\\": {\\n        \\\"Damage\\\": 0,\\n        \\\"AttributeModifiers\\\": [\\n            {\\n                \\\"Amount\\\": 3.0d,\\n                \\\"Operation\\\": 0,\\n                \\\"Slot\\\": \\\"feet\\\",\\n                \\\"UUID\\\": [I;1624854239,-1370865197,-1979221776,1862783941],\\n                \\\"AttributeName\\\": \\\"generic.armor\\\",\\n                \\\"Name\\\": \\\"generic.armor\\\"\\n            },\\n            {\\n                \\\"Amount\\\": 3.0d,\\n                \\\"Operation\\\": 0,\\n                \\\"Slot\\\": \\\"feet\\\",\\n                \\\"UUID\\\": [I;996174618,-1532542096,-1324170079,1457612765],\\n                \\\"AttributeName\\\": \\\"generic.armor_toughness\\\",\\n                \\\"Name\\\": \\\"generic.armor_toughness\\\"\\n            }\\n        ],\\n        \\\"display\\\": {\\n            \\\"Lore\\\": [\\n                \\\"\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§aPrice: §e75¢\\\\\\\"}\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§7Click to purchase\\\\\\\"}\\\"\\n            ]\\n        }\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"minecraft:iron_boots\\\",\\n    \\\"tag\\\": {\\n        \\\"Damage\\\": 0,\\n        \\\"AttributeModifiers\\\": [\\n            {\\n                \\\"Amount\\\": 11.0d,\\n                \\\"Operation\\\": 0,\\n                \\\"Name\\\": \\\"generic.armor\\\",\\n                \\\"UUID\\\": [I;-741852963,159357258,-258147963,753951456],\\n                \\\"AttributeName\\\": \\\"generic.armor\\\",\\n                \\\"Slot\\\": \\\"feet\\\"\\n            }\\n        ],\\n        \\\"display\\\": {\\n            \\\"Lore\\\": [\\n                \\\"\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§aPrice: §e1000¢\\\\\\\"}\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§7Click to purchase\\\\\\\"}\\\"\\n            ]\\n        }\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"minecraft:golden_boots\\\",\\n    \\\"tag\\\": {\\n        \\\"Damage\\\": 0,\\n        \\\"AttributeModifiers\\\": [\\n            {\\n                \\\"Amount\\\": 18.0d,\\n                \\\"Operation\\\": 0,\\n                \\\"Name\\\": \\\"generic.armor\\\",\\n                \\\"UUID\\\": [I;-847362915,264918375,-519283746,736491820],\\n                \\\"AttributeName\\\": \\\"generic.armor\\\",\\n                \\\"Slot\\\": \\\"feet\\\"\\n            }\\n        ],\\n        \\\"display\\\": {\\n            \\\"Lore\\\": [\\n                \\\"\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§aPrice: §e5000¢\\\\\\\"}\\\",\\n                \\\"{\\\\\\\"translate\\\\\\\":\\\\\\\"§7Click to purchase\\\\\\\"}\\\"\\n            ]\\n        }\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],\"3\":[\"{\\n    \\\"id\\\": \\\"tacz:attachment\\\",\\n    \\\"tag\\\": {\\n        \\\"AttachmentId\\\": \\\"tacz:sight_sro_dot\\\"\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"tacz:attachment\\\",\\n    \\\"tag\\\": {\\n        \\\"AttachmentId\\\": \\\"tacz:sight_coyote\\\",\\n        \\\"ZoomNumber\\\": 1\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"tacz:attachment\\\",\\n    \\\"tag\\\": {\\n        \\\"AttachmentId\\\": \\\"tacz:sight_t2\\\"\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",\"{\\n    \\\"id\\\": \\\"tacz:attachment\\\",\\n    \\\"tag\\\": {\\n        \\\"AttachmentId\\\": \\\"tacz:scope_acog_ta31\\\"\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],\"4\":[\"{\\n    \\\"id\\\": \\\"tacz:attachment\\\",\\n    \\\"tag\\\": {\\n        \\\"AttachmentId\\\": \\\"tacz:light_extended_mag_1\\\"\\n    },\\n    \\\"Count\\\": 1b\\n}\\n\",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null]}"
+        }
+    },
+    "TotalTicksAlive": 9894905L,
+    "Brain": {
+        "memories": {
+        }
+    },
+    "TransformHasInv": 0b,
+    "MinExp": 0,
+    "Rotation": [
+        124.06296f,
+        -31.187769f
+    ],
+    "Texture": "cyberpunkskins:textures/niki.png",
+    "NpcKilledLines": {
+        "Lines": [
+        ]
+    },
+    "NpcKillLines": {
+        "Lines": [
+        ]
+    },
+    "DistanceToMelee": 0,
+    "PositionOffsetY": 5.0f,
+    "Air": 300s,
+    "HandItems": [
+        {
+        },
+        {
+        }
+    ],
+    "AvoidsSun": 0b,
+    "AvoidsWater": 0b,
+    "MarkovGender": 0,
+    "NpcHurtSound": "minecraft:entity.player.hurt",
+    "FallDistance": 0.0f,
+    "CanSwim": 1b,
+    "MaxHealth": 20,
+    "Health": 20.0f,
+    "UsingSkinUrl": 0b,
+    "PortalCooldown": 0
+}

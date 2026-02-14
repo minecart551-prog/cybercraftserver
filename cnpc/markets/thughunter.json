@@ -1,0 +1,42 @@
+{
+    "TraderCurrency": {
+        "NpcMiscInv": [
+            {
+                "Slot": 4b,
+                "id": "minecraft:shaper_armor_trim_smithing_template",
+                "Count": 1b
+            },
+            {
+                "Slot": 7b,
+                "id": "minecraft:dune_armor_trim_smithing_template",
+                "Count": 1b
+            },
+            {
+                "Slot": 10b,
+                "id": "minecraft:silence_armor_trim_smithing_template",
+                "Count": 1b
+            }
+        ]
+    },
+    "TraderIgnoreNBT": 0b,
+    "TraderSold": {
+        "NpcMiscInv": [
+            {
+                "Slot": 4b,
+                "id": "coins:stone_coin",
+                "Count": 12b
+            },
+            {
+                "Slot": 7b,
+                "id": "coins:stone_coin",
+                "Count": 60b
+            },
+            {
+                "Slot": 10b,
+                "id": "coins:coal_coin",
+                "Count": 3b
+            }
+        ]
+    },
+    "TraderIgnoreDamage": 1b
+}

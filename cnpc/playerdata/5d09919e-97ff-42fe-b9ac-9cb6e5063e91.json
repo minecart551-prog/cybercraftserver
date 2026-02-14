@@ -1,0 +1,137 @@
+{
+    "QuestData": {
+        "ActiveQuests": [
+            {
+                "ExtraData": {
+                },
+                "QuestCompleted": 0b,
+                "Quest": 1
+            },
+            {
+                "ExtraData": {
+                },
+                "QuestCompleted": 0b,
+                "Quest": 5
+            }
+        ],
+        "CompletedQuests": [
+            {
+                "Quest": 3,
+                "Date": 44181832L
+            },
+            {
+                "Quest": 5,
+                "Date": 42698292L
+            },
+            {
+                "Quest": 7,
+                "Date": 47810637L
+            }
+        ]
+    },
+    "jacket": 0,
+    "FactionData": [
+        {
+            "Faction": 17,
+            "Points": 1000
+        },
+        {
+            "Faction": 18,
+            "Points": 300
+        },
+        {
+            "Faction": 3,
+            "Points": 1000
+        },
+        {
+            "Faction": 4,
+            "Points": 1600
+        },
+        {
+            "Faction": 5,
+            "Points": 1000
+        },
+        {
+            "Faction": 6,
+            "Points": 1000
+        },
+        {
+            "Faction": 9,
+            "Points": 1000
+        },
+        {
+            "Faction": 13,
+            "Points": 1000
+        },
+        {
+            "Faction": 15,
+            "Points": 1000
+        }
+    ],
+    "face": 0,
+    "ItemGiverChained": [
+    ],
+    "ScriptStoreddata": {
+        "RestaurantJobActive": "true",
+        "contractZ": -647.0d,
+        "canDoContract": 0.0d,
+        "contractX": 2540.0d,
+        "contractY": -52.0d,
+        "contractKillsLeft": 1.0d,
+        "SelectedMenuSlots": "[1,4]",
+        "tourGuideTriggered": 1.0d
+    },
+    "hair": 0,
+    "ItemGiversList": [
+        {
+            "Long": 1755736137759L,
+            "Slot": 2
+        },
+        {
+            "Long": 1768624386036L,
+            "Slot": 51
+        },
+        {
+            "Long": 1755736686111L,
+            "Slot": 6
+        },
+        {
+            "Long": 5293L,
+            "Slot": 46
+        }
+    ],
+    "TransportData": [
+    ],
+    "DialogData": [
+        {
+            "Dialog": 4
+        },
+        {
+            "Dialog": 6
+        },
+        {
+            "Dialog": 8
+        },
+        {
+            "Dialog": 10
+        }
+    ],
+    "PlayerCompanionId": 0,
+    "body": 0,
+    "isActive": 0b,
+    "bodyColor": 0,
+    "NpcsTimers": [
+    ],
+    "shoes": 0,
+    "leg": 0,
+    "PlayerName": "R4ND0M1Z3",
+    "isMale": 0b,
+    "UUID": "5d09919e-97ff-42fe-b9ac-9cb6e5063e91",
+    "eyesColor": 0,
+    "MailData": [
+    ],
+    "BankData": [
+    ],
+    "peculiarities": [I;],
+    "hairColor": 0
+}

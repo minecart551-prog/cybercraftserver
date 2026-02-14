@@ -1,0 +1,70 @@
+{
+    "Type": 0,
+    "QuestCompletion": 0,
+    "QuestCommand": "",
+    "QuestFactionPoints": {
+        "DecreaseFaction2Points": 0b,
+        "OptionFaction2Points": 100,
+        "OptionFaction1Points": 100,
+        "OptionFactions2": -1,
+        "OptionFactions1": -1,
+        "DecreaseFaction1Points": 0b
+    },
+    "LeaveItems": 0b,
+    "IgnoreNBT": 0b,
+    "Rewards": {
+        "NpcMiscInv": [
+            {
+                "Slot": 3b,
+                "id": "yuushya:small_title_blue",
+                "tag": {
+                    "display": {
+                        "Name": "{\"text\":\"Delivery Token\"}"
+                    }
+                },
+                "Count": 1b
+            },
+            {
+                "Slot": 4b,
+                "id": "minecraft:emerald",
+                "Count": 64b
+            }
+        ]
+    },
+    "CompleterNpc": "Maxim",
+    "NextQuestId": -1,
+    "CompleteText": "",
+    "Text": "",
+    "QuestMail": {
+        "Subject": "",
+        "MailQuest": -1,
+        "BeenRead": 0b,
+        "MailItems": [
+        ],
+        "Sender": "",
+        "Message": {
+        },
+        "Time": 0L,
+        "TimePast": 1756508922131L
+    },
+    "RandomReward": 0b,
+    "Title": "Maxim",
+    "IgnoreDamage": 0b,
+    "Items": {
+        "NpcMiscInv": [
+            {
+                "Slot": 0b,
+                "id": "yuushya:package_0",
+                "tag": {
+                    "display": {
+                        "Name": "{\"text\":\"Maxim (2075 -53 -373)\"}"
+                    }
+                },
+                "Count": 1b
+            }
+        ]
+    },
+    "QuestRepeat": 1,
+    "RewardExp": 0,
+    "ModRev": 18
+}

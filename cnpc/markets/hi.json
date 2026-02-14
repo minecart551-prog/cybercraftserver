@@ -1,0 +1,236 @@
+{
+    "TraderCurrency": {
+        "NpcMiscInv": [
+            {
+                "Slot": 0b,
+                "id": "minecraft:emerald",
+                "Count": 15b
+            },
+            {
+                "Slot": 1b,
+                "id": "minecraft:emerald",
+                "Count": 20b
+            },
+            {
+                "Slot": 2b,
+                "id": "minecraft:emerald",
+                "Count": 64b
+            },
+            {
+                "Slot": 3b,
+                "id": "minecraft:echo_shard",
+                "Count": 3b
+            },
+            {
+                "Slot": 4b,
+                "id": "minecraft:emerald",
+                "Count": 60b
+            },
+            {
+                "Slot": 5b,
+                "id": "minecraft:echo_shard",
+                "Count": 1b
+            },
+            {
+                "Slot": 6b,
+                "id": "minecraft:echo_shard",
+                "Count": 20b
+            },
+            {
+                "Slot": 7b,
+                "id": "minecraft:emerald",
+                "Count": 50b
+            },
+            {
+                "Slot": 8b,
+                "id": "minecraft:echo_shard",
+                "Count": 1b
+            },
+            {
+                "Slot": 9b,
+                "id": "minecraft:emerald",
+                "Count": 1b
+            },
+            {
+                "Slot": 10b,
+                "id": "minecraft:emerald",
+                "Count": 20b
+            },
+            {
+                "Slot": 11b,
+                "id": "minecraft:emerald",
+                "Count": 64b
+            },
+            {
+                "Slot": 12b,
+                "id": "minecraft:emerald",
+                "Count": 10b
+            },
+            {
+                "Slot": 15b,
+                "id": "minecraft:emerald",
+                "Count": 50b
+            },
+            {
+                "Slot": 20b,
+                "id": "minecraft:emerald",
+                "Count": 11b
+            },
+            {
+                "Slot": 23b,
+                "id": "minecraft:emerald",
+                "Count": 38b
+            },
+            {
+                "Slot": 26b,
+                "id": "minecraft:emerald",
+                "Count": 12b
+            },
+            {
+                "Slot": 29b,
+                "id": "minecraft:emerald",
+                "Count": 11b
+            },
+            {
+                "Slot": 33b,
+                "id": "minecraft:emerald",
+                "Count": 50b
+            }
+        ]
+    },
+    "TraderIgnoreNBT": 0b,
+    "TraderSold": {
+        "NpcMiscInv": [
+            {
+                "Slot": 0b,
+                "id": "tacz:modern_kinetic_gun",
+                "tag": {
+                    "HasBulletInBarrel": 1b,
+                    "GunCurrentAmmoCount": 17,
+                    "GunFireMode": "SEMI",
+                    "GunId": "tacz:glock_17"
+                },
+                "Count": 1b
+            },
+            {
+                "Slot": 1b,
+                "id": "minecraft:iron_helmet",
+                "tag": {
+                    "Damage": 0
+                },
+                "Count": 1b
+            },
+            {
+                "Slot": 2b,
+                "id": "minecraft:netherite_helmet",
+                "tag": {
+                    "Damage": 0
+                },
+                "Count": 1b
+            },
+            {
+                "Slot": 3b,
+                "id": "tacz:modern_kinetic_gun",
+                "tag": {
+                    "HasBulletInBarrel": 1b,
+                    "GunCurrentAmmoCount": 20,
+                    "GunFireMode": "SEMI",
+                    "GunId": "tacz:scar_h"
+                },
+                "Count": 1b
+            },
+            {
+                "Slot": 4b,
+                "id": "minecraft:iron_chestplate",
+                "tag": {
+                    "Damage": 0
+                },
+                "Count": 1b
+            },
+            {
+                "Slot": 5b,
+                "id": "minecraft:netherite_chestplate",
+                "tag": {
+                    "Damage": 0
+                },
+                "Count": 1b
+            },
+            {
+                "Slot": 6b,
+                "id": "tacz:modern_kinetic_gun",
+                "tag": {
+                    "AttachmentSCOPE": {
+                        "id": "tacz:attachment",
+                        "Count": 1b,
+                        "tag": {
+                            "AttachmentId": "tacz:scope_elcan_4x",
+                            "ZoomNumber": 2
+                        }
+                    },
+                    "HasBulletInBarrel": 0b,
+                    "GunCurrentAmmoCount": 0,
+                    "GunFireMode": "SEMI",
+                    "GunId": "tacz:m95"
+                },
+                "Count": 1b
+            },
+            {
+                "Slot": 7b,
+                "id": "minecraft:iron_leggings",
+                "tag": {
+                    "Damage": 0
+                },
+                "Count": 1b
+            },
+            {
+                "Slot": 8b,
+                "id": "minecraft:netherite_leggings",
+                "tag": {
+                    "Damage": 0
+                },
+                "Count": 1b
+            },
+            {
+                "Slot": 9b,
+                "id": "tacz:ammo",
+                "tag": {
+                    "AmmoId": "tacz:9mm"
+                },
+                "Count": 10b
+            },
+            {
+                "Slot": 10b,
+                "id": "minecraft:iron_boots",
+                "tag": {
+                    "Damage": 0
+                },
+                "Count": 1b
+            },
+            {
+                "Slot": 11b,
+                "id": "minecraft:netherite_boots",
+                "tag": {
+                    "Damage": 0
+                },
+                "Count": 1b
+            },
+            {
+                "Slot": 12b,
+                "id": "tacz:ammo",
+                "tag": {
+                    "AmmoId": "tacz:68x51fury"
+                },
+                "Count": 10b
+            },
+            {
+                "Slot": 15b,
+                "id": "tacz:ammo",
+                "tag": {
+                    "AmmoId": "tacz:50bmg"
+                },
+                "Count": 10b
+            }
+        ]
+    },
+    "TraderIgnoreDamage": 1b
+}

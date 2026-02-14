@@ -1,0 +1,71 @@
+{
+    "Type": 0,
+    "QuestCompletion": 0,
+    "QuestCommand": "",
+    "QuestFactionPoints": {
+        "DecreaseFaction2Points": 0b,
+        "OptionFaction2Points": 100,
+        "OptionFaction1Points": 100,
+        "OptionFactions2": -1,
+        "OptionFactions1": -1,
+        "DecreaseFaction1Points": 0b
+    },
+    "LeaveItems": 0b,
+    "IgnoreNBT": 0b,
+    "Rewards": {
+        "NpcMiscInv": [
+            {
+                "Slot": 3b,
+                "id": "yuushya:small_title_blue",
+                "tag": {
+                    "display": {
+                        "Name": "{\"text\":\"Delivery Token\"}"
+                    }
+                },
+                "Count": 1b
+            },
+            {
+                "Slot": 4b,
+                "id": "minecraft:emerald",
+                "Count": 16b
+            }
+        ]
+    },
+    "CompleterNpc": "Pablo",
+    "NextQuestId": -1,
+    "CompleteText": "",
+    "Text": "",
+    "QuestMail": {
+        "Subject": "",
+        "MailQuest": -1,
+        "BeenRead": 0b,
+        "MailItems": [
+        ],
+        "Sender": "",
+        "Message": {
+        },
+        "Time": 0L,
+        "TimePast": 1756486866804L
+    },
+    "RandomReward": 0b,
+    "Title": "Pablo",
+    "IgnoreDamage": 0b,
+    "Items": {
+        "NpcMiscInv": [
+            {
+                "Slot": 1b,
+                "id": "yuushya:package_0",
+                "tag": {
+                    "RepairCost": 0,
+                    "display": {
+                        "Name": "{\"text\":\"Pablo (2515 58 635)\"}"
+                    }
+                },
+                "Count": 1b
+            }
+        ]
+    },
+    "QuestRepeat": 1,
+    "RewardExp": 0,
+    "ModRev": 18
+}

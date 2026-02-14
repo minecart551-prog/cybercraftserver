@@ -1,0 +1,137 @@
+{
+    "QuestData": {
+        "ActiveQuests": [
+            {
+                "ExtraData": {
+                },
+                "QuestCompleted": 0b,
+                "Quest": 1
+            },
+            {
+                "ExtraData": {
+                },
+                "QuestCompleted": 0b,
+                "Quest": 3
+            },
+            {
+                "ExtraData": {
+                },
+                "QuestCompleted": 0b,
+                "Quest": 5
+            }
+        ],
+        "CompletedQuests": [
+            {
+                "Quest": 2,
+                "Date": 31812530L
+            },
+            {
+                "Quest": 3,
+                "Date": 33685410L
+            },
+            {
+                "Quest": 4,
+                "Date": 31801750L
+            },
+            {
+                "Quest": 5,
+                "Date": 33707600L
+            },
+            {
+                "Quest": 6,
+                "Date": 33683723L
+            },
+            {
+                "Quest": 7,
+                "Date": 33343921L
+            }
+        ]
+    },
+    "jacket": 0,
+    "FactionData": [
+        {
+            "Faction": 3,
+            "Points": 1000
+        },
+        {
+            "Faction": 4,
+            "Points": 1600
+        },
+        {
+            "Faction": 5,
+            "Points": 1000
+        },
+        {
+            "Faction": 6,
+            "Points": 1000
+        },
+        {
+            "Faction": 9,
+            "Points": 1000
+        },
+        {
+            "Faction": 10,
+            "Points": 1000
+        }
+    ],
+    "face": 0,
+    "ItemGiverChained": [
+    ],
+    "ScriptStoreddata": {
+        "canGetPackage": 0.0d
+    },
+    "hair": 0,
+    "ItemGiversList": [
+        {
+            "Long": 1755290350064L,
+            "Slot": 2
+        },
+        {
+            "Long": 1755191137184L,
+            "Slot": 6
+        }
+    ],
+    "TransportData": [
+    ],
+    "DialogData": [
+        {
+            "Dialog": 4
+        },
+        {
+            "Dialog": 5
+        },
+        {
+            "Dialog": 6
+        },
+        {
+            "Dialog": 7
+        },
+        {
+            "Dialog": 8
+        },
+        {
+            "Dialog": 9
+        },
+        {
+            "Dialog": 10
+        }
+    ],
+    "PlayerCompanionId": 0,
+    "body": 0,
+    "isActive": 0b,
+    "bodyColor": 0,
+    "NpcsTimers": [
+    ],
+    "shoes": 0,
+    "leg": 0,
+    "PlayerName": "LordFufu96x",
+    "isMale": 0b,
+    "UUID": "96aa8855-2f6f-494b-87b5-632d5c680e8f",
+    "eyesColor": 0,
+    "MailData": [
+    ],
+    "BankData": [
+    ],
+    "peculiarities": [I;],
+    "hairColor": 0
+}

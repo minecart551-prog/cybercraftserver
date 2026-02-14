@@ -1,0 +1,55 @@
+{
+    "Type": 0,
+    "QuestCompletion": 0,
+    "QuestCommand": "",
+    "QuestFactionPoints": {
+        "DecreaseFaction2Points": 0b,
+        "OptionFaction2Points": 100,
+        "OptionFaction1Points": 100,
+        "OptionFactions2": -1,
+        "OptionFactions1": -1,
+        "DecreaseFaction1Points": 0b
+    },
+    "LeaveItems": 0b,
+    "IgnoreNBT": 0b,
+    "Rewards": {
+        "NpcMiscInv": [
+            {
+                "Slot": 6b,
+                "id": "minecraft:emerald",
+                "Count": 30b
+            }
+        ]
+    },
+    "CompleterNpc": "Marlene",
+    "NextQuestId": -1,
+    "CompleteText": "Thank you! These look great. Here're some emeralds for you!",
+    "Text": "Give Marlene 3 beetroots",
+    "QuestMail": {
+        "Subject": "",
+        "MailQuest": -1,
+        "BeenRead": 0b,
+        "MailItems": [
+        ],
+        "Sender": "",
+        "Message": {
+        },
+        "Time": 0L,
+        "TimePast": 1755186800955L
+    },
+    "RandomReward": 1b,
+    "Title": "Beetroot soup",
+    "IgnoreDamage": 0b,
+    "Items": {
+        "NpcMiscInv": [
+            {
+                "Slot": 0b,
+                "id": "minecraft:beetroot",
+                "Count": 3b
+            }
+        ]
+    },
+    "QuestRepeat": 0,
+    "RewardExp": 0,
+    "ModRev": 18
+}

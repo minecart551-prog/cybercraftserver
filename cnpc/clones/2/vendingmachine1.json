@@ -1,0 +1,564 @@
+{
+    "TransformHasDisplay": 0b,
+    "AttackInvisible": 0b,
+    "IsStatue": 0b,
+    "AbsorptionAmount": 0.0f,
+    "SpawnCycle": 0,
+    "Accuracy": 60,
+    "MovingPatern": 0,
+    "HideBodyWhenKilled": 0b,
+    "ReturnToStart": 1b,
+    "TransformHasAdvanced": 0b,
+    "Weapons": [
+    ],
+    "ActiveRange": 32,
+    "Resistances": {
+        "Knockback": 1.0f,
+        "Explosion": 1.0f,
+        "Melee": 1.0f,
+        "Arrow": 1.0f
+    },
+    "NPCDialogOptions": [
+    ],
+    "FactionPoints": {
+        "DecreaseFaction2Points": 0b,
+        "OptionFaction2Points": 100,
+        "OptionFaction1Points": 100,
+        "OptionFactions2": -1,
+        "OptionFactions1": -1,
+        "DecreaseFaction1Points": 0b
+    },
+    "BossColor": 0,
+    "OverlayGlowing": 1b,
+    "CloakTexture": "",
+    "pSize": 5,
+    "HandDropChances": [
+        0.085f,
+        0.085f
+    ],
+    "BossBar": 0b,
+    "MovingState": 0,
+    "MovingPause": 1b,
+    "FireRate": 5,
+    "OnAttack": 0,
+    "pArea": 0,
+    "GroundSound": "minecraft:block.stone.break",
+    "pRender3D": 1b,
+    "ArmorItems": [
+        {
+        },
+        {
+        },
+        {
+        },
+        {
+        }
+    ],
+    "Scripts": [
+        {
+            "Script": "",
+            "Console": [
+            ],
+            "ScriptList": [
+                {
+                    "Line": "trader/vendingmachine1.js"
+                }
+            ]
+        }
+    ],
+    "FiringSound": "minecraft:entity.arrow.shoot",
+    "ShowName": 1,
+    "LinkedNpcName": "vendingmachine1",
+    "Armor": [
+    ],
+    "CanSprint": 0b,
+    "LootMode": 0,
+    "ReactsToFire": 0b,
+    "NpcInteractNPCLines": {
+        "Lines": [
+        ]
+    },
+    "SkinUrl": "",
+    "PotionEffect": 0,
+    "unloaded_activity": {
+        "last_tick": 1576625L
+    },
+    "IgnoreCobweb": 0b,
+    "ModRev": 18,
+    "TraderMarket": "vendingmachine1",
+    "KilledTime": 0L,
+    "TransformHasRole": 0b,
+    "MoveSpeed": 5,
+    "DropChance": [
+        {
+            "Integer": 100.0f,
+            "Slot": 0
+        },
+        {
+            "Integer": 100.0f,
+            "Slot": 1
+        },
+        {
+            "Integer": 100.0f,
+            "Slot": 2
+        },
+        {
+            "Integer": 100.0f,
+            "Slot": 3
+        },
+        {
+            "Integer": 100.0f,
+            "Slot": 4
+        },
+        {
+            "Integer": 100.0f,
+            "Slot": 5
+        },
+        {
+            "Integer": 100.0f,
+            "Slot": 6
+        },
+        {
+            "Integer": 100.0f,
+            "Slot": 7
+        },
+        {
+            "Integer": 100.0f,
+            "Slot": 8
+        }
+    ],
+    "Fire": -1s,
+    "CombatRegen": 0,
+    "NpcAttackLines": {
+        "Lines": [
+        ]
+    },
+    "WalkingRange": 10,
+    "DeathTime": 0s,
+    "CanDrown": 1b,
+    "pStick": 0b,
+    "pDamage": 4,
+    "PositionOffsetZ": 5.0f,
+    "Orientation": 0,
+    "StandingState": 0,
+    "AggroRange": 16,
+    "OnGround": 1b,
+    "MaxFiringRange": 15,
+    "pEffect": 0,
+    "HitSound": "minecraft:entity.arrow.hit",
+    "pPhysics": 1b,
+    "TransformHasJob": 0b,
+    "CanLeap": 0b,
+    "Attributes": [
+        {
+            "Name": "minecraft:generic.attack_damage",
+            "Base": 5.0d
+        },
+        {
+            "Name": "minecraft:generic.follow_range",
+            "Base": 69.0d
+        },
+        {
+            "Name": "minecraft:generic.flying_speed",
+            "Base": 0.5d
+        },
+        {
+            "Name": "minecraft:generic.movement_speed",
+            "Base": 0.25d
+        },
+        {
+            "Name": "minecraft:generic.max_health",
+            "Base": 20.0d
+        }
+    ],
+    "FactionID": 4,
+    "NpcScenes": {
+        "Scenes": [
+        ]
+    },
+    "Name": "vendingmachine1",
+    "NpcAngrySound": "",
+    "VisibleAvailability": {
+        "AvailabilityScoreboardObjective": "",
+        "AvailabilityDialog3Id": -1,
+        "AvailabilityFaction2Stance": 0,
+        "AvailabilityDialog4": 0,
+        "AvailabilityQuest2": 0,
+        "AvailabilityFaction": 0,
+        "AvailabilityDialog2Id": -1,
+        "AvailabilityQuest3Id": -1,
+        "AvailabilityQuest": 0,
+        "AvailabilityMinPlayerLevel": 0,
+        "AvailabilityQuest4Id": -1,
+        "AvailabilityQuest2Id": -1,
+        "AvailabilityDialog3": 0,
+        "AvailabilityDayTime": 0,
+        "AvailabilityScoreboard2Type": 1,
+        "AvailabilityScoreboard2Objective": "",
+        "AvailabilityDialog": 0,
+        "AvailabilityDialog4Id": -1,
+        "AvailabilityQuestId": -1,
+        "AvailabilityDialogId": -1,
+        "AvailabilityScoreboardType": 1,
+        "AvailabilityDialog2": 0,
+        "AvailabilityQuest3": 0,
+        "AvailabilityQuest4": 0,
+        "AvailabilityFactionId": -1,
+        "AvailabilityFactionStance": 0,
+        "AvailabilityFaction2": 0,
+        "AvailabilityScoreboardValue": 1,
+        "AvailabilityFaction2Id": -1,
+        "AvailabilityScoreboard2Value": 1,
+        "ModRev": 18
+    },
+    "npcInteracting": 1b,
+    "FindShelter": 2,
+    "cardinal_components": {
+        "tacz:synced_entity_data": {
+            "DataHolderList": [
+            ]
+        }
+    },
+    "TraderIgnoreNBT": 0b,
+    "HurtByTimestamp": 2344,
+    "AttackStrenght": 5,
+    "ScriptEnabled": 1b,
+    "HealthRegen": 1,
+    "pXlr8": 0b,
+    "NpcStepSound": "",
+    "MovementType": 0,
+    "FireIndirect": 0,
+    "Size": 5,
+    "Role": 1,
+    "DoorInteract": 2,
+    "DirectLOS": 1b,
+    "TransformIsActive": 0b,
+    "SkinColor": 16777215,
+    "PositionOffsetX": 5.0f,
+    "NoFallDamage": 0b,
+    "BurstCount": 1,
+    "TransformHasAI": 0b,
+    "FrameworkDataHolder": {
+    },
+    "AttackRange": 2,
+    "pSpeed": 10,
+    "pTrail": 0,
+    "id": "customnpcs:customnpc",
+    "Title": "",
+    "pGlows": 0b,
+    "HurtTime": 0s,
+    "AttackSpeed": 20,
+    "FallFlying": 0b,
+    "NpcLines": {
+        "Lines": [
+        ]
+    },
+    "GlowTexture": "",
+    "MountControl": 0b,
+    "MaxExp": 0,
+    "Silent": 1b,
+    "AimWhileShooting": 0b,
+    "pImpact": 0,
+    "TraderIgnoreDamage": 0b,
+    "ImmuneToFire": 0b,
+    "DisablePitch": 0b,
+    "TraderSold": {
+        "NpcMiscInv": [
+            {
+                "Slot": 0b,
+                "id": "minecraft:cookie",
+                "Count": 1b
+            },
+            {
+                "Slot": 1b,
+                "id": "minecraft:potato",
+                "Count": 1b
+            },
+            {
+                "Slot": 2b,
+                "id": "minecraft:rabbit_stew",
+                "Count": 1b
+            },
+            {
+                "Slot": 3b,
+                "id": "minecraft:glow_berries",
+                "Count": 1b
+            },
+            {
+                "Slot": 4b,
+                "id": "minecraft:melon_slice",
+                "Count": 1b
+            },
+            {
+                "Slot": 5b,
+                "id": "minecraft:carrot",
+                "Count": 1b
+            },
+            {
+                "Slot": 6b,
+                "id": "minecraft:sweet_berries",
+                "Count": 1b
+            },
+            {
+                "Slot": 7b,
+                "id": "minecraft:apple",
+                "Count": 1b
+            },
+            {
+                "Slot": 8b,
+                "id": "minecraft:bread",
+                "Count": 1b
+            },
+            {
+                "Slot": 15b,
+                "id": "minecraft:splash_potion",
+                "tag": {
+                    "Potion": "minecraft:strong_swiftness"
+                },
+                "Count": 1b
+            },
+            {
+                "Slot": 16b,
+                "id": "minecraft:potion",
+                "tag": {
+                    "Potion": "minecraft:strong_healing"
+                },
+                "Count": 1b
+            }
+        ]
+    },
+    "LeftHanded": 0b,
+    "minDelay": 20,
+    "MoveState": 0,
+    "NpcInteractLines": {
+        "Lines": [
+        ]
+    },
+    "DefendFaction": 0b,
+    "Invulnerable": 0b,
+    "NpcJob": 0,
+    "ArmorDropChances": [
+        0.085f,
+        0.085f,
+        0.085f,
+        0.085f
+    ],
+    "NpcIdleSound": "",
+    "NpcInv": [
+    ],
+    "AttackOtherFactions": 0b,
+    "pSpin": 0b,
+    "TransformEditingModus": 0b,
+    "pDur": 5,
+    "NpcVisible": 0,
+    "NpcsTimers": [
+    ],
+    "stopAndInteract": 1b,
+    "MovingPos": 0,
+    "KnockBack": 0,
+    "RespawnTime": 20,
+    "OrderedLines": 0b,
+    "ShotCount": 1,
+    "PotionAmp": 0,
+    "maxDelay": 40,
+    "NoAI": 1b,
+    "ScriptLanguage": "ECMAScript",
+    "MarkovGeneratorId": 9,
+    "Motion": [
+        0.0d,
+        0.0d,
+        0.0d
+    ],
+    "CanPickUpLoot": 0b,
+    "NpcDeathSound": "minecraft:entity.player.hurt",
+    "PotionImmune": 0b,
+    "AABB": [
+        2342.199999988079d,
+        -48.0d,
+        840.1999999880791d,
+        2342.800000011921d,
+        -46.10000002384186d,
+        840.8000000119209d
+    ],
+    "PersistenceRequired": 0b,
+    "NpcModelData": {
+        "ExtraData": {
+        },
+        "HeadConfig": {
+            "TransY": 0.0f,
+            "ScaleY": 1.0f,
+            "ScaleZ": 1.0f,
+            "TransX": 0.0f,
+            "ScaleX": 1.0f,
+            "NotShared": 0b,
+            "TransZ": 0.0f
+        },
+        "LastEdited": 1752958102537L,
+        "Legs2Config": {
+            "TransY": 0.0f,
+            "ScaleY": 1.0f,
+            "ScaleZ": 1.0f,
+            "TransX": 0.0f,
+            "ScaleX": 1.0f,
+            "NotShared": 0b,
+            "TransZ": 0.0f
+        },
+        "ArmsConfig": {
+            "TransY": 0.0f,
+            "ScaleY": 1.0f,
+            "ScaleZ": 1.0f,
+            "TransX": 0.0f,
+            "ScaleX": 1.0f,
+            "NotShared": 0b,
+            "TransZ": 0.0f
+        },
+        "MoveAnimation": 16,
+        "ModelType": 0,
+        "BodyConfig": {
+            "TransY": 0.0f,
+            "ScaleY": 1.0f,
+            "ScaleZ": 1.0f,
+            "TransX": 0.0f,
+            "ScaleX": 1.0f,
+            "NotShared": 0b,
+            "TransZ": 0.0f
+        },
+        "NewParts": [
+        ],
+        "Animation": 0,
+        "WingMode": 0,
+        "LegsConfig": {
+            "TransY": 0.0f,
+            "ScaleY": 1.0f,
+            "ScaleZ": 1.0f,
+            "TransX": 0.0f,
+            "ScaleX": 1.0f,
+            "NotShared": 0b,
+            "TransZ": 0.0f
+        },
+        "SimpleRender": 0b,
+        "Parts": [
+        ],
+        "DisplayName": "",
+        "CustomSkinUrl": "",
+        "Arms2Config": {
+            "TransY": 0.0f,
+            "ScaleY": 1.0f,
+            "ScaleZ": 1.0f,
+            "TransX": 0.0f,
+            "ScaleX": 1.0f,
+            "NotShared": 0b,
+            "TransZ": 0.0f
+        }
+    },
+    "NoLivingAnimation": 1b,
+    "BurnInSun": 0b,
+    "TransformHasStats": 0b,
+    "CreatureType": 0,
+    "PotionDuration": 5,
+    "pEffAmp": 0,
+    "CNPC_persistantData": {
+        "cnpcmarkdata": {
+            "marks": [
+            ]
+        }
+    },
+    "TotalTicksAlive": 151729L,
+    "Brain": {
+        "memories": {
+        }
+    },
+    "TransformHasInv": 0b,
+    "MinExp": 0,
+    "Rotation": [
+        150.57819f,
+        0.0f
+    ],
+    "Texture": "cyberpunkskins:textures/invisible.png",
+    "NpcKilledLines": {
+        "Lines": [
+        ]
+    },
+    "TraderCurrency": {
+        "NpcMiscInv": [
+            {
+                "Slot": 0b,
+                "id": "minecraft:emerald",
+                "Count": 1b
+            },
+            {
+                "Slot": 1b,
+                "id": "minecraft:emerald",
+                "Count": 2b
+            },
+            {
+                "Slot": 2b,
+                "id": "minecraft:emerald",
+                "Count": 3b
+            },
+            {
+                "Slot": 3b,
+                "id": "minecraft:emerald",
+                "Count": 1b
+            },
+            {
+                "Slot": 4b,
+                "id": "minecraft:emerald",
+                "Count": 2b
+            },
+            {
+                "Slot": 5b,
+                "id": "minecraft:emerald",
+                "Count": 3b
+            },
+            {
+                "Slot": 6b,
+                "id": "minecraft:emerald",
+                "Count": 1b
+            },
+            {
+                "Slot": 7b,
+                "id": "minecraft:emerald",
+                "Count": 2b
+            },
+            {
+                "Slot": 8b,
+                "id": "minecraft:emerald",
+                "Count": 3b
+            },
+            {
+                "Slot": 15b,
+                "id": "minecraft:emerald",
+                "Count": 3b
+            },
+            {
+                "Slot": 16b,
+                "id": "minecraft:emerald",
+                "Count": 12b
+            }
+        ]
+    },
+    "NpcKillLines": {
+        "Lines": [
+        ]
+    },
+    "DistanceToMelee": 0,
+    "PositionOffsetY": 5.0f,
+    "HandItems": [
+        {
+        },
+        {
+        }
+    ],
+    "Air": 300s,
+    "AvoidsSun": 0b,
+    "AvoidsWater": 0b,
+    "MarkovGender": 0,
+    "NpcHurtSound": "minecraft:entity.player.hurt",
+    "FallDistance": 0.0f,
+    "CanSwim": 1b,
+    "MaxHealth": 20,
+    "Health": 20.0f,
+    "UsingSkinUrl": 0b,
+    "PortalCooldown": 0
+}
