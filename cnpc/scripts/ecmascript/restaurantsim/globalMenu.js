@@ -1,16 +1,11 @@
 // ================================================================
 // Menu Editor NPC Script
-// Reads/writes world "GlobalMenuData" directly.
+// ONLY reads/writes "GlobalMenuData" in world storage.
 // Format: { "page0_slot3": {item: nbtString, price: 8}, ... }
-// NPC stores only MaxPages.
+// Tab icons are stored as page X, slot -1: { tabIcon: nbtString }
+// maxPages and totalRows are derived from the data itself.
 // Place in: Interact, customGuiButton, customGuiSlotClicked, customGuiClosed
 // ================================================================
-
-function makeNullArray(n) {
-    var a = new Array(n);
-    for (var i = 0; i < n; i++) a[i] = null;
-    return a;
-}
 
 function safeJSONParse(str, fallback) {
     if (!str || str.length === 0) return fallback;
@@ -29,21 +24,21 @@ function atomicSave(storageData, key, value) {
 
 // ========== State ==========
 
-var guiRef          = null;
-var mySlots         = [];
-var tabSlots        = [];
+var guiRef           = null;
+var mySlots          = [];
+var tabSlots         = [];
 var highlightLineIds = [];
-var highlightedSlot = null;
-var lastNpc         = null;
-var skipSaveOnClose = false;
+var highlightedSlot  = null;
+var lastNpc          = null;
+var skipSaveOnClose  = false;
 
-var globalMenuData  = {};  // live copy of world "GlobalMenuData"
-var maxPages        = 1;
-var currentPage     = 0;
-var viewportRow     = 0;
-var viewportRows    = 6;
-var totalRows       = 20;  // rows for current page (stored in "GlobalMenuRows")
-var numCols         = 9;
+var globalMenuData = {};
+var maxPages       = 1;
+var currentPage    = 0;
+var viewportRow    = 0;
+var viewportRows   = 6;
+var totalRows      = 20;
+var numCols        = 9;
 
 // Component IDs
 var ID_PRICE_FIELD      = 100;
@@ -65,66 +60,60 @@ for (var _r = 0; _r < viewportRows; _r++) {
     }
 }
 
-// ========== GlobalMenuData slot helpers ==========
+// ========== Data helpers ==========
 
-function slotKey(page, slotIdx) {
-    return "page" + page + "_slot" + slotIdx;
+function slotKey(page, idx)    { return "page" + page + "_slot" + idx; }
+function tabIconKey(page)      { return "page" + page + "_tabicon"; }
+
+function getSlot(page, idx)    { return globalMenuData[slotKey(page, idx)] || null; }
+function setSlot(page, idx, nbt, price) {
+    if (nbt) { globalMenuData[slotKey(page, idx)] = { item: nbt, price: price }; }
+    else      { delete globalMenuData[slotKey(page, idx)]; }
 }
 
-function getSlot(page, idx) {
-    return globalMenuData[slotKey(page, idx)] || null;
+function getTabIcon(page)      { return globalMenuData[tabIconKey(page)] || null; }
+function setTabIcon(page, nbt) {
+    if (nbt) { globalMenuData[tabIconKey(page)] = { tabIcon: nbt }; }
+    else      { delete globalMenuData[tabIconKey(page)]; }
 }
 
-function setSlot(page, idx, nbtString, price) {
-    if (nbtString) {
-        globalMenuData[slotKey(page, idx)] = { item: nbtString, price: price };
-    } else {
-        delete globalMenuData[slotKey(page, idx)];
+// Scan GlobalMenuData to find how many pages exist
+function deriveMaxPages(data) {
+    var max = 0;
+    for (var key in data) {
+        if (!data.hasOwnProperty(key)) continue;
+        var m = key.match(/^page(\d+)_/);
+        if (m) {
+            var pg = parseInt(m[1]);
+            if (pg > max) max = pg;
+        }
     }
+    return max + 1;
 }
 
-// ========== Row config (stored separately as "GlobalMenuRows") ==========
-// { "0": 20, "1": 10, ... }
-
-function loadRowConfig(worldData) {
-    if (!worldData.has("GlobalMenuRows")) return {};
-    return safeJSONParse(worldData.get("GlobalMenuRows"), {});
+// Scan GlobalMenuData to find highest slot index for a page -> total rows
+function derivePageRows(data, page) {
+    var maxSlot = -1;
+    var prefix  = "page" + page + "_slot";
+    for (var key in data) {
+        if (!data.hasOwnProperty(key)) continue;
+        if (key.indexOf(prefix) !== 0) continue;
+        var idx = parseInt(key.substring(prefix.length));
+        if (!isNaN(idx) && idx > maxSlot) maxSlot = idx;
+    }
+    if (maxSlot < 0) return 20; // default
+    return Math.ceil((maxSlot + 1) / numCols);
 }
 
-function getPageRows(worldData, pageIdx) {
-    var cfg = loadRowConfig(worldData);
-    return (cfg[pageIdx] !== undefined) ? cfg[pageIdx] : 20;
-}
-
-function savePageRows(worldData, pageIdx, rows) {
-    var cfg = loadRowConfig(worldData);
-    cfg[pageIdx] = rows;
-    atomicSave(worldData, "GlobalMenuRows", cfg);
-}
-
-// ========== Tab icons (stored as "GlobalMenuTabs") ==========
-// [nbtString|null, ...]
-
-function loadTabIcons(worldData) {
-    if (!worldData.has("GlobalMenuTabs")) return [];
-    var parsed = safeJSONParse(worldData.get("GlobalMenuTabs"), []);
-    return Array.isArray(parsed) ? parsed : [];
-}
-
-function saveTabIcons(worldData, icons) {
-    atomicSave(worldData, "GlobalMenuTabs", icons);
-}
-
-// ========== Extract price from lore ==========
-
-function extractPrice(nbtString) {
-    if (!nbtString) return null;
+// Extract price from item NBT lore
+function extractPrice(nbt) {
+    if (!nbt) return null;
     try {
-        var clean  = nbtString.replace(/(\d+)(d|b|s|f|L)\b/g, '$1');
-        var nbtObj = safeJSONParse(clean, null);
-        if (!nbtObj || !nbtObj.tag || !nbtObj.tag.display || !nbtObj.tag.display.Lore) return null;
-        var lore = nbtObj.tag.display.Lore;
-        var list = Array.isArray(lore) ? lore : (function(){ var a=[]; for(var k in lore) a.push(lore[k]); return a; })();
+        var clean  = nbt.replace(/(\d+)(d|b|s|f|L)\b/g, '$1');
+        var obj    = safeJSONParse(clean, null);
+        if (!obj || !obj.tag || !obj.tag.display || !obj.tag.display.Lore) return null;
+        var lore   = obj.tag.display.Lore;
+        var list   = Array.isArray(lore) ? lore : (function(){ var a=[]; for(var k in lore) a.push(lore[k]); return a; })();
         for (var j = 0; j < list.length; j++) {
             var line = String(list[j]);
             var lj   = safeJSONParse(line, null);
@@ -137,6 +126,20 @@ function extractPrice(nbtString) {
         }
     } catch(e) {}
     return null;
+}
+
+// ========== World load/save ==========
+
+function loadFromWorld(worldData) {
+    if (worldData.has("GlobalMenuData")) {
+        globalMenuData = safeJSONParse("" + worldData.get("GlobalMenuData"), {});
+    } else {
+        globalMenuData = {};
+    }
+}
+
+function saveToWorld(worldData) {
+    atomicSave(worldData, "GlobalMenuData", globalMenuData);
 }
 
 // ========== Viewport ==========
@@ -159,13 +162,13 @@ function updateScrollIndicator() {
     if (!guiRef) return;
     var scrollX = startX + (numCols * colSpacing) + 2;
     try { guiRef.removeComponent(10); } catch(e) {}
-    guiRef.addLabel(10, "§7" + (viewportRow+1) + "/" + Math.max(1, totalRows-viewportRows+1), scrollX+1, startY+42, 0.7, 0.7);
+    guiRef.addLabel(10, "§7" + (viewportRow+1) + "/" + Math.max(1, totalRows - viewportRows + 1), scrollX+1, startY+42, 0.7, 0.7);
 }
 
 function highlightActiveTab() {
     if (!guiRef) return;
     try { guiRef.removeComponent(20); guiRef.removeComponent(21); guiRef.removeComponent(22); guiRef.removeComponent(23); } catch(e) {}
-    var tw=25, th=28, ts=2, ty=-80, hx = currentPage*(tw+ts);
+    var tw=25, th=28, ts=2, ty=-80, hx=currentPage*(tw+ts);
     try {
         guiRef.addColoredLine(20, hx-1,    ty-1,    hx+tw+1, ty-1,    0xFFFF00, 2);
         guiRef.addColoredLine(21, hx-1,    ty+th+1, hx+tw+1, ty+th+1, 0xFFFF00, 2);
@@ -174,13 +177,12 @@ function highlightActiveTab() {
     } catch(e) {}
 }
 
-// Sync visible slots into globalMenuData
 function flushVisibleSlots() {
     for (var i = 0; i < mySlots.length; i++) {
         var gi    = viewportToGlobal(i);
         var stack = mySlots[i].getStack();
         if (stack && !stack.isEmpty()) {
-            var nbt   = stack.getItemNbt().toJsonString();
+            var nbt = stack.getItemNbt().toJsonString();
             setSlot(currentPage, gi, nbt, extractPrice(nbt));
         } else {
             setSlot(currentPage, gi, null, null);
@@ -188,14 +190,11 @@ function flushVisibleSlots() {
     }
 }
 
-// Sync tab icon slots into world
-function flushAndSaveTabIcons(worldData) {
-    var icons = [];
+function flushTabIcons() {
     for (var i = 0; i < tabSlots.length; i++) {
         var s = tabSlots[i].getStack();
-        icons.push((s && !s.isEmpty()) ? s.getItemNbt().toJsonString() : null);
+        setTabIcon(i, (s && !s.isEmpty()) ? s.getItemNbt().toJsonString() : null);
     }
-    saveTabIcons(worldData, icons);
 }
 
 // ========== interact ==========
@@ -209,26 +208,14 @@ function interact(event) {
     var adminMode = player.getMainhandItem() && player.getMainhandItem().getName() === "minecraft:bedrock";
     if (!adminMode) { player.message("§cYou need bedrock in hand to edit the menu!"); return; }
 
-    // MaxPages stored in world so any NPC sees the same value
-    if (worldData.has("GlobalMenuPages")) {
-        try {
-            maxPages = parseInt("" + worldData.get("GlobalMenuPages"));
-            if (isNaN(maxPages) || maxPages < 1) maxPages = 1;
-            if (maxPages > 10) maxPages = 10;
-        } catch(e) { maxPages = 1; }
-    } else {
-        maxPages = 1;
-    }
+    loadFromWorld(worldData);
 
-    // Load GlobalMenuData from world
-    if (worldData.has("GlobalMenuData")) {
-        globalMenuData = safeJSONParse(worldData.get("GlobalMenuData"), {});
-    } else {
-        globalMenuData = {};
-    }
+    // Derive maxPages from data
+    maxPages = deriveMaxPages(globalMenuData);
+    if (maxPages < 1) maxPages = 1;
 
     if (currentPage >= maxPages) currentPage = 0;
-    totalRows = getPageRows(worldData, currentPage);
+    totalRows = Math.max(derivePageRows(globalMenuData, currentPage), viewportRows);
 
     highlightedSlot  = null;
     highlightLineIds = [];
@@ -246,8 +233,8 @@ function interact(event) {
         mySlots = slotPositions.map(function(pos){ return guiRef.addItemSlot(pos.x, pos.y); });
 
         var scrollX = startX + (numCols * colSpacing) + 2;
-        guiRef.addButton(ID_SCROLL_UP,   "↑", scrollX, startY,      18, 18);
-        guiRef.addButton(ID_SCROLL_DOWN, "↓", scrollX, startY+20,   18, 18);
+        guiRef.addButton(ID_SCROLL_UP,   "↑", scrollX, startY,    18, 18);
+        guiRef.addButton(ID_SCROLL_DOWN, "↓", scrollX, startY+20, 18, 18);
         guiRef.addLabel(10, "", scrollX+1, startY+42, 0.7, 0.7);
 
         guiRef.addLabel(3, "§7Price:", 2, -100, 0.8, 0.8);
@@ -255,8 +242,8 @@ function interact(event) {
         guiRef.addButton(ID_SET_PRICE_BUTTON, "Set", 125, -104, 35, 18);
 
         var tmx = (maxPages*27)+2;
-        guiRef.addButton(ID_ADD_TAB,    "+", tmx,     -80, 16, 14);
-        guiRef.addButton(ID_REMOVE_TAB, "-", tmx+18,  -80, 16, 14);
+        guiRef.addButton(ID_ADD_TAB,    "+", tmx,    -80, 16, 14);
+        guiRef.addButton(ID_REMOVE_TAB, "-", tmx+18, -80, 16, 14);
         guiRef.addLabel(7, "§7Tabs", tmx-8, -92, 0.7, 0.7);
 
         guiRef.addLabel(1, "§6Menu Editor", 2, 63, 1.0, 1.0);
@@ -268,13 +255,12 @@ function interact(event) {
         player.showCustomGui(guiRef);
     }
 
-    // Populate tab icons
-    var tabIcons = loadTabIcons(worldData);
-    while (tabIcons.length < maxPages) tabIcons.push(null);
+    // Populate tab icons from GlobalMenuData
     for (var i = 0; i < tabSlots.length; i++) {
         tabSlots[i].setStack(null);
-        if (tabIcons[i]) {
-            try { tabSlots[i].setStack(player.world.createItemFromNbt(api.stringToNbt(tabIcons[i]))); } catch(e) {}
+        var iconEntry = getTabIcon(i);
+        if (iconEntry && iconEntry.tabIcon) {
+            try { tabSlots[i].setStack(player.world.createItemFromNbt(api.stringToNbt(iconEntry.tabIcon))); } catch(e) {}
         }
     }
 
@@ -294,7 +280,7 @@ function customGuiButton(event) {
     if (event.buttonId === ID_SCROLL_UP) {
         if (viewportRow > 0) {
             flushVisibleSlots();
-            atomicSave(worldData, "GlobalMenuData", globalMenuData);
+            saveToWorld(worldData);
             viewportRow--;
             updateVisibleSlots(player, api);
             updateScrollIndicator();
@@ -306,7 +292,7 @@ function customGuiButton(event) {
     if (event.buttonId === ID_SCROLL_DOWN) {
         if (viewportRow < Math.max(0, totalRows - viewportRows)) {
             flushVisibleSlots();
-            atomicSave(worldData, "GlobalMenuData", globalMenuData);
+            saveToWorld(worldData);
             viewportRow++;
             updateVisibleSlots(player, api);
             updateScrollIndicator();
@@ -320,11 +306,11 @@ function customGuiButton(event) {
         var tabIndex = event.buttonId - ID_TAB_BASE;
         if (tabIndex !== currentPage) {
             flushVisibleSlots();
-            flushAndSaveTabIcons(worldData);
-            atomicSave(worldData, "GlobalMenuData", globalMenuData);
+            flushTabIcons();
+            saveToWorld(worldData);
             currentPage = tabIndex;
             viewportRow = 0;
-            totalRows   = getPageRows(worldData, currentPage);
+            totalRows   = Math.max(derivePageRows(globalMenuData, currentPage), viewportRows);
             highlightActiveTab();
             updateVisibleSlots(player, api);
             updateScrollIndicator();
@@ -333,39 +319,40 @@ function customGuiButton(event) {
         return;
     }
 
-    // Set Rows
+    // Set Rows — just sets how many rows are visible, removes overflow slots
     if (event.buttonId === ID_SET_ROWS_BUTTON) {
         var rowsField = event.gui.getComponent(ID_ROWS_FIELD);
         if (!rowsField) return;
-        var newRows = parseInt(rowsField.getText().trim());
+        var newRows = parseInt("" + rowsField.getText().trim());
         if (isNaN(newRows) || newRows < 1 || newRows > 100) {
             player.message("§cEnter a number between 1 and 100.");
             return;
         }
         flushVisibleSlots();
-        // Remove any slots beyond the new size
-        for (var i = newRows * numCols; i < totalRows * numCols; i++) {
+        // Delete any slots beyond the new row count
+        var newMax = newRows * numCols;
+        var oldMax = totalRows * numCols;
+        for (var i = newMax; i < oldMax; i++) {
             setSlot(currentPage, i, null, null);
         }
         totalRows = newRows;
-        savePageRows(worldData, currentPage, totalRows);
-        atomicSave(worldData, "GlobalMenuData", globalMenuData);
         var maxVR = Math.max(0, totalRows - viewportRows);
         if (viewportRow > maxVR) viewportRow = maxVR;
+        saveToWorld(worldData);
         player.message("§aSet total rows to §e" + totalRows + " §afor this tab!");
         interact({ player: player, API: api, npc: lastNpc });
         return;
     }
 
-    // Add Tab
+    // Add Tab — just increment; new page has no data yet so deriveMaxPages will see it next open
     if (event.buttonId === ID_ADD_TAB) {
         if (maxPages >= 10) { player.message("§cMaximum 10 tabs allowed!"); return; }
         flushVisibleSlots();
-        flushAndSaveTabIcons(worldData);
-        atomicSave(worldData, "GlobalMenuData", globalMenuData);
-        maxPages++;
-        worldData.put("GlobalMenuPages", "" + maxPages);
-        player.message("§aAdded tab! Total tabs: §e" + maxPages);
+        flushTabIcons();
+        // Write a placeholder so the new page exists in the data
+        globalMenuData["page" + maxPages + "_placeholder"] = { placeholder: true };
+        saveToWorld(worldData);
+        player.message("§aAdded tab! Total tabs: §e" + (maxPages + 1));
         guiRef = null; viewportRow = 0; currentPage = 0;
         skipSaveOnClose = true;
         event.gui.close();
@@ -376,46 +363,25 @@ function customGuiButton(event) {
     if (event.buttonId === ID_REMOVE_TAB) {
         if (maxPages <= 1) { player.message("§cMust have at least 1 tab!"); return; }
         flushVisibleSlots();
-        flushAndSaveTabIcons(worldData);
+        flushTabIcons();
 
         var tabToDelete = currentPage;
-
-        // Rebuild globalMenuData: remove deleted page, shift higher pages down
         var newData = {};
         for (var key in globalMenuData) {
             if (!globalMenuData.hasOwnProperty(key)) continue;
-            var m = key.match(/^page(\d+)_slot(\d+)$/);
+            var m = key.match(/^page(\d+)_(.*)/);
             if (!m) continue;
-            var pg = parseInt(m[1]), sl = parseInt(m[2]);
+            var pg     = parseInt(m[1]);
+            var suffix = m[2];
             if (pg === tabToDelete) continue;
             var newPg = (pg > tabToDelete) ? pg - 1 : pg;
-            newData["page" + newPg + "_slot" + sl] = globalMenuData[key];
+            newData["page" + newPg + "_" + suffix] = globalMenuData[key];
         }
         globalMenuData = newData;
 
-        // Shift tab icons
-        var icons = loadTabIcons(worldData);
-        var newIcons = [];
-        for (var i = 0; i < icons.length; i++) {
-            if (i !== tabToDelete) newIcons.push(icons[i] || null);
-        }
-        saveTabIcons(worldData, newIcons);
-
-        // Shift row configs
-        var cfg = loadRowConfig(worldData);
-        var newCfg = {};
-        for (var oi = 0; oi < maxPages; oi++) {
-            if (oi === tabToDelete) continue;
-            var ni = (oi > tabToDelete) ? oi - 1 : oi;
-            if (cfg[oi] !== undefined) newCfg[ni] = cfg[oi];
-        }
-        atomicSave(worldData, "GlobalMenuRows", newCfg);
-
         maxPages--;
         if (currentPage >= maxPages) currentPage = maxPages - 1;
-        worldData.put("GlobalMenuPages", "" + maxPages);
-        atomicSave(worldData, "GlobalMenuData", globalMenuData);
-
+        saveToWorld(worldData);
         player.message("§aDeleted tab §e" + (tabToDelete+1) + "§a! Total tabs: §e" + maxPages);
         guiRef = null; viewportRow = 0; currentPage = 0;
         skipSaveOnClose = true;
@@ -427,7 +393,7 @@ function customGuiButton(event) {
     if (event.buttonId === ID_SET_PRICE_BUTTON) {
         var priceField = event.gui.getComponent(ID_PRICE_FIELD);
         if (!priceField) return;
-        var inputText = priceField.getText().trim();
+        var inputText = ("" + priceField.getText()).trim();
         if (!inputText) { player.message("§cPlease enter a value!"); return; }
 
         // Tab rename?
@@ -437,7 +403,8 @@ function customGuiButton(event) {
                 if (!tabItem || tabItem.isEmpty()) { player.message("§cNo item in tab slot!"); return; }
                 tabItem.setCustomName(inputText);
                 highlightedSlot.setStack(tabItem);
-                flushAndSaveTabIcons(worldData);
+                flushTabIcons();
+                saveToWorld(worldData);
                 player.message("§aRenamed tab to: " + inputText);
                 return;
             }
@@ -465,7 +432,7 @@ function customGuiButton(event) {
         if (si !== -1) {
             setSlot(currentPage, viewportToGlobal(si), item.getItemNbt().toJsonString(), price);
         }
-        atomicSave(worldData, "GlobalMenuData", globalMenuData);
+        saveToWorld(worldData);
         player.message("§aSet price §e" + price + "¢ §afor item!");
     }
 }
@@ -478,30 +445,28 @@ function customGuiSlotClicked(event) {
     var player      = event.player;
     var worldData   = lastNpc.getWorld().getStoreddata();
 
-    // Tab slot clicked directly — handle item swap right here
+    // Tab slot clicked — swap item directly
     for (var i = 0; i < tabSlots.length; i++) {
         if (tabSlots[i] === clickedSlot) {
             highlightedSlot = clickedSlot;
             var slotStack = clickedSlot.getStack();
             if (stack && !stack.isEmpty()) {
-                // Place item from hand into tab slot
                 var ic = player.world.createItemFromNbt(stack.getItemNbt());
                 if (slotStack && !slotStack.isEmpty()) player.giveItem(slotStack);
                 clickedSlot.setStack(ic);
                 player.removeItem(stack, stack.getStackSize());
-                flushAndSaveTabIcons(worldData);
             } else if (slotStack && !slotStack.isEmpty()) {
-                // Take item out of tab slot
                 player.giveItem(slotStack);
                 clickedSlot.setStack(player.world.createItem("minecraft:air", 1));
-                flushAndSaveTabIcons(worldData);
             }
+            flushTabIcons();
+            saveToWorld(worldData);
             guiRef.update();
             return;
         }
     }
 
-    // Menu slot clicked — select + draw highlight border
+    // Menu slot clicked — select + draw highlight
     var slotIndex = mySlots.indexOf(clickedSlot);
     if (slotIndex !== -1) {
         highlightedSlot = clickedSlot;
@@ -519,7 +484,7 @@ function customGuiSlotClicked(event) {
         return;
     }
 
-    // Inventory click — transfer item into the currently highlighted slot (menu or tab)
+    // Inventory click — transfer into highlighted slot
     if (!highlightedSlot) return;
 
     var isTabSlot = false;
@@ -559,7 +524,7 @@ function customGuiSlotClicked(event) {
         }
 
         if (isTabSlot) {
-            flushAndSaveTabIcons(worldData);
+            flushTabIcons();
         } else {
             var si = mySlots.indexOf(highlightedSlot);
             if (si !== -1) {
@@ -572,8 +537,8 @@ function customGuiSlotClicked(event) {
                     setSlot(currentPage, gi, null, null);
                 }
             }
-            atomicSave(worldData, "GlobalMenuData", globalMenuData);
         }
+        saveToWorld(worldData);
         guiRef.update();
     } catch(e) {
         player.message("§cError: " + e);
@@ -585,8 +550,8 @@ function customGuiSlotClicked(event) {
 function customGuiClosed(event) {
     if (!skipSaveOnClose && lastNpc) {
         flushVisibleSlots();
-        flushAndSaveTabIcons(lastNpc.getWorld().getStoreddata());
-        atomicSave(lastNpc.getWorld().getStoreddata(), "GlobalMenuData", globalMenuData);
+        flushTabIcons();
+        saveToWorld(lastNpc.getWorld().getStoreddata());
     } else {
         skipSaveOnClose = false;
     }
