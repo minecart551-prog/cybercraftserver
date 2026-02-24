@@ -2,7 +2,11 @@
   "bucket": "tide:angelfish_bucket",
   "conditions": [
     {
-      "type": "tide:saltwater"
+      "type": "tide:found_in",
+      "biomes": [
+         "#minecraft:is_cold_ocean",
+         "#minecraft:is_lukewarm_ocean"
+      ] 
     },
     {
       "type": "tide:dimension",
@@ -16,7 +20,7 @@
     },
     {
       "type": "tide:above",
-      "y": 40
+      "y": -63
     }
   ],
   "display_data": {
@@ -31,13 +35,6 @@
     "location": "journal.info.location.saltwater",
     "rarity": "uncommon"
   },
-  "modifiers": [
-    {
-      "type": "tide:temperature",
-      "preferred_temperature": 1.0,
-      "temperature_tolerance": 0.8
-    }
-  ],
   "selection_weight": 25.0,
   "size": {
     "record_high_cm": 20.0,

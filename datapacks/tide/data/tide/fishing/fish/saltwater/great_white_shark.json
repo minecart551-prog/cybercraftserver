@@ -20,7 +20,10 @@
       ]
     },
     {
-      "type": "tide:saltwater"
+      "type": "tide:found_in",
+      "biomes": [
+         "#minecraft:is_cold_ocean"
+      ]
     },
     {
       "type": "tide:dimension",
@@ -34,7 +37,7 @@
     },
     {
       "type": "tide:above",
-      "y": 40
+      "y": -63
     }
   ],
   "display_data": {
@@ -52,13 +55,6 @@
     "location": "journal.info.location.saltwater",
     "rarity": "very_rare"
   },
-  "modifiers": [
-    {
-      "type": "tide:temperature",
-      "preferred_temperature": -0.18,
-      "temperature_tolerance": 0.2
-    }
-  ],
   "selection_quality": 0.5,
   "selection_weight": 3.0,
   "size": {

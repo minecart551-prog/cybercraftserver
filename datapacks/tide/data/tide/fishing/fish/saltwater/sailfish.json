@@ -3,7 +3,11 @@
   "bucket": "tide:sailfish_bucket",
   "conditions": [
     {
-      "type": "tide:saltwater"
+      "type": "tide:found_in",
+      "biomes": [
+         "#minecraft:is_cold_ocean",
+         "#minecraft:is_lukewarm_ocean"
+      ] 
     },
     {
       "type": "tide:dimension",
@@ -17,7 +21,7 @@
     },
     {
       "type": "tide:above",
-      "y": 40
+      "y": -63
     }
   ],
   "display_data": {
@@ -35,13 +39,6 @@
     "location": "journal.info.location.saltwater",
     "rarity": "rare"
   },
-  "modifiers": [
-    {
-      "type": "tide:temperature",
-      "preferred_temperature": 0.7,
-      "temperature_tolerance": 0.5
-    }
-  ],
   "selection_weight": 8.0,
   "size": {
     "record_high_cm": 380.0,

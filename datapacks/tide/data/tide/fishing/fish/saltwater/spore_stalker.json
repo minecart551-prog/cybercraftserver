@@ -4,8 +4,9 @@
     {
       "type": "tide:found_in",
       "biomes": [
-        "#tide:has_mushroom_fish"
-      ]
+         "#minecraft:is_cold_ocean",
+         "#minecraft:is_lukewarm_ocean"
+      ] 
     },
     {
       "type": "tide:dimension",
@@ -19,7 +20,7 @@
     },
     {
       "type": "tide:above",
-      "y": 40
+      "y": -63
     }
   ],
   "display_data": {

@@ -2,15 +2,11 @@
   "bucket": "tide:flounder_bucket",
   "conditions": [
     {
-      "type": "tide:seasons",
-      "seasons": [
-        "summer",
-        "fall",
-        "winter"
-      ]
-    },
-    {
-      "type": "tide:saltwater"
+      "type": "tide:found_in",
+      "biomes": [
+         "#minecraft:is_cold_ocean",
+         "#minecraft:is_lukewarm_ocean"
+      ] 
     },
     {
       "type": "tide:dimension",
@@ -24,7 +20,7 @@
     },
     {
       "type": "tide:above",
-      "y": 40
+      "y": -63
     }
   ],
   "display_data": {
@@ -38,13 +34,6 @@
     "group": "saltwater",
     "location": "journal.info.location.saltwater"
   },
-  "modifiers": [
-    {
-      "type": "tide:temperature",
-      "preferred_temperature": -0.25,
-      "temperature_tolerance": 0.5
-    }
-  ],
   "selection_weight": 35.0,
   "size": {
     "record_high_cm": 75.0,

@@ -4,8 +4,9 @@
     {
       "type": "tide:found_in",
       "biomes": [
-        "#tide:has_coastal_fish"
-      ]
+         "#minecraft:is_cold_ocean",
+         "#minecraft:is_lukewarm_ocean"
+      ] 
     },
     {
       "type": "tide:saltwater"
@@ -22,7 +23,7 @@
     },
     {
       "type": "tide:above",
-      "y": 40
+      "y": -63
     }
   ],
   "display_data": {
@@ -35,13 +36,6 @@
     "group": "saltwater",
     "location": "journal.info.location.coast"
   },
-  "modifiers": [
-    {
-      "type": "tide:temperature",
-      "preferred_temperature": 0.12,
-      "temperature_tolerance": 0.45
-    }
-  ],
   "selection_weight": 42.0,
   "size": {
     "record_high_cm": 125.0,

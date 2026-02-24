@@ -21,11 +21,8 @@
     {
       "type": "tide:found_in",
       "biomes": [
-        "#minecraft:is_deep_ocean"
+         "#minecraft:is_cold_ocean"
       ]
-    },
-    {
-      "type": "tide:saltwater"
     },
     {
       "type": "tide:dimension",
@@ -57,13 +54,6 @@
     "location": "journal.info.location.deep_ocean",
     "rarity": "legendary"
   },
-  "modifiers": [
-    {
-      "type": "tide:temperature",
-      "preferred_temperature": 0.3,
-      "temperature_tolerance": 0.2
-    }
-  ],
   "selection_quality": 0.5,
   "selection_weight": 1.0,
   "size": {

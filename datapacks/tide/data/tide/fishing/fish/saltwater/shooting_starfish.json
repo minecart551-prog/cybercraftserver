@@ -19,11 +19,8 @@
     {
       "type": "tide:found_in",
       "biomes": [
-        "#minecraft:is_deep_ocean"
+         "#minecraft:is_cold_ocean"
       ]
-    },
-    {
-      "type": "tide:saltwater"
     },
     {
       "type": "tide:dimension",
@@ -37,7 +34,7 @@
     },
     {
       "type": "tide:above",
-      "y": 40
+      "y": -63
     }
   ],
   "display_data": {

@@ -2,14 +2,10 @@
   "bucket": "tide:marstilus_bucket",
   "conditions": [
     {
-      "type": "tide:moon_phase",
-      "any_of": [
-        1,
-        7
-      ]
-    },
-    {
-      "type": "tide:saltwater"
+      "type": "tide:found_in",
+      "biomes": [
+         "#minecraft:is_cold_ocean"
+      ] 
     },
     {
       "type": "tide:dimension",
@@ -23,7 +19,7 @@
     },
     {
       "type": "tide:above",
-      "y": 40
+      "y": -63
     }
   ],
   "display_data": {

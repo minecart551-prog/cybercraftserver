@@ -3,17 +3,11 @@
   "bucket": "tide:aquathorn_bucket",
   "conditions": [
     {
-      "type": "tide:found_in_structures",
-      "structures": [
-        "minecraft:monument",
-        "betteroceanmonuments:ocean_monument"
-      ]
-    },
-    {
-      "type": "tide:found_in_structures",
-      "structures": [
-        "minecraft:monument"
-      ]
+      "type": "tide:found_in",
+      "biomes": [
+         "#minecraft:is_cold_ocean",
+         "#minecraft:is_lukewarm_ocean"
+      ] 
     },
     {
       "type": "tide:dimension",
@@ -24,6 +18,10 @@
     {
       "type": "tide:fluid",
       "fluid": "water"
+    },
+    {
+      "type": "tide:above",
+      "y": -63
     }
   ],
   "display_data": {
