@@ -2,7 +2,7 @@
   "bucket": "tide:mahi_mahi_bucket",
   "conditions": [
     {
-      "type": "tide:found_in",
+      "type": "tide:saltwater",
       "biomes": [
          "#minecraft:is_cold_ocean",
          "#minecraft:is_lukewarm_ocean"
