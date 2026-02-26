@@ -29,14 +29,14 @@ function getBlockKey(block) {
     return "grill_" + block.getX() + "_" + block.getY() + "_" + block.getZ();
 }
 
-function loadGrillData(block, apiOrWorld) {
+function loadGrillData(block) {
     var world = block.getWorld();
-    var worldData = world.getStoreddata();
+    var tempData = world.getTempdata();
     var blockKey = getBlockKey(block);
     
-    if(worldData.has(blockKey)){
+    if(tempData.has(blockKey)){
         try {
-            return JSON.parse(worldData.get(blockKey));
+            return JSON.parse(tempData.get(blockKey));
         } catch(e) {
             return { slots: {}, coal: null };
         }
@@ -46,22 +46,19 @@ function loadGrillData(block, apiOrWorld) {
 
 function saveGrillData(block, data) {
     var world = block.getWorld();
-    var worldData = world.getStoreddata();
+    var tempData = world.getTempdata();
     var blockKey = getBlockKey(block);
     
-    worldData.put(blockKey, JSON.stringify(data));
+    tempData.put(blockKey, JSON.stringify(data));
 }
 
 function reloadGrillItemsInGui(block, api) {
-    // This function reloads items from storage into the GUI
-    // Called by timer to show cooking progress
     if(!guiRef || !cookingSlots || cookingSlots.length === 0) return;
     if(!block) return;
     
     var world = block.getWorld();
-    var data = loadGrillData(block, api);
+    var data = loadGrillData(block);
     
-    // Reload cooking slots
     for(var i = 0; i < GRID_SIZE; i++){
         if(data.slots[i]){
             try {
@@ -73,7 +70,6 @@ function reloadGrillItemsInGui(block, api) {
         }
     }
     
-    // Reload coal slot
     if(data.coal){
         try {
             var coalItem = world.createItemFromNbt(api.stringToNbt(data.coal));
@@ -92,9 +88,8 @@ function openGrillGui(player, api) {
     highlightedSlot = null;
     highlightLineIds = [];
     
-    // Create 3x3 grid of cooking slots (moved up 50 pixels)
     var startX = 55;
-    var startY = -45; // Was 20, now -30 (moved up 50)
+    var startY = -45;
     var slotSpacing = 18;
     
     for(var row = 0; row < 3; row++){
@@ -106,17 +101,13 @@ function openGrillGui(player, api) {
         }
     }
     
-    // Create coal slot below (moved up 50 pixels)
-    coalSlot = guiRef.addItemSlot(73, 26); // Was 90, now 40
+    coalSlot = guiRef.addItemSlot(73, 26);
     
-    // Labels (moved up 50 pixels)
-    guiRef.addLabel(1, "§6Grill", 71, -60, 1.2, 1.2); // Was 5, now -45
-    guiRef.addLabel(2, "§7Coal", 47, 30, 0.8, 0.8); // Was 93, now 43
+    guiRef.addLabel(1, "§6Grill", 71, -60, 1.2, 1.2);
+    guiRef.addLabel(2, "§7Coal", 47, 30, 0.8, 0.8);
     
-    // Show player inventory (back to original position)
     guiRef.showPlayerInventory(0, 86, false);
     
-    // Load items from storage
     loadGrillItems(player, api);
     
     player.showCustomGui(guiRef);
@@ -125,9 +116,8 @@ function openGrillGui(player, api) {
 function loadGrillItems(player, api) {
     if(!lastBlock) return;
     
-    var data = loadGrillData(lastBlock, api);
+    var data = loadGrillData(lastBlock);
     
-    // Load cooking slots
     for(var i = 0; i < GRID_SIZE; i++){
         if(data.slots[i]){
             try {
@@ -137,7 +127,6 @@ function loadGrillItems(player, api) {
         }
     }
     
-    // Load coal slot
     if(data.coal){
         try {
             var coalItem = player.world.createItemFromNbt(api.stringToNbt(data.coal));
@@ -158,21 +147,17 @@ function customGuiSlotClicked(event) {
     var player = event.player;
     var api = event.API;
     
-    // Check if clicked slot is a cooking slot
     var slotIndex = cookingSlots.indexOf(clickedSlot);
     var isCoalSlot = (clickedSlot === coalSlot);
     
     if(slotIndex !== -1) {
-        // Clicked a cooking slot
         highlightedSlot = clickedSlot;
         
-        // Clear old highlights
         for(var i = 0; i < highlightLineIds.length; i++){
             try { guiRef.removeComponent(highlightLineIds[i]); } catch(e) {}
         }
         highlightLineIds = [];
         
-        // Draw highlight
         var row = Math.floor(slotIndex / 3);
         var col = slotIndex % 3;
         var startX = 55;
@@ -191,16 +176,13 @@ function customGuiSlotClicked(event) {
     }
     
     if(isCoalSlot) {
-        // Clicked coal slot
         highlightedSlot = clickedSlot;
         
-        // Clear old highlights
         for(var i = 0; i < highlightLineIds.length; i++){
             try { guiRef.removeComponent(highlightLineIds[i]); } catch(e) {}
         }
         highlightLineIds = [];
         
-        // Draw highlight
         var x = 73, y = 26;
         var w = 18, h = 18;
         
@@ -212,20 +194,15 @@ function customGuiSlotClicked(event) {
         return;
     }
     
-    // If no slot is highlighted, return
     if(!highlightedSlot) return;
     
     var slotStack = highlightedSlot.getStack();
     var isHighlightedCoal = (highlightedSlot === coalSlot);
     
     if(stack && !stack.isEmpty()) {
-        // Player clicked with item in hand
         if(slotStack && !slotStack.isEmpty()) {
-            // Slot already has an item
             if(slotStack.getDisplayName() === stack.getDisplayName()) {
-                // Same item
                 if(isHighlightedCoal) {
-                    // Coal slot - can stack normally
                     var maxStack = stack.getMaxStackSize();
                     var total = slotStack.getStackSize() + stack.getStackSize();
                     if(total <= maxStack) {
@@ -243,12 +220,9 @@ function customGuiSlotClicked(event) {
                             player.giveItem(overflowItem);
                         }
                     }
-                } else {
-                    // Cooking slot - already has 1 item, can't add more
-                    // Do nothing
                 }
+                // Cooking slot: already has 1 item, do nothing
             } else {
-                // Different item - swap
                 var oldItem = slotStack;
                 player.giveItem(oldItem);
                 
@@ -259,7 +233,6 @@ function customGuiSlotClicked(event) {
                 player.removeItem(stack, amountToPlace);
             }
         } else {
-            // Slot is empty - place item
             var itemCopy = player.world.createItemFromNbt(stack.getItemNbt());
             var amountToPlace = isHighlightedCoal ? stack.getStackSize() : 1;
             itemCopy.setStackSize(amountToPlace);
@@ -267,7 +240,6 @@ function customGuiSlotClicked(event) {
             player.removeItem(stack, amountToPlace);
         }
     } else if(slotStack && !slotStack.isEmpty()) {
-        // Empty hand, take item
         player.giveItem(slotStack);
         highlightedSlot.setStack(player.world.createItem("minecraft:air", 1));
     }
@@ -281,16 +253,13 @@ function saveGrillItems() {
     
     var data = { slots: {}, coal: null };
     
-    // Save cooking slots
     for(var i = 0; i < cookingSlots.length; i++){
         var stack = cookingSlots[i].getStack();
-        
         if(stack && !stack.isEmpty()){
             data.slots[i] = stack.getItemNbt().toJsonString();
         }
     }
     
-    // Save coal slot
     var coalStack = coalSlot.getStack();
     if(coalStack && !coalStack.isEmpty()){
         data.coal = coalStack.getItemNbt().toJsonString();
@@ -298,7 +267,6 @@ function saveGrillItems() {
     
     saveGrillData(lastBlock, data);
     
-    // Check if we should start or stop the timer
     checkAndUpdateTimer(lastBlock);
 }
 
@@ -306,10 +274,9 @@ function checkAndUpdateTimer(block) {
     if(!block) return;
     
     var world = block.getWorld();
-    var data = loadGrillData(block, world);
+    var data = loadGrillData(block);
     var API = Java.type("noppes.npcs.api.NpcAPI").Instance();
     
-    // Check if there's coal
     var hasCoal = false;
     if(data.coal){
         try {
@@ -320,7 +287,6 @@ function checkAndUpdateTimer(block) {
         } catch(e) {}
     }
     
-    // Check if there are any uncookable items
     var hasUncooked = false;
     for(var i = 0; i < GRID_SIZE; i++){
         if(data.slots[i]){
@@ -337,13 +303,9 @@ function checkAndUpdateTimer(block) {
     var shouldRun = hasCoal && hasUncooked;
     
     if(shouldRun){
-        // Start timer if not already running
-        block.timers.forceStart(1, 20, true); // Every 1 second, repeating
+        block.timers.forceStart(1, 20, true);
     } else {
-        // Stop timer and reset progress
         block.timers.stop(1);
-        
-        // Reset cooking progress for items that won't be cooked
         if(!hasCoal || !hasUncooked){
             for(var key in cookingProgress){
                 delete cookingProgress[key];
@@ -353,15 +315,13 @@ function checkAndUpdateTimer(block) {
 }
 
 function timer(event) {
-    // Only process timer ID 1 (our cooking timer)
     if(event.id !== 1) return;
     
     var block = event.block;
     var api = event.API;
     var world = block.getWorld();
-    var data = loadGrillData(block, api);
+    var data = loadGrillData(block);
     
-    // Check if there's coal
     var hasCoal = false;
     if(data.coal){
         try {
@@ -373,9 +333,7 @@ function timer(event) {
     }
     
     if(!hasCoal){
-        // No coal, stop timer
         block.timers.stop(1);
-        // Reset all cooking progress
         for(var key in cookingProgress){
             delete cookingProgress[key];
         }
@@ -386,18 +344,15 @@ function timer(event) {
     var shouldUpdate = false;
     var hasUncooked = false;
     
-    // Check each slot
     for(var i = 0; i < GRID_SIZE; i++){
         if(data.slots[i]){
             try {
                 var item = world.createItemFromNbt(api.stringToNbt(data.slots[i]));
                 
                 if(item && !item.isEmpty()){
-                    // Cook any item that's not already cooked
                     if(!isCooked(item)){
                         hasUncooked = true;
                         
-                        // Start cooking if not already started
                         if(!cookingProgress[i]){
                             cookingProgress[i] = {
                                 secondsElapsed: 0,
@@ -405,17 +360,14 @@ function timer(event) {
                             };
                         }
                         
-                        // Increment seconds
                         cookingProgress[i].secondsElapsed++;
                         var secondsRemaining = COOK_TIME - cookingProgress[i].secondsElapsed;
                         
                         if(cookingProgress[i].secondsElapsed >= COOK_TIME){
-                            // Item is cooked!
                             var cookedItem = world.createItemFromNbt(api.stringToNbt(data.slots[i]));
                             var existingLore = cookedItem.getLore();
                             var loreArray = [];
                             
-                            // Remove cooking timer lines and trailing empty lines
                             for(var j = 0; j < existingLore.length; j++){
                                 if(existingLore[j].indexOf("Cooking:") === -1){
                                     loreArray.push(existingLore[j]);
@@ -434,12 +386,10 @@ function timer(event) {
                             itemsCooked = true;
                             shouldUpdate = true;
                         } else {
-                            // Update timer
                             var cookingItem = world.createItemFromNbt(api.stringToNbt(data.slots[i]));
                             var existingLore = cookingItem.getLore();
                             var loreArray = [];
                             
-                            // Remove cooking timer lines and trailing empty lines
                             for(var j = 0; j < existingLore.length; j++){
                                 if(existingLore[j].indexOf("Cooking:") === -1){
                                     loreArray.push(existingLore[j]);
@@ -457,7 +407,6 @@ function timer(event) {
                             shouldUpdate = true;
                         }
                     } else {
-                        // Already cooked, remove from progress
                         if(cookingProgress[i]){
                             delete cookingProgress[i];
                         }
@@ -465,14 +414,12 @@ function timer(event) {
                 }
             } catch(e) {}
         } else {
-            // Slot is empty, remove from progress
             if(cookingProgress[i]){
                 delete cookingProgress[i];
             }
         }
     }
     
-    // If no more uncooked items, stop timer
     if(!hasUncooked){
         block.timers.stop(1);
         saveGrillData(block, data);
@@ -482,11 +429,9 @@ function timer(event) {
         return;
     }
     
-    // Consume coal if items were cooked
     if(itemsCooked && data.coal){
         try {
             var coalItem = world.createItemFromNbt(api.stringToNbt(data.coal));
-            
             if(coalItem && !coalItem.isEmpty()){
                 var coalCount = coalItem.getStackSize();
                 if(coalCount > 1){
@@ -499,10 +444,8 @@ function timer(event) {
         } catch(e) {}
     }
     
-    // Save updated data
     saveGrillData(block, data);
     
-    // Reload GUI slots if there were updates
     if(shouldUpdate){
         reloadGrillItemsInGui(block, api);
     }
