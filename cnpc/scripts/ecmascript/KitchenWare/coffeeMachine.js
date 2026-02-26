@@ -37,14 +37,14 @@ function getBlockKey(block) {
     return "coffee_" + block.getX() + "_" + block.getY() + "_" + block.getZ();
 }
 
-function loadCoffeeData(block, apiOrWorld) {
+function loadCoffeeData(block) {
     var world = block.getWorld();
-    var worldData = world.getStoreddata();
+    var tempData = world.getTempdata();
     var blockKey = getBlockKey(block);
     
-    if(worldData.has(blockKey)){
+    if(tempData.has(blockKey)){
         try {
-            return JSON.parse(worldData.get(blockKey));
+            return JSON.parse(tempData.get(blockKey));
         } catch(e) {
             return { ingredients: {}, output: null };
         }
@@ -54,22 +54,19 @@ function loadCoffeeData(block, apiOrWorld) {
 
 function saveCoffeeData(block, data) {
     var world = block.getWorld();
-    var worldData = world.getStoreddata();
+    var tempData = world.getTempdata();
     var blockKey = getBlockKey(block);
     
-    worldData.put(blockKey, JSON.stringify(data));
+    tempData.put(blockKey, JSON.stringify(data));
 }
 
 function reloadCoffeeItemsInGui(block, api) {
-    // This function reloads items from storage into the GUI
-    // Called by timer to show brewing progress
     if(!guiRef || !ingredientSlots || ingredientSlots.length === 0) return;
     if(!block) return;
     
     var world = block.getWorld();
-    var data = loadCoffeeData(block, api);
+    var data = loadCoffeeData(block);
     
-    // Reload ingredient slots
     for(var i = 0; i < INGREDIENT_COUNT; i++){
         if(data.ingredients[i]){
             try {
@@ -81,7 +78,6 @@ function reloadCoffeeItemsInGui(block, api) {
         }
     }
     
-    // Reload output slot
     if(data.output){
         try {
             var outputItem = world.createItemFromNbt(api.stringToNbt(data.output));
@@ -100,24 +96,19 @@ function openCoffeeMachineGui(player, api) {
     highlightedSlot = null;
     highlightLineIds = [];
     
-    // Create 3 ingredient slots (vertical layout)
     for(var i = 0; i < INGREDIENT_COUNT; i++){
         var y = INGREDIENT_START_Y + i * INGREDIENT_SPACING;
         var slot = guiRef.addItemSlot(INGREDIENT_START_X, y);
         ingredientSlots.push(slot);
     }
     
-    // Create output slot on the right
     outputSlot = guiRef.addItemSlot(OUTPUT_X, OUTPUT_Y);
     
-    // Labels
     guiRef.addLabel(1, "§6Coffee Machine", 43, -75, 1.0, 1.0);
     guiRef.addLabel(5, "§eCoffee", 94, -48, 0.7, 0.7);
     
-    // Show player inventory
     guiRef.showPlayerInventory(0, 43, false);
     
-    // Load items from storage
     loadCoffeeItems(player, api);
     
     player.showCustomGui(guiRef);
@@ -126,9 +117,8 @@ function openCoffeeMachineGui(player, api) {
 function loadCoffeeItems(player, api) {
     if(!lastBlock) return;
     
-    var data = loadCoffeeData(lastBlock, api);
+    var data = loadCoffeeData(lastBlock);
     
-    // Load ingredient slots
     for(var i = 0; i < INGREDIENT_COUNT; i++){
         if(data.ingredients[i]){
             try {
@@ -138,7 +128,6 @@ function loadCoffeeItems(player, api) {
         }
     }
     
-    // Load output slot
     if(data.output){
         try {
             var outputItem = player.world.createItemFromNbt(api.stringToNbt(data.output));
@@ -154,19 +143,16 @@ function customGuiClosed(event) {
 }
 
 function drawSlotHighlight(x, y) {
-    // Offset highlight by 1 pixel left and 1 pixel up
     x = x - 1;
     y = y - 1;
     
     var w = 18, h = 18;
     
-    // Clear old highlights
     for(var i = 0; i < highlightLineIds.length; i++){
         try { guiRef.removeComponent(highlightLineIds[i]); } catch(e) {}
     }
     highlightLineIds = [];
     
-    // Draw new highlight with unique IDs that won't conflict with labels
     highlightLineIds.push(guiRef.addColoredLine(101, x, y, x+w, y, 0xADD8E6, 2));
     highlightLineIds.push(guiRef.addColoredLine(102, x, y+h, x+w, y+h, 0xADD8E6, 2));
     highlightLineIds.push(guiRef.addColoredLine(103, x, y, x, y+h, 0xADD8E6, 2));
@@ -181,15 +167,12 @@ function customGuiSlotClicked(event) {
     var player = event.player;
     var api = event.API;
     
-    // Check if clicked slot is an ingredient slot
     var slotIndex = ingredientSlots.indexOf(clickedSlot);
     var isOutputSlot = (clickedSlot === outputSlot);
     
     if(slotIndex !== -1) {
-        // Clicked an ingredient slot
         highlightedSlot = clickedSlot;
         
-        // Calculate position based on slot index
         var x = INGREDIENT_START_X;
         var y = INGREDIENT_START_Y + slotIndex * INGREDIENT_SPACING;
         
@@ -198,32 +181,26 @@ function customGuiSlotClicked(event) {
     }
     
     if(isOutputSlot) {
-        // Clicked output slot
         highlightedSlot = clickedSlot;
         
         drawSlotHighlight(OUTPUT_X, OUTPUT_Y);
         return;
     }
     
-    // If no slot is highlighted, return
     if(!highlightedSlot) return;
     
-    // Check if highlighted slot is the output slot
     if(highlightedSlot === outputSlot){
         var outputStack = outputSlot.getStack();
         
         if(outputStack && !outputStack.isEmpty()) {
             if(!stack || stack.isEmpty()) {
-                // Empty hand, take item
                 player.giveItem(outputStack);
                 outputSlot.setStack(player.world.createItem("minecraft:air", 1));
             } else if(stack.getDisplayName() === outputStack.getDisplayName()){
-                // Same item, try to stack
                 var total = outputStack.getStackSize() + stack.getStackSize();
                 var maxStack = stack.getMaxStackSize();
                 
                 if(total <= maxStack){
-                    // Can fit in hand
                     player.removeItem(stack, stack.getStackSize());
                     outputStack.setStackSize(total);
                     player.giveItem(outputStack);
@@ -241,9 +218,7 @@ function customGuiSlotClicked(event) {
     var maxStack = stack ? stack.getMaxStackSize() : 64;
     
     if(stack && !stack.isEmpty()) {
-        // Player clicked with item in hand
         if(slotStack && !slotStack.isEmpty() && slotStack.getDisplayName() === stack.getDisplayName()) {
-            // Same item, stack
             var total = slotStack.getStackSize() + stack.getStackSize();
             if(total <= maxStack) {
                 slotStack.setStackSize(total);
@@ -261,7 +236,6 @@ function customGuiSlotClicked(event) {
                 }
             }
         } else {
-            // Different item, swap
             var itemCopy = player.world.createItemFromNbt(stack.getItemNbt());
             itemCopy.setStackSize(stack.getStackSize());
             if(slotStack && !slotStack.isEmpty()) player.giveItem(slotStack);
@@ -269,7 +243,6 @@ function customGuiSlotClicked(event) {
             player.removeItem(stack, stack.getStackSize());
         }
     } else if(slotStack && !slotStack.isEmpty()) {
-        // Empty hand, take item
         player.giveItem(slotStack);
         highlightedSlot.setStack(player.world.createItem("minecraft:air", 1));
     }
@@ -283,7 +256,6 @@ function saveCoffeeItems() {
     
     var data = { ingredients: {}, output: null };
     
-    // Save ingredient slots
     for(var i = 0; i < ingredientSlots.length; i++){
         var stack = ingredientSlots[i].getStack();
         
@@ -292,7 +264,6 @@ function saveCoffeeItems() {
         }
     }
     
-    // Save output slot
     var outputStack = outputSlot.getStack();
     if(outputStack && !outputStack.isEmpty()){
         data.output = outputStack.getItemNbt().toJsonString();
@@ -300,7 +271,6 @@ function saveCoffeeItems() {
     
     saveCoffeeData(lastBlock, data);
     
-    // Check if we should start or stop the timer
     checkAndUpdateTimer(lastBlock);
 }
 
@@ -308,10 +278,9 @@ function checkAndUpdateTimer(block) {
     if(!block) return;
     
     var world = block.getWorld();
-    var data = loadCoffeeData(block, world);
+    var data = loadCoffeeData(block);
     var API = Java.type("noppes.npcs.api.NpcAPI").Instance();
     
-    // Check if output slot has coffee
     var hasOutputCoffee = false;
     if(data.output){
         try {
@@ -322,7 +291,6 @@ function checkAndUpdateTimer(block) {
         } catch(e) {}
     }
     
-    // Check if all ingredients are present
     var hasMug = false;
     var hasCocoaBeans = false;
     var hasMilk = false;
@@ -348,25 +316,21 @@ function checkAndUpdateTimer(block) {
     var shouldRun = hasAllIngredients && !hasOutputCoffee;
     
     if(shouldRun){
-        // Start timer if not already running
-        block.timers.forceStart(1, 20, true); // Every 1 second, repeating
+        block.timers.forceStart(1, 20, true);
     } else {
-        // Stop timer
         block.timers.stop(1);
         brewingProgress = null;
     }
 }
 
 function timer(event) {
-    // Only process timer ID 1 (our brewing timer)
     if(event.id !== 1) return;
     
     var block = event.block;
     var api = event.API;
     var world = block.getWorld();
-    var data = loadCoffeeData(block, api);
+    var data = loadCoffeeData(block);
     
-    // Check if output slot already has coffee
     var hasOutputCoffee = false;
     if(data.output){
         try {
@@ -378,20 +342,17 @@ function timer(event) {
     }
     
     if(hasOutputCoffee){
-        // Can't brew while output has coffee - stop timer
         block.timers.stop(1);
         brewingProgress = null;
         return;
     }
     
-    // Check if all ingredients are present (in any order)
     var hasMug = false;
     var hasCocoaBeans = false;
     var hasMilk = false;
     
     var ingredientItems = [];
     
-    // Scan all ingredient slots
     for(var i = 0; i < INGREDIENT_COUNT; i++){
         if(data.ingredients[i]){
             try {
@@ -414,13 +375,11 @@ function timer(event) {
     var hasAllIngredients = hasMug && hasCocoaBeans && hasMilk;
     
     if(!hasAllIngredients){
-        // Missing ingredients - stop timer
         block.timers.stop(1);
         brewingProgress = null;
         return;
     }
     
-    // Start or continue brewing
     if(!brewingProgress){
         brewingProgress = {
             secondsElapsed: 0
@@ -431,9 +390,6 @@ function timer(event) {
     var secondsRemaining = BREW_TIME - brewingProgress.secondsElapsed;
     
     if(brewingProgress.secondsElapsed >= BREW_TIME){
-        // Coffee is ready!
-        
-        // Consume ingredients (find and consume each type)
         for(var i = 0; i < ingredientItems.length; i++){
             var itemData = ingredientItems[i];
             var itemName = itemData.item.getName();
@@ -451,13 +407,11 @@ function timer(event) {
             }
         }
         
-        // Add coffee to output slot (stack if possible)
         if(data.output){
             try {
                 var existingCoffee = world.createItemFromNbt(api.stringToNbt(data.output));
                 if(existingCoffee && !existingCoffee.isEmpty() && 
                    existingCoffee.getName() === "yuushya:small_coffee"){
-                    // Stack coffee
                     var newAmount = existingCoffee.getStackSize() + 1;
                     var maxStack = existingCoffee.getMaxStackSize();
                     
@@ -465,8 +419,6 @@ function timer(event) {
                         existingCoffee.setStackSize(newAmount);
                         data.output = existingCoffee.getItemNbt().toJsonString();
                     } else {
-                        // Output is full, can't add more
-                        // Don't consume ingredients, stop timer
                         brewingProgress = null;
                         saveCoffeeData(block, data);
                         reloadCoffeeItemsInGui(block, api);
@@ -474,7 +426,6 @@ function timer(event) {
                         return;
                     }
                 } else {
-                    // Different item in output, replace with coffee
                     var coffee = world.createItem("yuushya:small_coffee", 1);
                     data.output = coffee.getItemNbt().toJsonString();
                 }
@@ -483,20 +434,14 @@ function timer(event) {
                 data.output = coffee.getItemNbt().toJsonString();
             }
         } else {
-            // No item in output, create coffee
             var coffee = world.createItem("yuushya:small_coffee", 1);
             data.output = coffee.getItemNbt().toJsonString();
         }
         
-        // Save data first
         saveCoffeeData(block, data);
         
-        // Reset brewing progress to start next batch
         brewingProgress = null;
         
-        // Update GUI
         reloadCoffeeItemsInGui(block, api);
-        
-        // Timer will continue on next tick if ingredients still available
     }
 }
